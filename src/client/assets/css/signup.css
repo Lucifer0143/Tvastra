@@ -1,0 +1,90 @@
+body {
+    background-color: lightblue;
+}
+
+header {
+    margin: 0rem;
+}
+
+header nav {
+    display: none;
+}
+
+main {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 5rem;
+    width: 70%;
+    background-color: white;
+}
+
+h1 {
+    color: lightblue;
+}
+
+input {
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+input[id=email] {
+    background-image: url(../images/questionmark.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-position-x: 95%;
+}
+
+button[id=signupBtn] {
+    background-color: black;
+    color: white;
+    margin: 0.5rem;
+    background-image: url(../images/arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 95%;
+}
+
+select {
+    padding: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    background: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid black;
+    padding-top: 1rem;
+}
+
+form section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section input {
+    width: 45%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header nav {
+        display: block;
+    }
+    header .fa {
+        display: none;
+    }
+    main {
+        width: 50%;
+    }
+}

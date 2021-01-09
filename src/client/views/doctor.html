@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home/Doctor</title>
     <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/doctor.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -14,7 +15,9 @@
 
 <body>
     <header>
-        <nav class="left"><img class="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo"></nav>
+        <figure>
+            <img class="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
         <nav id="headNav">
             <a>Doctors</a>
             <a>Hospitals</a>
@@ -26,282 +29,267 @@
             <button id="loginBtn">Login / Sign Up</button>
             <button id="quoteBtn">Get a Quotes</button>
         </nav>
-        <nav class="right"><i class="fa fa-bars"></i></nav>
+        <i class="fa fa-bars"></i>
     </header>
-    <main id="doctor">
-        <section>
-            <div id="doctorArea">
-                <h1>Cardiaic Sergeon in <a href="">Delhi</a></h1>
-            </div>
+    <main>
+        <section class="doctorsImg">
+            <figure>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png" alt="doctor_image">
+                <figcaption>
+                    <h1>Cardiaic Sergeon in <a href="">Delhi</a></h1>
+                </figcaption>
+            </figure>
         </section>
-        <section id="doctorTop">
-            <h2>Home / Doctors Lists</h2>
+        <section class="sortBy">
+            <h3>Home/Doctors Lists</h3>
             <button id="sortBtn">Sort by <i class="fa fa-angle-down"></i></button>
         </section>
         <section class="allDoctors">
-            <div id="doctorList">
-                <div class="doctorFilter">
-                    <button id="filterBtn">Filter by</button>
-                    <div id="filterItem">
-                        <h3>Location</h3>
-                        <span class="fa fa-search"><hr></span><br><br>
-                        <input type="checkbox" id="DLF">
-                        <label for="DLF">DLF Cyber City</label><br>
-                        <input type="checkbox" id="Dwaraka">
-                        <label for="Dwaraka">Dwaraka</label><br>
-                        <input type="checkbox" id="Lajpat Nagar">
-                        <label for="Lajpat Nagar">Lajpat Nagar</label><br>
-                        <input type="checkbox" id="Palam Vihar">
-                        <label for="Palam Vihar">Palam Vihar</label><br>
-                        <input type="checkbox" id="Punjabi Baag">
-                        <label for="Punjabi Baag">Punjabi Baag</label><br>
-                        <input type="checkbox" id="Pusa Road">
-                        <label for="Pusa Road">Pusa Road</label><br>
-                        <br>
-                        <a href=""><span class="fa fa-plus"></span> Show More</a><br>
-                    </div>
-                    <hr>
-                    <div id="filterItem">
-                        <h3>Treatment</h3>
-                        <span class="fa fa-search"><hr></span><br><br>
-                        <input type="checkbox" id="Multi Organ Transplant">
-                        <label for="Multi Organ Transplant">Multi Organ Transplant</label><br>
-                        <input type="checkbox" id="Orthopedic Surgurey">
-                        <label for="Orthopedic Surgurey">Orthopedic Surgurey</label><br>
-                        <input type="checkbox" id="Infertility Treatment">
-                        <label for="Infertility Treatment">Infertility Treatment</label><br>
-                        <input type="checkbox" id="Dentistry">
-                        <label for="Dentistry">Dentistry</label><br>
-                        <input type="checkbox" id="Cardiology">
-                        <label for="Cardiology">Cardiology</label><br>
-                        <input type="checkbox" id="Cancer">
-                        <label for="Cancer">Cancer</label><br>
-                        <br>
-                        <a href=""><span class="fa fa-plus"></span> Show More</a><br>
-                    </div>
-                    <hr>
-                    <div id="filterItem">
-                        <h3>Hospitals</h3>
-                        <span class="fa fa-search"><hr></span><br><br>
-                        <input type="checkbox" id="Apollo Hospital">
-                        <label for="Apollo Hospital">Apollo Hospital</label><br>
-                        <input type="checkbox" id="Manipal North Side Hospital">
-                        <label for="Manipal North Side Hospital">Manipal North Side Hospital</label><br>
-                        <input type="checkbox" id="Northstar">
-                        <label for="Northstar">Northstar</label><br>
-                        <input type="checkbox" id="AIIMS">
-                        <label for="AIIMS">AIIMS</label><br>
-                        <input type="checkbox" id="Fortis Hospital">
-                        <label for="Fortis Hospital">Fortis Hospital</label><br>
-                        <input type="checkbox" id="Elbit Diagnostic">
-                        <label for="Elbit Diagnostic">Elbit Diagnostic</label><br>
-                        <br>
-                        <a href=""><span class="fa fa-plus"></span> Show More</a><br>
-                    </div>
-                    <hr>
-                    <div id="filterItem">
-                        <h3>Year of Experience</h3>
-                        <span class="fa fa-search"><hr></span><br><br>
-                        <input type="checkbox" id="30+">
-                        <label for="30+">30+</label><br>
-                        <input type="checkbox" id="25+">
-                        <label for="25+">25+</label><br>
-                        <input type="checkbox" id="20+">
-                        <label for="20+">20+</label><br>
-                        <input type="checkbox" id="15+">
-                        <label for="15+">15+</label><br>
-                        <input type="checkbox" id="10+">
-                        <label for="10+">10+</label><br>
-                        <input type="checkbox" id="5+">
-                        <label for="5+">5+</label><br>
-                        <br>
-                        <a href=""><span class="fa fa-plus"></span> Show More</a><br>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="doctorCard">
-                <div class="doctorInfo">
-                    <div id="doctorQual">
-                        <hr id="nameHr">
-                        <h2 id="doctorName">Duke Sanson</h2>
-                        <div id="doctorDetail">
-                            <div id="details">
-                                <span class="fas fa-certificate"></span>
-                                <p>Duke Sanson</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-award"></span>
-                                <p>Neuro Surgeon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-clock-o"></span>
-                                <p>Chain Deparment of Neurological Surgery </p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-hospital-o"></span>
-                                <p>doctor1</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-map-marker-alt"></span>
-                                <p>Australia</p>
-                            </div>
-                        </div>
+            <section id="doctorFilter">
+                <button id="filterBtn">Filter by</button>
+                <section id="filterItem">
+                    <h3>Location</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="DLF">
+                    <label for="DLF">DLF Cyber City</label>
+                    <input type="checkbox" id="Dwaraka">
+                    <label for="Dwaraka">Dwaraka</label>
+                    <input type="checkbox" id="Lajpat Nagar">
+                    <label for="Lajpat Nagar">Lajpat Nagar</label>
+                    <input type="checkbox" id="Palam Vihar">
+                    <label for="Palam Vihar">Palam Vihar</label>
+                    <input type="checkbox" id="Punjabi Baag">
+                    <label for="Punjabi Baag">Punjabi Baag</label>
+                    <input type="checkbox" id="Pusa Road">
+                    <label for="Pusa Road">Pusa Road</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+                <section id="filterItem">
+                    <h3>Treatment</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="Multi Organ Transplant">
+                    <label for="Multi Organ Transplant">Multi Organ Transplant</label>
+                    <input type="checkbox" id="Orthopedic Surgurey">
+                    <label for="Orthopedic Surgurey">Orthopedic Surgurey</label>
+                    <input type="checkbox" id="Infertility Treatment">
+                    <label for="Infertility Treatment">Infertility Treatment</label>
+                    <input type="checkbox" id="Dentistry">
+                    <label for="Dentistry">Dentistry</label>
+                    <input type="checkbox" id="Cardiology">
+                    <label for="Cardiology">Cardiology</label>
+                    <input type="checkbox" id="Cancer">
+                    <label for="Cancer">Cancer</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+                <section id="filterItem">
+                    <h3>Hospitals</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="Apollo Hospital">
+                    <label for="Apollo Hospital">Apollo Hospital</label>
+                    <input type="checkbox" id="Manipal North Side Hospital">
+                    <label for="Manipal North Side Hospital">Manipal North Side Hospital</label>
+                    <input type="checkbox" id="Northstar">
+                    <label for="Northstar">Northstar</label>
+                    <input type="checkbox" id="AIIMS">
+                    <label for="AIIMS">AIIMS</label>
+                    <input type="checkbox" id="Fortis Hospital">
+                    <label for="Fortis Hospital">Fortis Hospital</label>
+                    <input type="checkbox" id="Elbit Diagnostic">
+                    <label for="Elbit Diagnostic">Elbit Diagnostic</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+                <section id="filterItem">
+                    <h3>Year of Experience</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="30+">
+                    <label for="30+">30+</label>
+                    <input type="checkbox" id="25+">
+                    <label for="25+">25+</label>
+                    <input type="checkbox" id="20+">
+                    <label for="20+">20+</label>
+                    <input type="checkbox" id="15+">
+                    <label for="15+">15+</label>
+                    <input type="checkbox" id="10+">
+                    <label for="10+">10+</label>
+                    <input type="checkbox" id="5+">
+                    <label for="5+">5+</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+            </section>
+            <section id="doctorList">
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Duke Sanson</h2>
+                        <section>
+                            <i class="fas fa-certificate"></i>
+                            <p>Duke Sanson</p>
+                        </section>
+                        <section>
+                            <i class="fas fa-award"></i>
+                            <p>Neuro Surgeon</p>
+                        </section>
+                        <section>
+                            <i class="fa fa-clock-o"></i>
+                            <p>Chain Deparment of Neurological Surgery </p>
+                        </section>
+                        <section>
+                            <i class="fa fa-hospital-o"></i>
+                            <p>doctor1</p>
+                        </section>
+                        <section>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Australia</p>
+                        </section>
                         <button id="bookBtn">Book an appointment</button>
-                    </div>
-                    <img id="doctorImg" src="../assets/images/doctor1(1).jpg" alt="doctor_image">
-                </div>
-                <div class="doctorInfo">
-                    <div id="doctorQual">
-                        <hr id="nameHr">
-                        <h2 id="doctorName">Georgea Peter</h2>
-                        <div id="doctorDetail">
-                            <div id="details">
-                                <span class="fas fa-certificate"></span>
-                                <p>Georgea Peter</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-award"></span>
-                                <p>Breast Cancer Surgeon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-clock-o"></span>
-                                <p>Director. UT. Southwest</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-hospital-o"></span>
-                                <p>doctor2</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-map-marker-alt"></span>
-                                <p>London</p>
-                            </div>
-                        </div>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/doctor1(1).jpg" alt="doctor_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Georgea Peter</h2>
+                        <section id="details">
+                            <i class="fas fa-certificate"></i>
+                            <p>Georgea Peter</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-award"></i>
+                            <p>Breast Cancer Surgeon</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-clock-o"></i>
+                            <p>Director. UT. Southwest</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-hospital-o"></i>
+                            <p>doctor2</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>London</p>
+                        </section>
                         <button id="bookBtn">Book an appointment</button>
-                    </div>
-                    <img id="doctorImg" src="../assets/images/doctor2(1).jpg" alt="doctor_image">
-                </div>
-                <div class="doctorInfo">
-                    <div id="doctorQual">
-                        <hr id="nameHr">
-                        <h2 id="doctorName">Charlie Moon</h2>
-                        <div id="doctorDetail">
-                            <div id="details">
-                                <span class="fas fa-certificate"></span>
-                                <p>Charlie Moon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-award"></span>
-                                <p>Cardiaic surgeon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-clock-o"></span>
-                                <p>MBBS, MD, FRCP, MRCP, Fellowship</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-hospital-o"></span>
-                                <p>doctor3</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-map-marker-alt"></span>
-                                <p>New Delhi, India</p>
-                            </div>
-                        </div>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/doctor2(1).jpg" alt="doctor_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Charlie Moon</h2>
+                        <section id="details">
+                            <i class="fas fa-certificate"></i>
+                            <p>Charlie Moon</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-award"></i>
+                            <p>Cardiaic surgeon</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-clock-o"></i>
+                            <p>MBBS, MD, FRCP, MRCP, Fellowship</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-hospital-o"></i>
+                            <p>doctor3</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>New Delhi, India</p>
+                        </section>
                         <button id="bookBtn">Book an appointment</button>
-                    </div>
-                    <img id="doctorImg" src="../assets/images/doctor3(1).jpg" alt="doctor_image">
-                </div>
-                <div class="doctorInfo">
-                    <div id="doctorQual">
-                        <hr id="nameHr">
-                        <h2 id="doctorName">Shubham Shinde</h2>
-                        <div id="doctorDetail">
-                            <div id="details">
-                                <span class="fas fa-certificate"></span>
-                                <p>Shubham Shinde</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-award"></span>
-                                <p>Plastic surgeon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-clock-o"></span>
-                                <p>Deparment of Plastic and Reconstructive Surgery</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-hospital-o"></span>
-                                <p>doctor5</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-map-marker-alt"></span>
-                                <p>Dubai</p>
-                            </div>
-                        </div>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/doctor3(1).jpg" alt="doctor_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Shubham Shinde</h2>
+                        <section id="details">
+                            <i class="fas fa-certificate"></i>
+                            <p>Shubham Shinde</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-award"></i>
+                            <p>Plastic surgeon</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-clock-o"></i>
+                            <p>Deparment of Plastic and Reconstructive Surgery</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-hospital-o"></i>
+                            <p>doctor5</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>New Delhi, India</p>
+                        </section>
                         <button id="bookBtn">Book an appointment</button>
-                    </div>
-                    <img id="doctorImg" src="../assets/images/doctor5(1).jpg" alt="doctor_image">
-                </div>
-                <div class="doctorInfo">
-                    <div id="doctorQual">
-                        <hr id="nameHr">
-                        <h2 id="doctorName">Rose Moon</h2>
-                        <div id="doctorDetail">
-                            <div id="details">
-                                <span class="fas fa-certificate"></span>
-                                <p>Rose Moon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-award"></span>
-                                <p>Plastic Surgeon</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-clock-o"></span>
-                                <p>Deparment of Plastic and Reconstructive surgery</p>
-                            </div>
-                            <div id="details">
-                                <span class="fa fa-hospital-o"></span>
-                                <p>doctor4</p>
-                            </div>
-                            <div id="details">
-                                <span class="fas fa-map-marker-alt"></span>
-                                <p>Dubai</p>
-                            </div>
-                        </div>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/doctor5(1).jpg" alt="doctor_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Rose Moon</h2>
+                        <section id="details">
+                            <i class="fas fa-certificate"></i>
+                            <p>Rose Moon</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-award"></i>
+                            <p>Plastic surgeon</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-clock-o"></i>
+                            <p>Deparment of Plastic and Reconstructive Surgery</p>
+                        </section>
+                        <section id="details">
+                            <i class="fa fa-hospital-o"></i>
+                            <p>doctor4</p>
+                        </section>
+                        <section id="details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Dubai</p>
+                        </section>
                         <button id="bookBtn">Book an appointment</button>
-                    </div>
-                    <img id="doctorImg" src="../assets/images/doctor4(1).jpg" alt="doctor_image">
-                </div>
-            </div>
-            </div>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/doctor4(1).jpg" alt="doctor_image">
+                    </figure>
+                </section>
+            </section>
         </section>
         <section class="enquiry">
-            <div id="enqBody">
-                <h1>Need Help?</h1>
-                <p>Just let us know, we will happy to assist you.</p>
-            </div>
-            <div id="enqBtn">
-                <button id="qrBtn">Submit your enquiry</button>
-            </div>
+            <h1>Need Help?</h1>
+            <p>Just let us know, we will happy to assist you.</p>
+            <button id="qrBtn">Submit your enquiry</button>
         </section>
     </main>
     <footer>
-        <img id="footerLogo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
         " alt="tvastra_logo">
-        <div id="footNav">
-            <p>Doctor</p>
-            <p>Hospital</p>
-            <p>Treatment</p>
-            <p id="footP">Other Service</p>
-            <p>FAQs</p>
-        </div>
-        <p id="socialMedia">
-            <a class="fa fa-facebook"></a>
-            <a class="fa fa-pinterest"></a>
-            <a class="fa fa-twitter"></a>
-            <a class="fa fa-google-plus"></a>
-            <a class="fa fa-instagram"></a>
-        </p>
-        <p id="rights">All Rights Reserved. &#169 tvastra 2018</p>
+        </figure>
+        <nav id="sectionNav">
+            <a>Doctor</a>
+            <a>Hospital</a>
+            <a>Treatment</a>
+            <a>Other Service</a>
+            <a>FAQs</a>
+        </nav>
+        <nav id=socialMedia>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-google-plus"></i>
+            <i class="fa fa-instagram"></i>
+        </nav>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
     </footer>
 </body>
 

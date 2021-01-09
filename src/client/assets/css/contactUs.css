@@ -1,0 +1,255 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --lightblue: #99c2ff;
+    --blue: rgb(116, 29, 197);
+    --silver: #ccc;
+    --lightsilver: rgb(233, 233, 233);
+    --cuteblue: rgb(58, 143, 212);
+    --blackblue: #021433;
+}
+
+header nav {
+    display: none;
+}
+
+section {
+    margin: 0 0.5rem;
+}
+
+section[id=doctorsImg] {
+    margin: 0;
+}
+
+section[id=doctorsImg] figure {
+    height: 15rem;
+    position: relative;
+}
+
+section[id=doctorsImg] figcaption {
+    position: absolute;
+    top: 35%;
+    margin-left: 1rem;
+}
+
+section[id=doctorsImg] figcaption {
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+}
+
+section[id=detailquery] {
+    margin: 0;
+    padding: 0;
+}
+
+section[id=contactDetail] section {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 'i aside';
+    justify-content: start;
+    grid-column-gap: 1rem;
+}
+
+section[id=contactDetail] i {
+    color: var(--cuteblue);
+    margin: auto;
+    margin-left: 0%;
+    font-size: 2rem;
+}
+
+section[id=contactDetail] aside {
+    margin: auto;
+    text-align: left;
+    margin-left: 0%;
+}
+
+section[id=contactDetail] aside h3,
+section[id=contactDetail] aside p {
+    text-align: left;
+}
+
+section[id=sendQuery] {
+    background-color: var(--lightblue);
+    display: flex;
+    flex-direction: column;
+}
+
+section[id=sendQuery] section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+section[id=sendQuery] button {
+    background-color: var(--cuteblue);
+    color: var(--white);
+    margin: 1rem;
+    display: block;
+    margin-right: 4%;
+    margin-left: auto;
+}
+
+section[id=sendQuery] textarea {
+    padding: 1rem 0.2rem 0.2rem 1rem;
+    border: none;
+}
+
+footer {
+    background-color: var(--blackblue);
+    margin-top: -0.5rem;
+    color: var(--silver);
+}
+
+footer figure {
+    display: grid;
+    margin: auto;
+    width: 10rem;
+    height: 3rem;
+    align-items: center;
+}
+
+footer nav {
+    text-align: center;
+}
+
+footer nav a {
+    display: block;
+    margin: 1rem;
+}
+
+footer nav i {
+    margin: 0 0.5rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    section[id=sendQuery] {
+        display: grid;
+        grid-template-areas: 'section textarea' 'button button';
+    }
+    section[id=sendQuery] button {
+        grid-area: button;
+        margin-right: 1.5%;
+    }
+    section[id=contactDetail] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer {
+        background-color: var(--white);
+        color: var(--black);
+        display: grid;
+        grid-template-areas: 'sectionNav figure' 'p socialMedia';
+        grid-row-gap: 0.5rem;
+        margin: 0rem;
+        padding: 1rem 5%;
+        border-bottom: 0.5rem solid var(--lightblue);
+    }
+    footer figure {
+        display: grid;
+        margin-left: auto;
+        margin-right: 0%;
+        width: 10rem;
+        height: 2.5rem;
+    }
+    footer nav[id=sectionNav] {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin-top: 1rem;
+        grid-area: sectionNav;
+    }
+    footer nav[id=socialMedia] {
+        margin-top: 1rem;
+        text-align: right;
+        grid-area: socialMedia;
+    }
+    footer nav a {
+        margin: 0.5rem;
+    }
+    footer nav i {
+        margin: 0 0.5rem;
+    }
+    footer p {
+        text-align: left;
+        margin-left: 0.3rem;
+        font-family: 'Nexa-light';
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header nav {
+        display: block;
+    }
+    header .fa {
+        display: none;
+    }
+    section[id=doctorsImg] figcaption h1,
+    section[id=doctorsImg] figcaption p {
+        text-align: left;
+        margin-left: 2rem;
+    }
+    section[id=map] {
+        padding: 0rem 2rem 1rem 2rem;
+    }
+    section[id=detailquery] {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 0 2rem;
+        grid-template-areas: 'section section';
+    }
+    section[id=sendQuery] {
+        display: grid;
+        grid-template-areas: 'section textarea' 'button button';
+    }
+    section[id=sendQuery] button {
+        grid-area: button;
+        margin-right: 1.5%;
+    }
+    footer {
+        background-color: var(--white);
+        color: var(--black);
+        display: grid;
+        grid-template-areas: 'sectionNav figure' 'p socialMedia';
+        grid-row-gap: 0.5rem;
+        margin: 0rem;
+        padding: 1rem 5%;
+        border-bottom: 0.5rem solid var(--lightblue);
+        border-top: 0.1rem solid var(--black);
+    }
+    footer figure {
+        display: grid;
+        margin-left: auto;
+        margin-right: 0%;
+        width: 10rem;
+        height: 2.5rem;
+    }
+    footer nav[id=sectionNav] {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin-top: 1rem;
+        grid-area: sectionNav;
+    }
+    footer nav[id=socialMedia] {
+        margin-top: 1rem;
+        text-align: right;
+        grid-area: socialMedia;
+    }
+    footer nav a {
+        margin: 0.5rem;
+    }
+    footer nav i {
+        margin: 0 0.5rem;
+    }
+    footer p {
+        text-align: left;
+        margin-left: 0.3rem;
+        font-family: 'Nexa-light';
+    }
+}

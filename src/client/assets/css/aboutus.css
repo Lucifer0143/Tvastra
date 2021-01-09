@@ -1,0 +1,33 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --lightblue: #99c2ff;
+    --blue: rgb(116, 29, 197);
+    --silver: #ccc;
+    --lightsilver: rgb(233, 233, 233);
+    --cuteblue: rgb(58, 143, 212);
+    --blackblue: #021433;
+    --lightblack: rgb(139, 138, 138);
+}
+
+section[id=doctorsImg] {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+section[id=doctorsImg] figcaption {
+    position: absolute;
+    width: 90%;
+    margin-top: -8rem;
+}
+
+section[id=doctorsImg] figcaption h1,
+section[id=doctorsImg] figcaption p {
+    color: var(--white);
+    margin: auto;
+}
+
+section[id=begine] {
+    text-transform: none;
+}

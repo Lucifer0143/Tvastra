@@ -1,0 +1,132 @@
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+header figure {
+    width: 8rem;
+    height: 2.5rem;
+}
+
+header i {
+    font-size: 1.1rem;
+}
+
+header nav {
+    display: none;
+}
+
+footer {
+    background-color: var(--blackblue);
+    margin-top: -0.5rem;
+    color: var(--silver);
+}
+
+footer figure {
+    display: grid;
+    margin: auto;
+    width: 10rem;
+    height: 3rem;
+    align-items: center;
+}
+
+footer nav {
+    text-align: center;
+}
+
+footer nav a {
+    display: block;
+}
+
+footer nav i {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+footer .rights {
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    header nav a {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    header button {
+        border: 0.1rem solid var(--black);
+        margin: 0.5rem;
+    }
+    button[id=loginBtn] {
+        background-color: var(--white);
+        color: var(--black);
+    }
+    button[id=quoteBtn] {
+        background-color: var(--black);
+        color: var(--white);
+    }
+    header figure {
+        height: 2rem;
+        width: 8rem;
+    }
+    header .fa {
+        font-size: 1.3rem;
+        color: var(--black);
+    }
+    footer {
+        background-color: var(--white);
+        color: var(--black);
+        display: grid;
+        grid-template-areas: 'sectionNav figure' 'p socialMedia';
+        grid-row-gap: 0.5rem;
+        margin: 0rem;
+        padding: 1rem 5%;
+        border-bottom: 0.5rem solid var(--lightblue);
+    }
+    footer figure {
+        display: grid;
+        margin-left: auto;
+        margin-right: 0%;
+        width: 10rem;
+        height: 2.5rem;
+    }
+    footer nav[id=sectionNav] {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin-top: 1rem;
+        grid-area: sectionNav;
+    }
+    footer nav[id=socialMedia] {
+        margin-top: 1rem;
+        text-align: right;
+        grid-area: socialMedia;
+    }
+    footer nav a {
+        margin: 0.5rem;
+        text-align: left;
+    }
+    footer nav i {
+        margin: 0 0.5rem;
+    }
+    footer p {
+        text-align: left;
+        margin-left: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header nav {
+        display: block;
+    }
+    header .fa {
+        display: none;
+    }
+    footer {
+        grid-row-gap: 1rem;
+    }
+}

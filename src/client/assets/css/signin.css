@@ -1,0 +1,91 @@
+body {
+    background-color: lightblue;
+}
+
+header {
+    margin: 0rem;
+}
+
+header nav {
+    display: none;
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    padding: 1rem;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: lightblue;
+}
+
+input {
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+input[id=email] {
+    background-image: url(../images/questionmark.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-position-x: 95%;
+}
+
+button[id=signinBtn] {
+    background-color: black;
+    color: white;
+    margin: 0.5rem;
+    background-image: url(../images/arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 95%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid black;
+    padding-top: 1rem;
+}
+
+footer {
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 90%;
+    top: 85%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 50%;
+    }
+    footer {
+        position: absolute;
+        justify-content: center;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header nav {
+        display: block;
+    }
+    header .fa {
+        display: none;
+    }
+    main {
+        width: 50%;
+    }
+}

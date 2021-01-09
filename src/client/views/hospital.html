@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/Doctor</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/hospital.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img class="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav id="headNav">
+            <a>Doctors</a>
+            <a>Hospitals</a>
+            <a>Treatment</a>
+            <a>Other Services</a>
+            <a>About</a>
+        </nav>
+        <nav id="headBtn">
+            <button id="loginBtn">Login / Sign Up</button>
+            <button id="quoteBtn">Get a Quotes</button>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <main>
+        <section class="doctorsImg">
+            <figure>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png" alt="doctor_image">
+                <figcaption>
+                    <h1>Hospital in <a href="">Delhi</a></h1>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="sortBy">
+            <h3>Home/Hospital Lists</h3>
+            <button id="sortBtn">Sort by <i class="fa fa-angle-down"></i></button>
+        </section>
+        <section class="allDoctors">
+            <section id="doctorFilter">
+                <button id="filterBtn">Filter by</button>
+                <section id="filterItem">
+                    <h3>Location</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="DLF">
+                    <label for="DLF">DLF Cyber City</label>
+                    <input type="checkbox" id="Dwaraka">
+                    <label for="Dwaraka">Dwaraka</label>
+                    <input type="checkbox" id="Lajpat Nagar">
+                    <label for="Lajpat Nagar">Lajpat Nagar</label>
+                    <input type="checkbox" id="Palam Vihar">
+                    <label for="Palam Vihar">Palam Vihar</label>
+                    <input type="checkbox" id="Punjabi Baag">
+                    <label for="Punjabi Baag">Punjabi Baag</label>
+                    <input type="checkbox" id="Pusa Road">
+                    <label for="Pusa Road">Pusa Road</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+                <section id="filterItem">
+                    <h3>Deparment</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="Deparment one">
+                    <label for="Deparment one">Deparment one</label>
+                    <input type="checkbox" id="Deparment 1">
+                    <label for="Deparment 1">Deparment 1</label>
+                    <input type="checkbox" id="Deparment onx">
+                    <label for="Deparment onx">Deparment onx</label>
+                    <input type="checkbox" id="Deparment opo">
+                    <label for="Deparment opo">Deparment opo</label>
+                    <input type="checkbox" id="Deparment ON">
+                    <label for="Deparment ON">Deparment ON</label>
+                    <input type="checkbox" id="Deparment FIVE">
+                    <label for="Deparment FIVE">Deparment FIVE</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+                <section id="filterItem">
+                    <h3>Treatment</h3>
+                    <i class="fa fa-search"></i>
+                    <input type="checkbox" id="Multi Organ Transplant">
+                    <label for="Multi Organ Transplant">Multi Organ Transplant</label>
+                    <input type="checkbox" id="Orthopedic Surgurey">
+                    <label for="Orthopedic Surgurey">Orthopedic Surgurey</label>
+                    <input type="checkbox" id="Infertility Treatment">
+                    <label for="Infertility Treatment">Infertility Treatment</label>
+                    <input type="checkbox" id="Dentistry">
+                    <label for="Dentistry">Dentistry</label>
+                    <input type="checkbox" id="Cardiology">
+                    <label for="Cardiology">Cardiology</label>
+                    <input type="checkbox" id="Cancer">
+                    <label for="Cancer">Cancer</label>
+                    <a class="fa fa-plus">Show More</a>
+                </section>
+            </section>
+            <section id="doctorList">
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Apollo Hospital</h2>
+                        <section>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
+                        </section>
+                        <section>
+                            <i class="fas fa-bed"></i>
+                            <p>133 Beds</p>
+                        </section>
+                        <section>
+                            <i class="fa fa-stethoscope"></i>
+                            <p>Famous Treatments</p>
+                        </section>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
+                        <button id="bookBtn">Call Now</button>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/hospital1.jpg" alt="hospital_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Fortis Hospital</h2>
+                        <section>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
+                        </section>
+                        <section>
+                            <i class="fas fa-bed"></i>
+                            <p>133 Beds</p>
+                        </section>
+                        <section>
+                            <i class="fa fa-stethoscope"></i>
+                            <p>Famous Treatments</p>
+                        </section>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
+                        <button id="bookBtn">Call Now</button>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/hospital2.jpg" alt="hospital_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Rockland Hospital</h2>
+                        <section>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
+                        </section>
+                        <section>
+                            <i class="fas fa-bed"></i>
+                            <p>133 Beds</p>
+                        </section>
+                        <section>
+                            <i class="fa fa-stethoscope"></i>
+                            <p>Famous Treatments</p>
+                        </section>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
+                        <button id="bookBtn">Call Now</button>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/hospital3.jpg" alt="hospital_image">
+                    </figure>
+                </section>
+                <section id="doctorInfo">
+                    <figcaption>
+                        <h2>Primus Super Speciality Hospital</h2>
+                        <section>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
+                        </section>
+                        <section>
+                            <i class="fas fa-bed"></i>
+                            <p>133 Beds</p>
+                        </section>
+                        <section>
+                            <i class="fa fa-stethoscope"></i>
+                            <p>Famous Treatments</p>
+                        </section>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
+                        <button id="bookBtn">Call Now</button>
+                    </figcaption>
+                    <figure>
+                        <img src="../assets/images/hospital.jpg" alt="hospital_image">
+                    </figure>
+                </section>
+            </section>
+        </section>
+        <section class="enquiry">
+            <h1>Need Help?</h1>
+            <p>Just let us know, we will happy to assist you.</p>
+            <button id="qrBtn">Submit your enquiry</button>
+        </section>
+    </main>
+    <footer>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
+        " alt="tvastra_logo">
+        </figure>
+        <nav id="sectionNav">
+            <a>Doctor</a>
+            <a>Hospital</a>
+            <a>Treatment</a>
+            <a>Other Service</a>
+            <a>FAQs</a>
+        </nav>
+        <nav id=socialMedia>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-google-plus"></i>
+            <i class="fa fa-instagram"></i>
+        </nav>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+</body>
+
+</html>
