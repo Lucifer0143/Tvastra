@@ -8,234 +8,245 @@
     src: url("../fonts/Nexa-Light.otf");
 }
 
-:root {
-    --black: #000;
-    --white: #fff;
-    --lightblue: #99c2ff;
-    --blue: rgb(116, 29, 197);
-    --silver: #ccc;
-    --lightsilver: rgb(233, 233, 233);
-    --cuteblue: rgb(58, 143, 212);
-    --blackblue: #021433;
-    --skyblue: blue;
+@import './theme.css';
+section[class=discription] {
+    margin-top: 0;
+    display: block;
+    background-color: var(--lightblue);
+    justify-content: center;
 }
 
-@media only screen and (max-width:767px) {
-    header nav {
-        display: none;
-    }
-    section section {
-        margin: 0;
-        padding: 0;
-    }
-    section[class=discription] {
-        margin: -1rem 1rem;
-        display: block;
-        background-color: var(--lightblue);
-        justify-content: center;
-    }
-    section[class=discription] section input {
-        padding: 1rem 1.5rem;
-        display: grid;
-        margin: 1rem auto;
-        width: 80%;
-    }
-    input[id=searchCity] {
-        background-image: url(../images/mapmarker.jpeg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 1rem;
-        background-position-x: 0.3rem;
-    }
-    .fa-crosshairs {
-        position: absolute;
-        margin-top: 1rem;
-        right: 15%;
-    }
-    section[class=discription] section button {
-        display: grid;
-        margin: 1rem auto;
-        padding: 1rem 2rem;
-    }
-    section[class=discription] section {
-        margin: 0;
-        padding: 0;
-    }
-    section[class=protocols] aside {
-        display: none;
-    }
-    section[class=protocols] section {
-        margin: 0;
-        padding: 0;
-    }
-    section[class=protocols] section button {
-        width: 100%;
-        margin: 0.3rem 0rem;
-        border: 0.1rem solid var(--black);
-        border-radius: 0.4rem;
-        text-align: left;
-        background-color: var(--white);
-        font-family: 'Nexa-bold';
-        font-size: 1.2rem;
-        letter-spacing: -0.05rem;
-        text-transform: capitalize;
-        opacity: 0.5;
-    }
-    section[class=protocols] section h2 {
-        text-align: center;
-        margin: 1rem;
-    }
-    #Btn01 {
-        opacity: 1;
-    }
-    button>i {
-        color: var(--lightblue);
-        margin-right: 0.5rem;
-    }
-    section[class=doctors] {
-        background-color: var(--black);
-        color: var(--white);
-    }
-    section[class=doctors] figure figcaption {
-        background-color: var(--white);
-        color: var(--black);
-        margin-top: -1.25rem;
-        margin-bottom: 1rem;
-        padding: 0.5rem 0.5rem 1rem 0;
-        border-bottom: 0.5rem solid var(--lightblue);
-    }
-    section[class=doctors] figure figcaption p,
-    h2 {
-        text-align: left;
-        margin-left: 1.5rem;
-        margin-bottom: -0.9rem;
-    }
-    section[class=doctors] figure figcaption h2 {
-        color: var(--cuteblue);
-        position: relative;
-    }
-    section[class=doctors] figure figcaption h2::before {
-        content: "";
-        display: block;
-        position: absolute;
-        border-bottom: 0.2rem solid var(--cuteblue);
-        top: 0.8rem;
-        left: -1.5rem;
-        width: 1.4rem;
-    }
-    section[class=feature] figure {
-        position: relative;
-        margin: 1rem -1rem;
-    }
-    section[class=feature] figure::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, transparent, var(--black));
-    }
-    section[class=feature] figure figcaption {
-        position: absolute;
-        color: var(--white);
-        z-index: 5;
-        bottom: 0.5rem;
-    }
-    section[class=feature] figure figcaption p,
-    h4 {
-        text-align: left;
-        margin-left: 1.2rem;
-        line-height: 0.2rem;
-    }
-    section[class=feature] figure figcaption p {
-        font-size: 0.9rem;
-    }
-    section[class=feature] figure img {
-        min-height: 20rem;
-    }
-    section[class=service] {
-        background-color: var(--lightsilver);
-        margin: 0 0.5rem;
-    }
-    section[class=service] section {
-        background-color: var(--lightsilver);
-        padding: 0 1rem 1rem 0;
-        margin: 0;
-        display: grid;
-        position: relative;
-        grid-gap: 1rem;
-        grid-template-columns: 50% 50%;
-    }
-    section[class=service] section figure {
-        background-color: var(--white);
-        border-radius: 0.5rem;
-        margin: 0;
-    }
-    section[class=service] section figure figcaption {
-        text-align: center;
-        font-family: 'Nexa-bold';
-        opacity: 0.7;
-        margin-top: -0.5rem;
-    }
-    section[class=service] section figure img {
-        height: 80%;
-    }
-    section[class=enquiry] {
-        background-color: var(--lightblue);
-        margin: 0rem 0.5rem;
-    }
-    section[class=enquiry] h1 {
-        color: var(--white);
-    }
-    section[class=enquiry] button {
-        display: grid;
-        margin: auto;
-        background-color: var(--cuteblue);
-        border-radius: 0.3rem;
-        color: var(--white);
-        font-weight: bold;
-    }
+input[class=searchCity] {
+    background-image: url(../images/mapmarker.jpeg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 0.3rem;
+    padding-left: 1.5rem;
+}
+
+input[class=searchDoctor] {
+    margin: 0;
+}
+
+section[class=discription] div .fa-crosshairs {
+    position: absolute;
+    margin-top: 1.5rem;
+    right: 10%;
+}
+
+section[class=discription] div {
+    padding: 0;
+}
+
+section[class=discription] div button {
+    display: grid;
+    margin: 1rem auto 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+section[class=protocols] aside {
+    display: none;
+}
+
+section[class=protocols] section {
+    margin: 0;
+    padding: 0;
+}
+
+section[class=protocols] section button {
+    width: 100%;
+    margin: 0.4rem 0rem;
+    padding: 1.1rem 1rem;
+    border: 0.1rem solid var(--black);
+    border-radius: 0.4rem;
+    text-align: left;
+    background-color: var(--white);
+    font-family: 'Nexa-bold';
+    font-size: 1.3rem;
+    letter-spacing: -0.05rem;
+    text-transform: capitalize;
+    opacity: 0.5;
+}
+
+section[class=protocols] section h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+section[class=protocols] section button[id=Btn01] {
+    opacity: 1;
+}
+
+button>i {
+    color: var(--lightblue);
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+section[class=doctors] {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+section[class=doctors] div figure {
+    margin: 1rem 0;
+}
+
+section[class=doctors] div figure img {
+    height: 20rem;
+}
+
+section[class=doctors] div figure figcaption {
+    background-color: var(--white);
+    color: var(--black);
+    margin-top: -0.5rem;
+    padding-left: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid var(--lightblue);
+}
+
+section[class=doctors] div figure figcaption ul {
+    margin-left: 2rem;
+    padding: 0;
+}
+
+section[class=doctors] div figure figcaption h2 {
+    color: var(--cuteblue);
+    margin-bottom: 0;
+    margin-left: 2rem;
+    position: relative;
+    text-align: left;
+}
+
+section[class=doctors] div figure figcaption h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 0.2rem solid var(--cuteblue);
+    top: 0.8rem;
+    left: -2rem;
+    width: 1.8rem;
+}
+
+section[class=feature] p {
+    padding: 0 1.5rem;
+}
+
+section[class=feature] div {
+    display: grid;
+    grid-template-areas: 'figure';
+    grid-row-gap: 1rem;
+}
+
+section[class=feature] figure {
+    position: relative;
+    margin: 0;
+}
+
+section[class=feature] figure::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, var(--black));
+}
+
+section[class=feature] figure figcaption {
+    position: absolute;
+    color: var(--white);
+    z-index: 5;
+    bottom: 0rem;
+}
+
+section[class=feature] figure figcaption h4 {
+    text-align: left;
+    line-height: 0.1rem;
+}
+
+section[class=feature] figure figcaption i {
+    font-size: 0.9rem;
+}
+
+section[class=feature] figure img {
+    min-height: 20rem;
+}
+
+section[class=service] {
+    background-color: var(--lightsilver);
+    margin: 0 0.5rem;
+}
+
+section[class=service] div {
+    background-color: var(--lightsilver);
+    display: grid;
+    position: relative;
+    grid-gap: 0.5rem;
+    grid-template-columns: 49% 49%;
+}
+
+section[class=service] div figure {
+    background-color: var(--white);
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+section[class=service] div figure figcaption {
+    text-align: center;
+    padding: 0;
+    font-family: 'Nexa-bold';
+    opacity: 0.7;
+    margin-top: -0.5rem;
+}
+
+section[class=service] div figure img {
+    height: 80%;
+}
+
+section[class=enquiry] {
+    background-color: var(--lightblue);
+    margin: 0rem 0.5rem;
+}
+
+section[class=enquiry] h1 {
+    color: var(--white);
+}
+
+section[class=enquiry] button {
+    display: grid;
+    margin: auto;
+    background-color: var(--cuteblue);
+    border-radius: 0.3rem;
+    color: var(--white);
+    font-weight: bold;
 }
 
 @media only screen and (min-width:768px) {
-    section[class=discription] {
-        background-color: var(--lightblue);
-        margin: -1rem 1rem;
-    }
-    section[class=discription] section {
+    section {
         margin: 0;
-        padding: 0;
-        text-align: center;
     }
-    input[id=searchCity] {
-        width: 20%;
-        padding: 1rem 1.5rem;
-        background-image: url(../images/mapmarker.jpeg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 1rem;
-        background-position-x: 0.3rem;
-        border: 0.1rem solid var(--black);
+    section[class=discription] div {
+        display: flex;
+        flex-direction: row;
     }
-    input[id=searchDoctor] {
-        margin: 0 -1rem;
-        width: 45%;
-        border: 0.1rem solid var(--black);
+    input[class=searchCity] {
+        width: 75%;
+        border-right: 0.11rem solid var(--lightsilver);
     }
-    section[class=discription] i {
-        position: absolute;
-        left: 29%;
-        margin-top: 1.5rem;
+    input[class=searchDoctor] {
+        width: 125%;
+        margin: 0.5rem 0;
     }
-    section[class=discription] button {
-        padding: 1rem 1.8rem;
-        margin-left: 0.7rem;
-        border-bottom: 0.1rem solid var(--black);
+    section[class=discription] div .fa-crosshairs {
+        right: 67%;
     }
-    button>i {
-        color: var(--lightblue);
-        margin-right: 0.5rem;
+    section[class=discription] div button {
+        margin: auto;
     }
     section[class=protocols] h1 {
         grid-area: h1;
@@ -246,167 +257,68 @@
     section[class=protocols] {
         display: grid;
         grid-template-areas: "h1 h1" "p p" "section aside";
+        grid-column-gap: 1rem;
+    }
+    section[class=protocols] section {
+        padding: 0;
     }
     section[class=protocols] section section {
         display: none;
     }
+    section[class=protocols] aside {
+        display: block;
+        padding: 0 1rem;
+    }
     section[class=protocols] aside h2 {
         text-align: center;
-        margin: 1rem;
+        margin-bottom: 1rem;
     }
-    section[class=protocols] section button {
-        width: 100%;
-        margin: 0.3rem 0rem;
-        border: 0.1rem solid var(--black);
-        border-radius: 0.4rem;
-        text-align: left;
-        background-color: var(--white);
-        font-family: 'Nexa-bold';
-        font-size: 1.2rem;
-        letter-spacing: -0.05rem;
-        text-transform: capitalize;
-        opacity: 0.5;
-    }
-    #Btn01 {
-        opacity: 1;
+    section[class=protocols] aside p {
+        margin: 0;
     }
     section[class=protocols] aside figure {
-        height: 60%;
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
     section[class=doctors] {
         background-color: var(--black);
         color: var(--white);
-        display: grid;
-        grid-template-areas: 'h1 h1' 'p p' 'figure figure';
-        grid-column-gap: 1rem;
     }
-    section[class=doctors] h1 {
-        grid-area: h1;
-    }
-    section[class=doctors] p {
-        grid-area: p;
-    }
-    section[class=doctors] figure {
-        height: 80%;
-    }
-    section[class=doctors] figure figcaption {
-        background-color: var(--white);
-        color: var(--black);
-        margin-top: -1.25rem;
-        padding: 0.5rem 0.5rem 1rem 0;
-        border-bottom: 0.5rem solid var(--lightblue);
-    }
-    section[class=doctors] figure figcaption p,
-    h2 {
-        text-align: left;
-        margin-left: 1.5rem;
-        margin-bottom: -0.9rem;
-    }
-    section[class=doctors] figure figcaption h2 {
-        color: var(--cuteblue);
-        position: relative;
-    }
-    section[class=doctors] figure figcaption h2::before {
-        content: "";
-        display: block;
-        position: absolute;
-        border-bottom: 0.2rem solid var(--cuteblue);
-        top: 0.8rem;
-        left: -1.5rem;
-        width: 1.4rem;
-    }
-    section[class=feature] section {
+    section[class=doctors] div {
         display: grid;
         grid-template-areas: 'figure figure';
         grid-gap: 1rem;
     }
-    section[class=feature] section figure {
-        position: relative;
+    section[class=doctors] div figure {
+        height: 80%;
+        margin: 0;
     }
-    section[class=feature] section figure::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, transparent, var(--black));
+    section[class=doctors] div figure figcaption {
+        height: 7rem;
     }
-    section[class=feature] section figure figcaption {
-        position: absolute;
-        color: var(--white);
-        z-index: 5;
-        bottom: 0.5rem;
+    section[class=feature] {
+        margin: 1rem 0;
+        padding: 1rem 0;
     }
-    section[class=feature] section figure figcaption p,
-    h4 {
-        text-align: left;
-        margin-left: 1.2rem;
-        line-height: 0.2rem;
+    section[class=feature] div {
+        display: grid;
+        grid-template-areas: 'figure figure';
+        grid-gap: 1rem;
     }
-    section[class=feature] section figure figcaption p {
-        font-size: 0.9rem;
-    }
-    section[class=feature] section figure img {
-        min-height: 20rem;
-    }
-    section[class=service] {
-        background-color: var(--lightsilver);
-        margin: 0 0.5rem;
-    }
-    section[class=service] section {
-        background-color: var(--lightsilver);
+    section[class=service] div {
         padding: 0 0 1rem 0;
         margin: 0;
-        display: grid;
-        position: relative;
         grid-gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    section[class=service] section figure {
-        background-color: var(--white);
-        border-radius: 0.5rem;
-        margin: 0;
-    }
-    section[class=service] section figure figcaption {
-        text-align: center;
-        font-family: 'Nexa-bold';
-        opacity: 0.7;
-        margin-top: -0.5rem;
-    }
-    section[class=service] section figure img {
-        height: 80%;
-    }
-    section[class=enquiry] {
-        background-color: var(--lightblue);
-        margin: 0rem 0.5rem;
-    }
-    section[class=enquiry] h1 {
-        color: var(--white);
-    }
-    section[class=enquiry] button {
-        display: grid;
-        margin: auto;
-        background-color: var(--cuteblue);
-        border-radius: 0.3rem;
-        color: var(--white);
-        font-weight: bold;
+    section[class=service] div figure {
+        height: 10rem;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    header .fa {
-        display: none;
-    }
     section {
-        padding-left: 5%;
-    }
-    section section {
-        padding: 0rem;
-        margin: 0rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
     h1,
     p {
@@ -416,138 +328,52 @@
         background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg);
         background-position: center;
         background-size: cover;
-        padding: 7rem 7%;
-        margin: 1rem -0.5rem;
+        padding: 7rem 5rem;
     }
     section[class=discription] p {
-        text-align: left;
+        padding-right: 50%;
     }
-    input[id=searchCity] {
-        width: 17%;
-        padding: 1rem 1.5rem;
-        background-image: url(../images/mapmarker.jpeg);
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: 1rem;
-        background-position-x: 0.3rem;
+    section[class=discription] div {
+        width: 48rem;
     }
-    input[id=searchDoctor] {
-        margin: 0 -1rem;
-        width: 38%;
-    }
-    section[class=discription] i {
-        position: absolute;
-        left: 24%;
-        margin-top: 1.5rem;
+    section[class=discription] div .fa-crosshairs {
+        right: 76%;
         opacity: 0.5;
-    }
-    section[class=discription] section button {
-        padding: 0.9rem 1.8rem;
-        margin-left: 0.7rem;
-    }
-    section[class=protocols] h1 {
-        grid-area: h1;
-    }
-    section[class=protocols] p {
-        grid-area: p;
-        text-align: left;
-        margin-left: 0;
     }
     section[class=protocols] {
-        display: grid;
-        grid-template-areas: "h1 h1" "p p" "section aside";
-        grid-row-gap: -1rem;
-    }
-    section[class=protocols] section section {
-        display: none;
+        grid-column-gap: 5rem;
     }
     section[class=protocols] section button {
-        width: 90%;
-        padding: 5% 1rem;
-        margin: 0.3rem 0rem;
         border: 0.1rem solid var(--skyblue);
-        border-radius: 0.4rem;
-        text-align: left;
-        background-color: var(--white);
-        font-family: 'Nexa-bold';
-        font-size: 1.5rem;
-        letter-spacing: -0.05rem;
-        text-transform: capitalize;
-        opacity: 0.5;
+        padding: 6.5% 1rem;
     }
-    button>i {
-        color: var(--cuteblue);
-        margin-right: 0.5rem;
-    }
-    #Btn01 {
-        opacity: 1;
-    }
-    section[class=protocols] aside {
-        margin-bottom: auto;
-    }
-    section[class=protocols] aside h2,
     section[class=protocols] aside p {
         text-align: center;
-        margin: 1rem;
     }
-    section[class=protocols] aside figure {
-        padding-top: 1rem;
-        margin-bottom: 0rem;
-        height: 60%;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+    section[class=doctors] div {
+        grid-template-areas: 'figure figure figure figure';
     }
-    section[class=doctors] {
-        background-color: var(--black);
-        color: var(--white);
-        display: grid;
-        grid-template-areas: 'h1 h1 h1 h1' 'p p p p' 'figure figure figure figure';
-        grid-column-gap: 1rem;
-        padding-right: 5%;
-        margin: 1rem -0.5rem;
+    section[class=doctors] div figure figcaption {
+        min-height: 10rem;
+        height: auto;
     }
-    section[class=doctors] h1 {
-        grid-area: h1;
+    section[class=doctors] div figure figcaption h2 {
+        font-size: 1.8rem;
+        line-height: 2rem;
     }
-    section[class=doctors] p {
-        grid-area: p;
+    section[class=feature] {
+        padding: 1rem 4rem;
     }
-    section[class=doctors] figure {
-        height: 60%;
+    section[class=feature] h1,
+    section[class=feature] p {
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
     }
-    section[class=doctors] figure figcaption {
-        background-color: var(--white);
-        color: var(--black);
-        margin-top: -1.25rem;
-        padding: 0.5rem 0.5rem 1rem 0;
-        height: 8.5rem;
-        border-bottom: 0.5rem solid var(--lightblue);
-    }
-    section[class=doctors] figure figcaption p,
-    h2 {
-        text-align: left;
-        margin-left: 1.5rem;
-        margin-bottom: -0.9rem;
-    }
-    section[class=doctors] figure figcaption h2 {
-        color: var(--cuteblue);
-        position: relative;
-    }
-    section[class=doctors] figure figcaption h2::before {
-        content: "";
-        display: block;
-        position: absolute;
-        border-bottom: 0.2rem solid var(--cuteblue);
-        top: 0.8rem;
-        left: -1.5rem;
-        width: 1.4rem;
-    }
-    section[class=feature] section {
+    section[class=feature] div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
-        grid-auto-rows: 20rem 2rem 2rem;
+        grid-auto-rows: 15rem 5rem 5rem;
     }
     #fig01 {
         grid-column: 1;
@@ -573,67 +399,22 @@
         grid-column: 3;
         grid-row: 3/span 4;
     }
-    section[class=feature] section figure {
-        position: relative;
-    }
-    section[class=feature] section figure::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, transparent, var(--black));
-    }
-    section[class=feature] section figure figcaption {
-        position: absolute;
-        color: var(--white);
-        z-index: 5;
-        bottom: 0.5rem;
-    }
-    section[class=feature] section figure figcaption p,
-    h4 {
-        text-align: left;
-        margin-left: 1.2rem;
-        line-height: 0.2rem;
-    }
-    section[class=feature] section figure figcaption p {
-        font-size: 0.9rem;
-    }
-    section[class=feature] section figure img {
-        min-height: 20rem;
+    section[class=feature] figure img {
+        min-height: 100%;
     }
     section[class=service] {
-        background-color: var(--lightsilver);
-        margin: 0 -0.5rem;
-        padding-right: 5%;
-    }
-    section[class=service] section {
-        background-color: var(--lightsilver);
-        padding: 0 0 1rem 0;
         margin: 0;
-        display: grid;
-        position: relative;
-        grid-gap: 1rem;
+    }
+    section[class=service] div {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
     }
-    section[class=service] section figure {
-        background-color: var(--white);
-        border-radius: 0.5rem;
-        margin: 0;
-    }
-    section[class=service] section figure figcaption {
-        text-align: center;
-        font-family: 'Nexa-bold';
-        opacity: 0.7;
-        margin-top: -0.5rem;
-    }
-    section[class=service] section figure img {
-        height: 80%;
+    section[class=service] div figure {
+        border-radius: 0;
     }
     section[class=enquiry] {
         background-color: var(--lightblue);
-        margin: 0rem -0.5rem;
+        margin: 0rem 0rem;
         padding: 3rem 5%;
     }
     section[class=enquiry] h1 {

@@ -27,14 +27,6 @@ section section {
     padding: 0;
 }
 
-header nav {
-    display: none;
-}
-
-header {
-    margin: 0;
-}
-
 section[class=doctorsImg] {
     display: none;
 }
@@ -44,22 +36,26 @@ section[id=doctorFilter] {
 }
 
 section[class=sortBy] {
-    margin: -0.5rem;
     display: flex;
     flex-direction: row;
+    padding: 0 1rem;
     justify-content: space-between;
-}
-
-section[class=sortBy] button {
-    margin: 0;
 }
 
 section[class=sortBy] h3 {
     font-family: 'Nexa-light';
+    padding-top: 0.7rem;
+    margin-bottom: 0;
 }
 
 section[class=sortBy] button {
     background-color: var(--silver);
+    margin: 0;
+}
+
+section[class=allDoctors] {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 section[id=doctorList] section[id=doctorInfo] {
@@ -69,6 +65,11 @@ section[id=doctorList] section[id=doctorInfo] {
 
 section[id=doctorInfo] figure {
     height: 20rem;
+    margin: 0;
+}
+
+section[id=doctorInfo] figcaption {
+    padding-left: 0;
 }
 
 section[id=doctorInfo] figcaption button {
@@ -79,8 +80,8 @@ section[id=doctorInfo] figcaption button {
     color: var(--white);
 }
 
-section[id=doctorInfo] figcaption section {
-    margin: 0.5rem 1rem;
+section[id=doctorInfo] figcaption div {
+    margin: 0rem 1rem;
     display: grid;
     grid-template-areas: 'i p';
     justify-content: start;
@@ -104,14 +105,14 @@ section[id=doctorInfo] figcaption h2::before {
     width: 2.5rem;
 }
 
-section[id=doctorInfo] figcaption section i {
+section[id=doctorInfo] figcaption div i {
     color: var(--cuteblue);
     grid-area: i;
     margin: auto;
     margin-left: 0%;
 }
 
-section[id=doctorInfo] figcaption section p {
+section[id=doctorInfo] figcaption div p {
     grid-area: p;
     margin: auto;
     text-align: left;
@@ -135,52 +136,26 @@ section[class=enquiry] button {
     font-weight: bold;
 }
 
-footer {
-    background-color: var(--blackblue);
-    margin-top: -0.5rem;
-    color: var(--silver);
-}
-
-footer figure {
-    display: grid;
-    margin: auto;
-    width: 10rem;
-    height: 3rem;
-    align-items: center;
-}
-
-footer nav {
-    text-align: center;
-}
-
-footer nav a {
-    display: block;
-    margin: 1rem;
-}
-
-footer nav i {
-    margin: 0 0.5rem;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    header {
-        margin: 0.5rem 1rem -1rem 1rem;
-    }
+@media only screen and (min-width: 768px) {
     section[class=doctorsImg] {
         display: block;
-        margin: 0;
+        margin-top: 0;
+        padding: 0;
     }
     section[id=doctorFilter] {
         display: block;
     }
     section[class=doctorsImg] figure {
-        height: 10rem;
+        height: 15rem;
         position: relative;
+        margin: 0;
     }
     section[class=doctorsImg] figcaption {
         position: absolute;
         top: 33%;
-        margin-left: 1rem;
+    }
+    section[class=doctorsImg] figcaption h1 a {
+        font-size: 1.8rem;
     }
     section[class=doctorsImg] figure::before {
         content: '';
@@ -268,77 +243,20 @@ footer nav i {
         grid-area: button;
         align-items: center;
     }
-    footer {
-        background-color: var(--white);
-        color: var(--black);
-        display: grid;
-        grid-template-areas: 'sectionNav figure' 'p socialMedia';
-        grid-row-gap: 0.5rem;
-        margin: 0rem;
-        padding: 1rem 5%;
-        border-bottom: 0.5rem solid var(--lightblue);
-    }
-    footer figure {
-        display: grid;
-        margin-left: auto;
-        margin-right: 0%;
-        width: 10rem;
-        height: 2.5rem;
-    }
-    footer nav[id=sectionNav] {
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        margin-top: 1rem;
-        grid-area: sectionNav;
-    }
-    footer nav[id=socialMedia] {
-        margin-top: 1rem;
-        text-align: right;
-        grid-area: socialMedia;
-    }
-    footer nav a {
-        margin: 0.5rem;
-    }
-    footer nav i {
-        margin: 0 0.5rem;
-    }
-    footer p {
-        text-align: left;
-        margin-left: 0.3rem;
-        font-family: 'Nexa-light';
+    section[id=doctorInfo] figure {
+        height: 100%;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    header {
-        margin: 0.5rem 1rem -1rem 1rem;
-    }
-    header nav {
-        display: block;
-    }
-    header nav button {
-        padding: 0.7rem 1rem;
-        border-radius: 0.2rem;
-    }
-    header .fa {
-        display: none;
-    }
-    section[class=doctorsImg] {
-        display: block;
-        margin: 0 -0.5rem;
-    }
-    section[id=doctorFilter] {
-        display: block;
-    }
     section[class=doctorsImg] figure {
         height: 10rem;
-        position: relative;
     }
     section[class=doctorsImg] figcaption {
-        position: absolute;
-        top: 33%;
         margin-left: 1rem;
+    }
+    section[class=doctorsImg] figcaption h1 {
+        font-size: 2rem;
     }
     section[class=doctorsImg] figure::before {
         content: '';
@@ -350,9 +268,7 @@ footer nav i {
         background-image: linear-gradient(to bottom, var(--lightblue), var(--lightblue));
         opacity: 0.7;
     }
-    section[class=sortBy] {
-        margin: 0;
-    }
+    section[class=sortBy] h3 {}
     section[class=allDoctors] {
         display: grid;
         grid-template-columns: 1fr 2.5fr;
@@ -434,7 +350,7 @@ footer nav i {
     }
     section[class=enquiry] {
         background-color: var(--lightblue);
-        margin: 0rem -0.5rem;
+        margin: 0rem;
         padding: 3rem 5%;
     }
     section[class=enquiry] h1 {
@@ -453,45 +369,5 @@ footer nav i {
         border-radius: 0.3rem;
         color: var(--white);
         font-weight: bold;
-    }
-    footer {
-        background-color: var(--white);
-        color: var(--black);
-        display: grid;
-        grid-template-areas: 'sectionNav figure' 'p socialMedia';
-        grid-row-gap: 0.5rem;
-        margin: 0rem;
-        padding: 1rem 5%;
-        border-bottom: 0.5rem solid var(--lightblue);
-    }
-    footer figure {
-        display: grid;
-        margin-left: auto;
-        margin-right: 0%;
-        width: 10rem;
-        height: 2.5rem;
-    }
-    footer nav[id=sectionNav] {
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        margin-top: 1rem;
-        grid-area: sectionNav;
-    }
-    footer nav[id=socialMedia] {
-        margin-top: 1rem;
-        text-align: right;
-        grid-area: socialMedia;
-    }
-    footer nav a {
-        margin: 0.5rem;
-    }
-    footer nav i {
-        margin: 0 0.5rem;
-    }
-    footer p {
-        text-align: left;
-        margin-left: 0.3rem;
-        font-family: 'Nexa-light';
     }
 }

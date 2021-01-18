@@ -7,6 +7,7 @@
     <title>Home/Doctor</title>
     <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/doctor.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,18 +17,20 @@
 <body>
     <header>
         <figure>
-            <img class="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
         </figure>
-        <nav id="headNav">
-            <a>Doctors</a>
-            <a>Hospitals</a>
-            <a>Treatment</a>
-            <a>Other Services</a>
-            <a>About</a>
+        <nav>
+            <ul>
+                <li><a>Doctors</a></li>
+                <li><a>Hospitals</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Services</a></li>
+                <li><a>About</a></li>
+            </ul>
         </nav>
-        <nav id="headBtn">
-            <button id="loginBtn">Login / Sign Up</button>
-            <button id="quoteBtn">Get a Quotes</button>
+        <nav>
+            <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
+            <button class="quoteBtn">Get a Quotes</button>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
@@ -62,7 +65,7 @@
                     <label for="Punjabi Baag">Punjabi Baag</label>
                     <input type="checkbox" id="Pusa Road">
                     <label for="Pusa Road">Pusa Road</label>
-                    <a class="fa fa-plus">Show More</a>
+                    <a class="fa fa-plus"> Show More</a>
                 </section>
                 <section id="filterItem">
                     <h3>Treatment</h3>
@@ -79,7 +82,7 @@
                     <label for="Cardiology">Cardiology</label>
                     <input type="checkbox" id="Cancer">
                     <label for="Cancer">Cancer</label>
-                    <a class="fa fa-plus">Show More</a>
+                    <a class="fa fa-plus"> Show More</a>
                 </section>
                 <section id="filterItem">
                     <h3>Hospitals</h3>
@@ -96,7 +99,7 @@
                     <label for="Fortis Hospital">Fortis Hospital</label>
                     <input type="checkbox" id="Elbit Diagnostic">
                     <label for="Elbit Diagnostic">Elbit Diagnostic</label>
-                    <a class="fa fa-plus">Show More</a>
+                    <a class="fa fa-plus"> Show More</a>
                 </section>
                 <section id="filterItem">
                     <h3>Year of Experience</h3>
@@ -113,33 +116,33 @@
                     <label for="10+">10+</label>
                     <input type="checkbox" id="5+">
                     <label for="5+">5+</label>
-                    <a class="fa fa-plus">Show More</a>
+                    <a class="fa fa-plus"> Show More</a>
                 </section>
             </section>
             <section id="doctorList">
                 <section id="doctorInfo">
                     <figcaption>
                         <h2>Duke Sanson</h2>
-                        <section>
+                        <div>
                             <i class="fas fa-certificate"></i>
                             <p>Duke Sanson</p>
-                        </section>
-                        <section>
+                        </div>
+                        <div>
                             <i class="fas fa-award"></i>
                             <p>Neuro Surgeon</p>
-                        </section>
-                        <section>
+                        </div>
+                        <div>
                             <i class="fa fa-clock-o"></i>
                             <p>Chain Deparment of Neurological Surgery </p>
-                        </section>
-                        <section>
+                        </div>
+                        <div>
                             <i class="fa fa-hospital-o"></i>
                             <p>doctor1</p>
-                        </section>
-                        <section>
+                        </div>
+                        <div>
                             <i class="fas fa-map-marker-alt"></i>
                             <p>Australia</p>
-                        </section>
+                        </div>
                         <button id="bookBtn">Book an appointment</button>
                     </figcaption>
                     <figure>
@@ -149,26 +152,26 @@
                 <section id="doctorInfo">
                     <figcaption>
                         <h2>Georgea Peter</h2>
-                        <section id="details">
+                        <div id="details">
                             <i class="fas fa-certificate"></i>
                             <p>Georgea Peter</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-award"></i>
                             <p>Breast Cancer Surgeon</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-clock-o"></i>
                             <p>Director. UT. Southwest</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-hospital-o"></i>
                             <p>doctor2</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-map-marker-alt"></i>
                             <p>London</p>
-                        </section>
+                        </div>
                         <button id="bookBtn">Book an appointment</button>
                     </figcaption>
                     <figure>
@@ -178,26 +181,26 @@
                 <section id="doctorInfo">
                     <figcaption>
                         <h2>Charlie Moon</h2>
-                        <section id="details">
+                        <div id="details">
                             <i class="fas fa-certificate"></i>
                             <p>Charlie Moon</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-award"></i>
                             <p>Cardiaic surgeon</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-clock-o"></i>
                             <p>MBBS, MD, FRCP, MRCP, Fellowship</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-hospital-o"></i>
                             <p>doctor3</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-map-marker-alt"></i>
                             <p>New Delhi, India</p>
-                        </section>
+                        </div>
                         <button id="bookBtn">Book an appointment</button>
                     </figcaption>
                     <figure>
@@ -207,26 +210,26 @@
                 <section id="doctorInfo">
                     <figcaption>
                         <h2>Shubham Shinde</h2>
-                        <section id="details">
+                        <div id="details">
                             <i class="fas fa-certificate"></i>
                             <p>Shubham Shinde</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-award"></i>
                             <p>Plastic surgeon</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-clock-o"></i>
                             <p>Deparment of Plastic and Reconstructive Surgery</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-hospital-o"></i>
                             <p>doctor5</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-map-marker-alt"></i>
                             <p>New Delhi, India</p>
-                        </section>
+                        </div>
                         <button id="bookBtn">Book an appointment</button>
                     </figcaption>
                     <figure>
@@ -236,26 +239,26 @@
                 <section id="doctorInfo">
                     <figcaption>
                         <h2>Rose Moon</h2>
-                        <section id="details">
+                        <div id="details">
                             <i class="fas fa-certificate"></i>
                             <p>Rose Moon</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-award"></i>
                             <p>Plastic surgeon</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-clock-o"></i>
                             <p>Deparment of Plastic and Reconstructive Surgery</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fa fa-hospital-o"></i>
                             <p>doctor4</p>
-                        </section>
-                        <section id="details">
+                        </div>
+                        <div id="details">
                             <i class="fas fa-map-marker-alt"></i>
                             <p>Dubai</p>
-                        </section>
+                        </div>
                         <button id="bookBtn">Book an appointment</button>
                     </figcaption>
                     <figure>
@@ -275,19 +278,23 @@
             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
         " alt="tvastra_logo">
         </figure>
-        <nav id="sectionNav">
-            <a>Doctor</a>
-            <a>Hospital</a>
-            <a>Treatment</a>
-            <a>Other Service</a>
-            <a>FAQs</a>
+        <nav class="sectionNav">
+            <ul>
+                <li><a>Doctor</a></li>
+                <li><a>Hospital</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a>FAQs</a></li>
+            </ul>
         </nav>
-        <nav id=socialMedia>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-pinterest"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-instagram"></i>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
         </nav>
         <p>All Rights Reserved. &#169 tvastra 2018</p>
     </footer>

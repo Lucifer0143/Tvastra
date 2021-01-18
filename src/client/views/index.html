@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
-    <!-- <link rel="stylesheet" href="../assets/css/index.css" type="text/css"> -->
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -18,15 +18,17 @@
             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
         </figure>
         <nav>
-            <a>Doctors</a>
-            <a>Hospitals</a>
-            <a>Treatment</a>
-            <a>Other Services</a>
-            <a>About</a>
+            <ul>
+                <li><a>Doctors</a></li>
+                <li><a>Hospitals</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Services</a></li>
+                <li><a>About</a></li>
+            </ul>
         </nav>
         <nav>
-            <button id="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
-            <button id="quoteBtn">Get a Quotes</button>
+            <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
+            <button class="quoteBtn">Get a Quotes</button>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
@@ -34,12 +36,12 @@
         <section class="discription">
             <h1>Find Affordable Healthcare</h1>
             <p>Join thousands of others who have exercise their rights to quality healthcare at a price you can afford</p>
-            <section>
+            <div>
                 <i class="fa fa-crosshairs"></i>
-                <input type="text" id="searchCity" placeholder="Search for city">
-                <input type="text" id="searchDoctor" placeholder="Search for doctor, hospitals and treatments">
-                <button id="searchBtn">Search</button>
-            </section>
+                <input type="text" class="searchCity" placeholder="Search for city">
+                <input type="text" class="searchDoctor" placeholder="Search for doctor, hospitals and treatments">
+                <button class="searchBtn">Search</button>
+            </div>
         </section>
         <section class="protocols">
             <h1>How it works</h1>
@@ -71,95 +73,105 @@
         <section class="doctors">
             <h1>World class expert doctors!</h1>
             <p>The university of Texas Southastern has been a long works renowned research hospital. But untill the 80s, you couldn't go there. Now, with the addition of Aston Center and Zale Lipshy Hospital, UT Southastern is also a mecca for patients.</p>
-            <figure>
-                <img src="../assets/images/doctor1(1).jpg" alt="doctor">
-                <figcaption>
-                    <h2>Duke Sanson</h2>
-                    <p>Neuro Sergeon</p>
-                    <p>Department of Neurological Surgery</p>
-                    <p>Australia</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../assets/images/doctor2(1).jpg" alt="doctor">
-                <figcaption>
-                    <h2>Georgea Peter</h2>
-                    <p>Breast Cancer Surgeon</p>
-                    <p>Director, UT. Southwest</p>
-                    <p>London</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../assets/images/doctor3(1).jpg" alt="doctor">
-                <figcaption>
-                    <h2>Charlie Moon</h2>
-                    <p>Cardiac surgeon</p>
-                    <p>M.B.B.S., M.D., F.R.C.P., M.R.C.P., Fellowship</p>
-                    <p>New Delhi, India</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="../assets/images/doctor4(1).jpg" alt="doctor">
-                <figcaption>
-                    <h2>Rose Moon</h2>
-                    <p>Plastic surgeon</p>
-                    <p>Deparment of Plastic and Reconstructive Sergery</p>
-                    <p>Dubai</p>
-                </figcaption>
-            </figure>
+            <div>
+                <figure>
+                    <img src="../assets/images/doctor1(1).jpg" alt="doctor">
+                    <figcaption>
+                        <h2>Duke Sanson</h2>
+                        <ul>
+                            <li>Neuro Sergeon</li>
+                            <li>Department of Neurological Surgery</li>
+                            <li>Australia</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/doctor2(1).jpg" alt="doctor">
+                    <figcaption>
+                        <h2>Georgea Peter</h2>
+                        <ul>
+                            <li>Breast Cancer Surgeon</li>
+                            <li>Director, UT. Southwest</li>
+                            <li>London</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/doctor3(1).jpg" alt="doctor">
+                    <figcaption>
+                        <h2>Charlie Moon</h2>
+                        <ul>
+                            <li>Cardiac surgeon</li>
+                            <li>M.B.B.S., M.D., F.R.C.P., M.R.C.P., Fellowship</li>
+                            <li>New Delhi, India</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/doctor4(1).jpg" alt="doctor">
+                    <figcaption>
+                        <h2>Rose Moon</h2>
+                        <ul>
+                            <li>Plastic surgeon</li>
+                            <li>Deparment of Plastic and Reconstructive Sergery</li>
+                            <li>Dubai</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </div>
         </section>
         <section class="feature">
             <h1>Feature Medical Treatments</h1>
             <p>Join thousands of others who have exercise their rights to quality healthcare at a price you can afford</p>
-            <section>
+            <div>
                 <figure id="fig01">
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--009.jpg" alt="treatments">
                     <figcaption>
                         <h4>Dentistry</h4>
-                        <p>50+ Specialists</p>
+                        <i>50+ Specialists</i>
                     </figcaption>
                 </figure>
                 <figure id="fig02">
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg" alt="treatments">
                     <figcaption>
                         <h4>Cancer</h4>
-                        <p>50+ Specialists</p>
+                        <i>50+ Specialists</i>
                     </figcaption>
                 </figure>
                 <figure id="fig03">
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg" alt="treatments">
                     <figcaption>
-                        <h4>Cardiological Treatments</h4>
-                        <p>50+ Specialists</p>
+                        <h4>Cardiology Treatments</h4>
+                        <i>50+ Specialists</i>
                     </figcaption>
                 </figure>
                 <figure id="fig04">
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--006.jpg" alt="treatments">
                     <figcaption>
                         <h4>Multiorgan Transplant</h4>
-                        <p>50+ Specialists</p>
+                        <i>50+ Specialists</i>
                     </figcaption>
                 </figure>
                 <figure id="fig05">
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg" alt="treatments">
                     <figcaption>
                         <h4>Orthopadics Surgery</h4>
-                        <p>50+ Specialists</p>
+                        <i>50+ Specialists</i>
                     </figcaption>
                 </figure>
                 <figure id="fig06">
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--007.jpg" alt="treatments">
                     <figcaption>
                         <h4>Infertility Treatment</h4>
-                        <p>50+ Specialists</p>
+                        <i>50+ Specialists</i>
                     </figcaption>
                 </figure>
-            </section>
+            </div>
         </section>
         <section class="service">
             <h1>Exclucive Services</h1>
             <p>We want to be cofortable and apart from threating you illness, we provide you with some other services that you can see.</p>
-            <section id=serviceLink>
+            <div class=serviceLink>
                 <figure>
                     <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-01.png
                     " alt="service">
@@ -190,7 +202,7 @@
                     " alt="service">
                     <figcaption>AMBULANCE</figcaption>
                 </figure>
-            </section>
+            </div>
         </section>
         <section class="enquiry">
             <h1>Need Help?</h1>
@@ -203,21 +215,25 @@
             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
         " alt="tvastra_logo">
         </figure>
-        <nav id="sectionNav">
-            <a>Doctor</a>
-            <a>Hospital</a>
-            <a>Treatment</a>
-            <a>Other Service</a>
-            <a>FAQs</a>
+        <nav class="sectionNav">
+            <ul>
+                <li><a>Doctor</a></li>
+                <li><a>Hospital</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a>FAQs</a></li>
+            </ul>
         </nav>
-        <nav id=socialMedia>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-pinterest"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-instagram"></i>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
         </nav>
-        <p class="rights">All Rights Reserved. &#169 tvastra 2018</p>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
     </footer>
 </body>
 
