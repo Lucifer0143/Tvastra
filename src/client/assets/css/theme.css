@@ -49,6 +49,7 @@ section {
 
 nav {
     box-sizing: border-box;
+    text-align: center;
     padding: 0.5rem;
 }
 
@@ -57,7 +58,11 @@ div {
     padding: 0.5rem;
 }
 
-aside,
+aside {
+    display: block;
+    box-sizing: border-box;
+}
+
 form {
     padding: 1rem;
     box-sizing: border-box;
@@ -199,13 +204,15 @@ textarea::placeholder {
     color: var(--smokyblack);
 }
 
+textarea:focus,
 input:focus {
     outline: none;
 }
 
 textarea {
     font-size: 1rem;
-    margin-bottom: 1.2rem;
+    line-height: 1.5rem;
+    padding: 0.6rem;
     color: var(--textblack);
     width: 100%;
     box-sizing: border-box;
@@ -336,7 +343,6 @@ footer {
     }
     input[type=radio] {
         margin: 0.6rem;
-        padding: 0.6rem;
     }
     input::placeholder,
     textarea::placeholder {
@@ -344,6 +350,8 @@ footer {
     }
     textarea {
         font-size: 1.1rem;
+        line-height: 1.6rem;
+        padding: 0.8rem;
     }
     select {
         font-size: 1.1rem;
@@ -452,6 +460,8 @@ footer {
     }
     textarea {
         font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding: 1rem;
     }
     select {
         font-size: 1.2rem;
