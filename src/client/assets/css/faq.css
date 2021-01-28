@@ -1,0 +1,104 @@
+section[class=hero] {
+    padding: 0;
+}
+
+section[class=hero] figure {
+    margin: 0;
+    height: 15rem;
+}
+
+section[class=hero] figure img {
+    object-fit: cover;
+}
+
+section[class=hero] figure figcaption {
+    position: absolute;
+    top: 18%;
+    width: 100%;
+}
+
+section[class=hero] figure figcaption h1,
+section[class=hero] figure figcaption p {
+    text-align: center;
+    color: var(--white);
+}
+
+section[class=faqs] p[class=details] {
+    background-color: var(--lighterblue);
+    text-align: left;
+    padding: 0.5rem;
+}
+
+section[class=faqs] div[class=icons] {
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    display: flex;
+}
+
+section[class=faqs] div[class=icons] span {
+    color: var(--cuteblue);
+    font-family: 'Nexa-bold';
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+
+section[class=faqs] div[class=icons] i {
+    margin: auto;
+    margin-right: 0;
+    color: var(--cuteblue);
+    background-color: var(--lighterblue);
+    padding: 0.35rem 0.5rem;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+section[class=enquiry] {
+    background-color: var(--lightblue);
+    display: grid;
+}
+
+section[class=enquiry] h2 {
+    color: var(--white);
+}
+
+section[class=enquiry] button {
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: var(--cuteblue);
+    border-radius: 0.3rem;
+    font-family: 'Nexa-bold';
+}
+
+@media only screen and (min-width:768px) {
+    section[class=hero] figure figcaption {
+        top: 15%;
+    }
+    section[class=enquiry] h2,
+    section[class=enquiry] p {
+        grid-column: 1;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section[class=hero] figure figcaption {
+        padding-left: 5.5rem;
+        top: 22%;
+    }
+    section[class=hero] figure figcaption h1,
+    section[class=hero] figure figcaption p {
+        text-align: left;
+    }
+    section[class=enquiry] {
+        grid-template-columns: 1fr frr;
+    }
+    section[class=enquiry] h2,
+    section[class=enquiry] p {
+        text-align: left;
+    }
+    section[class=enquiry] button {
+        grid-column: 2;
+        grid-row: 1/ span 2;
+        margin-right: 0;
+    }
+}

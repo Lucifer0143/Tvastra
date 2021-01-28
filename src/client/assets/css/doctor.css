@@ -1,359 +1,375 @@
-/* for mobile views >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
-@font-face {
-    font-family: 'Nexa-bold';
-    src: url("../fonts/Nexa-Bold.otf");
-}
-
-@font-face {
-    font-family: 'Nexa-light';
-    src: url("../fonts/Nexa-Light.otf");
-}
-
- :root {
-    --black: #000;
-    --white: #fff;
-    --lightblue: #99c2ff;
-    --blue: rgb(116, 29, 197);
-    --silver: #ccc;
-    --lightsilver: rgb(233, 233, 233);
-    --cuteblue: rgb(58, 143, 212);
-    --blackblue: #021433;
-    --skyblue: blue;
-}
-
-section section {
-    margin: 0;
-    padding: 0;
-}
-
-section[class=doctorsImg] {
-    display: none;
-}
-
-section[id=doctorFilter] {
-    display: none;
-}
-
-section[class=sortBy] {
-    display: flex;
-    flex-direction: row;
-    padding: 0 1rem;
-    justify-content: space-between;
-}
-
-section[class=sortBy] h3 {
-    font-family: 'Nexa-light';
-    padding-top: 0.7rem;
-    margin-bottom: 0;
-}
-
-section[class=sortBy] button {
-    background-color: var(--silver);
-    margin: 0;
-}
-
-section[class=allDoctors] {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-section[id=doctorList] section[id=doctorInfo] {
-    border: 0.1rem solid var(--black);
-    margin: 0rem -0.5rem 1rem -0.5rem;
-}
-
-section[id=doctorInfo] figure {
-    height: 20rem;
-    margin: 0;
-}
-
-section[id=doctorInfo] figcaption {
-    padding-left: 0;
-}
-
-section[id=doctorInfo] figcaption button {
-    display: grid;
-    margin: 1rem auto;
-    padding: 0.7rem 1rem;
-    background-color: var(--blackblue);
-    color: var(--white);
-}
-
-section[id=doctorInfo] figcaption div {
-    margin: 0rem 1rem;
-    display: grid;
-    grid-template-areas: 'i p';
-    justify-content: start;
-    grid-gap: 1rem;
-}
-
-section[id=doctorInfo] figcaption h2 {
-    color: var(--cuteblue);
-    position: relative;
-    text-align: left;
-    margin-left: 2.7rem;
-}
-
-section[id=doctorInfo] figcaption h2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-bottom: 0.2rem solid var(--cuteblue);
-    top: 0.7rem;
-    margin-left: -2.7rem;
-    width: 2.5rem;
-}
-
-section[id=doctorInfo] figcaption div i {
-    color: var(--cuteblue);
-    grid-area: i;
-    margin: auto;
-    margin-left: 0%;
-}
-
-section[id=doctorInfo] figcaption div p {
-    grid-area: p;
-    margin: auto;
-    text-align: left;
-}
-
-section[class=enquiry] {
-    background-color: var(--lightblue);
-    margin: 0rem 0.5rem;
-}
-
-section[class=enquiry] h1 {
-    color: var(--white);
-}
-
-section[class=enquiry] button {
-    display: grid;
-    margin: auto;
-    background-color: var(--cuteblue);
-    border-radius: 0.3rem;
-    color: var(--white);
-    font-weight: bold;
-}
-
-@media only screen and (min-width: 768px) {
-    section[class=doctorsImg] {
-        display: block;
-        margin-top: 0;
+    /* for mobile views >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    
+    @font-face {
+        font-family: 'Nexa-bold';
+        src: url("../fonts/Nexa-Bold.otf");
+    }
+    
+    @font-face {
+        font-family: 'Nexa-light';
+        src: url("../fonts/Nexa-Light.otf");
+    }
+    
+     :root {
+        --black: #000;
+        --white: #fff;
+        --lightblue: #99c2ff;
+        --blue: rgb(116, 29, 197);
+        --silver: #ccc;
+        --lightsilver: rgb(233, 233, 233);
+        --cuteblue: rgb(58, 143, 212);
+        --blackblue: #021433;
+        --skyblue: blue;
+    }
+    
+    section section {
+        margin: 0;
         padding: 0;
     }
+    
+    section[class=doctorsImg] {
+        display: none;
+    }
+    
     section[id=doctorFilter] {
-        display: block;
+        display: none;
     }
-    section[class=doctorsImg] figure {
-        height: 15rem;
-        position: relative;
-        margin: 0;
-    }
-    section[class=doctorsImg] figcaption {
-        position: absolute;
-        top: 33%;
-    }
-    section[class=doctorsImg] figcaption h1 a {
-        font-size: 1.8rem;
-    }
-    section[class=doctorsImg] figure::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, var(--lightblue), var(--lightblue));
-        opacity: 0.7;
-    }
+    
     section[class=sortBy] {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+    }
+    
+    section[class=sortBy] h4 {
+        font-family: 'Nexa-light';
+        font-weight: 600;
+        padding-top: 0.7rem;
+        margin-bottom: 0;
+    }
+    
+    section[class=sortBy] button {
+        background-color: var(--silver);
         margin: 0;
     }
+    
     section[class=allDoctors] {
-        display: grid;
-        grid-template-columns: 1fr 2.5fr;
-        grid-template-areas: 'doctorFilter doctorList';
-        grid-column-gap: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
-    section[class=allDoctors] section[id=doctorFilter] section[id=filterItem] {
-        display: grid;
-        grid-template-columns: 2rem 1fr;
-        grid-template-areas: 'h3 i' 'icons icons' 'input label' 'input label' 'input label' 'input label' 'input label' 'input label' 'a a';
-        grid-gap: 0.5rem;
-        justify-content: start;
-        border-bottom: 0.1rem solid var(--black);
+    
+    section[id=doctorList] section[id=doctorInfo] {
+        border: 0.1rem solid var(--black);
+        margin: 0rem -0.5rem 1rem -0.5rem;
     }
-    section[class=allDoctors] section[id=doctorFilter] button {
-        background-color: var(--silver);
-        width: 97%;
-        margin: auto;
-        margin-bottom: 1rem;
-        text-align: left;
-        font-family: 'Nexa-bold';
-    }
-    section[id=filterItem] h3 {
-        grid-area: h3;
-        text-align: left;
-        margin: 1rem auto 1rem auto;
-    }
-    section[id=filterItem] i {
-        margin: 1rem auto 1rem auto;
-        margin-right: 10%;
-        color: var(--cuteblue);
-        position: relative;
-        font-size: 1.1rem;
-    }
-    section[id=filterItem] i::after {
-        content: "";
-        display: block;
-        position: absolute;
-        border-bottom: 0.2rem solid var(--silver);
-        top: 0.2rem;
-        margin-left: 1rem;
-        width: 1rem;
-    }
-    section[id=filterItem] input {
-        margin: auto;
-    }
-    section[id=filterItem] label {
-        margin: auto;
-        margin-left: 0;
-        text-align: start;
-    }
-    section[id=filterItem] a {
-        grid-area: a;
-        color: var(--cuteblue);
-        font-weight: normal;
-        margin: 1rem 0rem;
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas: 'figcaption figure';
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption {
-        display: grid;
-        grid-template-areas: 'h2 h2' 'section section' 'section section' 'section section' 'button button';
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption h2 {
-        grid-area: h2;
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption button {
-        grid-area: button;
-        align-items: center;
-    }
+    
     section[id=doctorInfo] figure {
-        height: 100%;
+        height: 20rem;
+        margin: 0;
     }
-}
-
-@media only screen and (min-width: 992px) {
-    section[class=doctorsImg] figure {
-        height: 10rem;
+    
+    section[id=doctorInfo] figcaption {
+        padding-left: 0;
     }
-    section[class=doctorsImg] figcaption {
-        margin-left: 1rem;
-    }
-    section[class=doctorsImg] figcaption h1 {
-        font-size: 2rem;
-    }
-    section[class=doctorsImg] figure::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, var(--lightblue), var(--lightblue));
-        opacity: 0.7;
-    }
-    section[class=sortBy] h3 {}
-    section[class=allDoctors] {
+    
+    section[id=doctorInfo] figcaption button {
         display: grid;
-        grid-template-columns: 1fr 2.5fr;
-        grid-template-areas: 'doctorFilter doctorList';
-        grid-column-gap: 1rem;
+        margin: 1rem auto;
+        padding: 0.7rem 1rem;
+        background-color: var(--blackblue);
+        color: var(--white);
     }
-    section[class=allDoctors] section[id=doctorFilter] section[id=filterItem] {
+    
+    section[id=doctorInfo] figcaption div {
+        margin: 0rem 1rem;
         display: grid;
-        grid-template-columns: 2rem 1fr;
-        grid-template-areas: 'h3 i' 'icons icons' 'input label' 'input label' 'input label' 'input label' 'input label' 'input label' 'a a';
-        grid-gap: 0.5rem;
+        grid-template-areas: 'i p';
         justify-content: start;
-        border-bottom: 0.1rem solid var(--black);
+        grid-gap: 1rem;
     }
-    section[class=allDoctors] section[id=doctorFilter] button {
-        background-color: var(--silver);
-        width: 97%;
-        margin: auto;
-        margin-bottom: 1rem;
-        text-align: left;
-        font-family: 'Nexa-bold';
-    }
-    section[id=filterItem] h3 {
-        grid-area: h3;
-        text-align: left;
-        margin: 1rem auto 1rem auto;
-    }
-    section[id=filterItem] i {
-        margin: 1rem auto 1rem auto;
-        margin-right: 10%;
+    
+    section[id=doctorInfo] figcaption h2 {
         color: var(--cuteblue);
         position: relative;
-        font-size: 1.1rem;
+        text-align: left;
+        margin-left: 2.7rem;
     }
-    section[id=filterItem] i::after {
+    
+    section[id=doctorInfo] figcaption h2::before {
         content: "";
         display: block;
         position: absolute;
-        border-bottom: 0.2rem solid var(--silver);
-        top: 0.2rem;
-        margin-left: 1rem;
-        width: 1rem;
+        border-bottom: 0.2rem solid var(--cuteblue);
+        top: 1.1rem;
+        margin-left: -2.75rem;
+        width: 2.5rem;
     }
-    section[id=filterItem] input {
-        margin: auto;
-    }
-    section[id=filterItem] label {
-        margin: auto;
-        margin-left: 0;
-        text-align: start;
-    }
-    section[id=filterItem] a {
-        grid-area: a;
+    
+    section[id=doctorInfo] figcaption div i {
         color: var(--cuteblue);
-        font-weight: normal;
-        margin: 1rem 0rem;
+        grid-area: i;
+        margin: auto;
+        margin-left: 0%;
     }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-template-areas: 'figcaption figure';
+    
+    section[id=doctorInfo] figcaption div p {
+        grid-area: p;
+        margin: auto;
+        text-align: left;
     }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption {
-        display: grid;
-        grid-template-areas: 'h2 h2' 'section section' 'section section' 'section section' 'button button';
-        grid-row-gap: 0rem;
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figure {
-        height: 100%;
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption h2 {
-        grid-area: h2;
-    }
-    section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption button {
-        margin-left: 1rem;
-        padding: 1rem 4rem;
-        grid-area: button;
-        align-items: center;
-    }
+    
     section[class=enquiry] {
+        background-color: var(--lightblue);
+    }
+    
+    section[class=enquiry] h1 {
+        color: var(--white);
+    }
+    
+    section[class=enquiry] button {
+        display: grid;
+        margin: auto;
+        background-color: var(--cuteblue);
+        border-radius: 0.3rem;
+        color: var(--white);
+        font-weight: bold;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        section[class=doctorsImg] {
+            display: block;
+            margin-top: 0;
+            padding: 0;
+        }
+        section[id=doctorFilter] {
+            display: block;
+        }
+        section[class=doctorsImg] figure {
+            height: 15rem;
+            position: relative;
+            margin: 0;
+        }
+        section[class=doctorsImg] figcaption {
+            position: absolute;
+            top: 33%;
+        }
+        section[class=doctorsImg] figcaption h1 a {
+            font-size: 1.8rem;
+        }
+        section[class=doctorsImg] figure::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, var(--lightblue), var(--lightblue));
+            opacity: 0.7;
+        }
+        section[class=sortBy] {
+            margin: 1.5rem 1rem;
+        }
+        section[class=allDoctors] {
+            padding-top: 0;
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            grid-template-areas: 'doctorFilter doctorList';
+            grid-column-gap: 1rem;
+        }
+        section[class=allDoctors] section[id=doctorFilter] section[id=filterItem] {
+            display: grid;
+            grid-template-columns: 2rem 1fr;
+            grid-template-areas: 'h3 i' 'icons icons' 'input label' 'input label' 'input label' 'input label' 'input label' 'input label' 'a a';
+            grid-gap: 0.5rem;
+            justify-content: start;
+            border-bottom: 0.1rem solid var(--black);
+        }
+        section[class=allDoctors] section[id=doctorFilter] button {
+            background-color: var(--silver);
+            width: 97%;
+            margin: auto;
+            margin-bottom: 1rem;
+            text-align: left;
+            font-family: 'Nexa-bold';
+        }
+        section[id=filterItem] h4 {
+            font-family: 'Nexa-light';
+            grid-area: h3;
+            text-align: left;
+            margin: 1rem auto 1rem auto;
+        }
+        section[id=filterItem] i {
+            margin: 1rem auto 1rem auto;
+            margin-right: 10%;
+            color: var(--cuteblue);
+            position: relative;
+            font-size: 1.1rem;
+        }
+        section[id=filterItem] i::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-bottom: 0.2rem solid var(--silver);
+            top: 0.2rem;
+            margin-left: 1rem;
+            width: 1rem;
+        }
+        section[id=filterItem] input {
+            margin: auto;
+        }
+        section[id=filterItem] label {
+            margin: auto;
+            margin-left: 0;
+            text-align: start;
+        }
+        section[id=filterItem] a {
+            grid-area: a;
+            color: var(--cuteblue);
+            font-weight: normal;
+            margin: 1rem 0rem;
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 'figcaption figure';
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption {
+            display: grid;
+            grid-template-areas: 'h2 h2' 'section section' 'section section' 'section section' 'button button';
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption h2 {
+            grid-area: h2;
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption button {
+            grid-area: button;
+            align-items: center;
+        }
+        section[id=doctorInfo] figure {
+            height: 100%;
+        }
+    }
+    
+    @media only screen and (min-width: 1024px) {
+        section[class=doctorsImg] figure {
+            height: 10rem;
+        }
+        section[class=doctorsImg] figcaption {
+            margin-left: 1rem;
+        }
+        section[class=doctorsImg] figcaption h1 {
+            font-size: 2rem;
+            margin-left: 2.5rem;
+        }
+        section[class=doctorsImg] figure::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, var(--lightblue), var(--lightblue));
+            opacity: 0.7;
+        }
+        section[class=allDoctors] {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            grid-template-areas: 'doctorFilter doctorList';
+            grid-column-gap: 1rem;
+        }
+        section[class=allDoctors] section[id=doctorFilter] section[id=filterItem] {
+            display: grid;
+            grid-template-columns: 2rem 1fr;
+            grid-template-areas: 'h3 i' 'icons icons' 'input label' 'input label' 'input label' 'input label' 'input label' 'input label' 'a a';
+            grid-gap: 0.5rem;
+            justify-content: start;
+            border-bottom: 0.1rem solid var(--black);
+        }
+        section[class=allDoctors] section[id=doctorFilter] button {
+            background-color: var(--silver);
+            width: 97%;
+            margin: auto;
+            margin-bottom: 1rem;
+            text-align: left;
+            font-family: 'Nexa-bold';
+        }
+        section[class=sortBy] {
+            margin: 1rem 4rem;
+        }
+        section[class=sortBy] button {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+        }
+        section[class=sortBy] button i {
+            margin-left: 1rem;
+        }
+        section[id=filterItem] h3 {
+            grid-area: h3;
+            text-align: left;
+            margin: 1rem auto 1rem auto;
+        }
+        section[id=filterItem] i {
+            margin: 1rem auto 1rem auto;
+            margin-right: 10%;
+            color: var(--cuteblue);
+            position: relative;
+            font-size: 1.1rem;
+        }
+        section[id=filterItem] i::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-bottom: 0.2rem solid var(--silver);
+            top: 0.2rem;
+            margin-left: 1rem;
+            width: 1rem;
+        }
+        section[id=filterItem] input {
+            margin: auto;
+        }
+        section[id=filterItem] label {
+            margin: auto;
+            margin-left: 0;
+            text-align: start;
+        }
+        section[id=filterItem] a {
+            grid-area: a;
+            color: var(--cuteblue);
+            font-weight: normal;
+            margin: 1rem 0rem;
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: 'figcaption figure';
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption {
+            display: grid;
+            grid-template-areas: 'h2 h2' 'section section' 'section section' 'section section' 'button button';
+            grid-row-gap: 0rem;
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figure {
+            height: 100%;
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption h2 {
+            grid-area: h2;
+        }
+        section[class=allDoctors] section[id=doctorList] section[id=doctorInfo] figcaption button {
+            margin-left: 1rem;
+            padding: 1rem 4rem;
+            grid-area: button;
+            align-items: center;
+        }
+        /* section[class=enquiry] {
         background-color: var(--lightblue);
         margin: 0rem;
         padding: 3rem 5%;
     }
-    section[class=enquiry] h1 {
+    section[class=enquiry] h2 {
         color: var(--white);
         text-align: left;
     }
@@ -362,12 +378,44 @@ section[class=enquiry] button {
     }
     section[class=enquiry] button {
         padding: 1.2rem 2rem;
-        margin-left: 70%;
-        margin-top: -5rem;
+        margin-left: 71.5%;
+        margin-top: -4.5rem;
         position: absolute;
         background-color: var(--cuteblue);
         border-radius: 0.3rem;
         color: var(--white);
         font-weight: bold;
+    } */
+        section[class=enquiry] {
+            background-color: var(--lightblue);
+            padding: 3rem 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 1fr 1fr;
+        }
+        section[class=enquiry] h2 {
+            display: flex;
+            margin-bottom: 0;
+            color: var(--white);
+            text-align: left;
+            grid-column: 1;
+            grid-row: 1/ span 1;
+        }
+        section[class=enquiry] p {
+            display: flex;
+            text-align: left;
+            align-items: center;
+            margin-bottom: 0;
+            grid-column: 1;
+            grid-row: 2/ span 1;
+        }
+        section[class=enquiry] button {
+            padding: 1.2rem 2rem;
+            margin-right: 0;
+            grid-column: 2;
+            grid-row: 1/ span 2;
+            background-color: var(--cuteblue);
+            border-radius: 0.3rem;
+            color: var(--white);
+        }
     }
-}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/appointment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,25 +19,27 @@
             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
         </figure>
         <nav>
-            <a>Doctors</a>
-            <a>Hospitals</a>
-            <a>Treatment</a>
-            <a>Other Services</a>
-            <a>About</a>
+            <ul>
+                <li><a>Doctors</a></li>
+                <li><a>Hospitals</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Services</a></li>
+                <li><a>About</a></li>
+            </ul>
         </nav>
         <nav>
-            <button id="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
-            <button id="quoteBtn">Get a Quotes</button>
+            <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
+            <button class="quoteBtn">Get a Quotes</button>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
     <main>
         <h1>Book an appointment</h1>
         <form action="/signin" method="post" id="signin">
-            <h2>Book An Appointment*</h2>
+            <h3>Book An Appointment*</h3>
             <input type="text" id="date" placeholder="DD/MM/YYYY">
 
-            <h2>Time Interval*</h2>
+            <h3>Time Interval*</h3>
             <section class="radiofield">
                 <input type="radio" id="Morning" name="interval" value="Morning">
                 <label for="Morning">Morning</label>
@@ -46,7 +49,7 @@
                 <label for="evening">Evening</label>
             </section>
 
-            <h2>appointment Status/Urgency</h2>
+            <h3>appointment Status/Urgency*</h3>
             <section class="radiofield">
                 <input type="radio" id="Routine" name="checkup" value="Routine-checkup">
                 <label for="Routine">Routine Check-up</label>
@@ -58,10 +61,10 @@
                 <label for="surgical">Surgical Appointment</label>
             </section>
 
-            <h2>Upload Previous Health Record</h2>
+            <h3>Upload Previous Health Record</h3>
             <input type="file" id="healthfile" value="healthfile">
 
-            <h2>appointment detail</h2>
+            <h3>appointment detail</h3>
             <textarea rows="10"></textarea>
 
             <button type="submit" id="bookBtn">Book Appointment</button>

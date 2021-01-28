@@ -1,33 +1,22 @@
 body {
-    background-color: lightblue;
-}
-
-header {
-    margin: 0rem;
-}
-
-header nav {
-    display: none;
+    background-color: var(--lightblue);
 }
 
 main {
-    background-color: white;
+    background-color: var(--white);
     margin: auto;
-    padding: 1rem;
-    width: 70%;
+    padding: 1rem 0;
+    width: 80%;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
 }
 
 h1 {
-    color: lightblue;
-}
-
-input {
-    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    color: var(--lightblue);
+    margin: 1rem 0;
 }
 
 input[id=email] {
@@ -38,10 +27,10 @@ input[id=email] {
     background-position-x: 95%;
 }
 
-button[id=signinBtn] {
-    background-color: black;
-    color: white;
-    margin: 0.5rem;
+form button[class=signinBtn] {
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0.5rem 0;
     background-image: url(../images/arrow.png);
     background-position: right;
     background-repeat: no-repeat;
@@ -52,40 +41,37 @@ button[id=signinBtn] {
 form {
     display: flex;
     flex-direction: column;
-    border-top: 0.1rem solid black;
-    padding-top: 1rem;
+    border-top: 0.1rem solid var(--silver);
+    padding: 1rem;
+}
+
+p a {
+    color: var(--cuteblue);
 }
 
 footer {
     position: absolute;
-    display: block;
-    margin: auto;
-    width: 90%;
-    top: 85%;
-    text-align: center;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+footer p {
+    margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
     main {
         width: 50%;
     }
-    footer {
-        position: absolute;
-        justify-content: center;
-        top: 95%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 
-@media only screen and (min-width: 992px) {
-    header nav {
-        display: block;
-    }
-    header .fa {
-        display: none;
-    }
+@media only screen and (min-width: 1024px) {
     main {
-        width: 50%;
+        width: 45%;
     }
 }

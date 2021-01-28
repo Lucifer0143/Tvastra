@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home/Doctor</title>
+    <meta name="viewport" content=" classth=device- classth, initial-scale=1.0">
+    <title>Home/Hospital</title>
     <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/hospital.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,18 +17,20 @@
 <body>
     <header>
         <figure>
-            <img class="logo" src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
         </figure>
-        <nav id="headNav">
-            <a>Doctors</a>
-            <a>Hospitals</a>
-            <a>Treatment</a>
-            <a>Other Services</a>
-            <a>About</a>
+        <nav>
+            <ul>
+                <li><a>Doctors</a></li>
+                <li><a>Hospitals</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Services</a></li>
+                <li><a>About</a></li>
+            </ul>
         </nav>
-        <nav id="headBtn">
-            <button id="loginBtn">Login / Sign Up</button>
-            <button id="quoteBtn">Get a Quotes</button>
+        <nav>
+            <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
+            <button class="quoteBtn">Get a Quotes</button>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
@@ -41,13 +44,13 @@
             </figure>
         </section>
         <section class="sortBy">
-            <h3>Home/Hospital Lists</h3>
-            <button id="sortBtn">Sort by <i class="fa fa-angle-down"></i></button>
+            <h3>Home / Hospital Lists</h3>
+            <button class="sortBtn">Sort by <i class="fa fa-angle-down"></i></button>
         </section>
         <section class="allDoctors">
-            <section id="doctorFilter">
-                <button id="filterBtn">Filter by</button>
-                <section id="filterItem">
+            <aside class="doctorFilter">
+                <button class="filterBtn">Filter by</button>
+                <div class="filterItem">
                     <h3>Location</h3>
                     <i class="fa fa-search"></i>
                     <input type="checkbox" id="DLF">
@@ -63,8 +66,8 @@
                     <input type="checkbox" id="Pusa Road">
                     <label for="Pusa Road">Pusa Road</label>
                     <a class="fa fa-plus">Show More</a>
-                </section>
-                <section id="filterItem">
+                </div>
+                <div class="filterItem">
                     <h3>Deparment</h3>
                     <i class="fa fa-search"></i>
                     <input type="checkbox" id="Deparment one">
@@ -80,8 +83,8 @@
                     <input type="checkbox" id="Deparment FIVE">
                     <label for="Deparment FIVE">Deparment FIVE</label>
                     <a class="fa fa-plus">Show More</a>
-                </section>
-                <section id="filterItem">
+                </div>
+                <div class="filterItem">
                     <h3>Treatment</h3>
                     <i class="fa fa-search"></i>
                     <input type="checkbox" id="Multi Organ Transplant">
@@ -97,103 +100,107 @@
                     <input type="checkbox" id="Cancer">
                     <label for="Cancer">Cancer</label>
                     <a class="fa fa-plus">Show More</a>
-                </section>
-            </section>
-            <section id="doctorList">
-                <section id="doctorInfo">
+                </div>
+            </aside>
+            <section class="doctorList">
+                <div class="doctorInfo">
                     <figcaption>
                         <h2>Apollo Hospital</h2>
-                        <section>
+                        <div>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
-                        </section>
-                        <section>
+                            <span>Delhi Mathura Road, Sarita Vihar, Delhi-110076</span>
+                        </div>
+                        <div>
                             <i class="fas fa-bed"></i>
-                            <p>133 Beds</p>
-                        </section>
-                        <section>
+                            <span>133 Beds</span>
+                        </div>
+                        <div>
                             <i class="fa fa-stethoscope"></i>
-                            <p>Famous Treatments</p>
-                        </section>
-                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
-                        <button id="bookBtn">Call Now</button>
+                            <span>Famous Treatments</span>
+                        </div>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i>
+                        </aside>
+                        <button class="bookBtn">Call Now</button>
                     </figcaption>
                     <figure>
                         <img src="../assets/images/hospital1.jpg" alt="hospital_image">
                     </figure>
-                </section>
-                <section id="doctorInfo">
+                </div>
+                <div class="doctorInfo">
                     <figcaption>
                         <h2>Fortis Hospital</h2>
-                        <section>
+                        <div>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
-                        </section>
-                        <section>
+                            <span>Delhi Mathura Road, Sarita Vihar, Delhi-110076</span>
+                        </div>
+                        <div>
                             <i class="fas fa-bed"></i>
-                            <p>133 Beds</p>
-                        </section>
-                        <section>
+                            <span>133 Beds</span>
+                        </div>
+                        <div>
                             <i class="fa fa-stethoscope"></i>
-                            <p>Famous Treatments</p>
-                        </section>
-                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
-                        <button id="bookBtn">Call Now</button>
+                            <span>Famous Treatments</span>
+                        </div>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i>
+                        </aside>
+                        <button class="bookBtn">Call Now</button>
                     </figcaption>
                     <figure>
                         <img src="../assets/images/hospital2.jpg" alt="hospital_image">
                     </figure>
-                </section>
-                <section id="doctorInfo">
+                </div>
+                <div class="doctorInfo">
                     <figcaption>
                         <h2>Rockland Hospital</h2>
-                        <section>
+                        <div>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
-                        </section>
-                        <section>
+                            <span>Delhi Mathura Road, Sarita Vihar, Delhi-110076</span>
+                        </div>
+                        <div>
                             <i class="fas fa-bed"></i>
-                            <p>133 Beds</p>
-                        </section>
-                        <section>
+                            <span>133 Beds</span>
+                        </div>
+                        <div>
                             <i class="fa fa-stethoscope"></i>
-                            <p>Famous Treatments</p>
-                        </section>
-                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
-                        <button id="bookBtn">Call Now</button>
+                            <span>Famous Treatments</span>
+                        </div>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i>
+                        </aside>
+                        <button class="bookBtn">Call Now</button>
                     </figcaption>
                     <figure>
                         <img src="../assets/images/hospital3.jpg" alt="hospital_image">
                     </figure>
-                </section>
-                <section id="doctorInfo">
+                </div>
+                <div class="doctorInfo">
                     <figcaption>
                         <h2>Primus Super Speciality Hospital</h2>
-                        <section>
+                        <div>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>Delhi Mathura Road, Sarita Vihar, Delhi-110076</p>
-                        </section>
-                        <section>
+                            <span>Delhi Mathura Road, Sarita Vihar, Delhi-110076</span>
+                        </div>
+                        <div>
                             <i class="fas fa-bed"></i>
-                            <p>133 Beds</p>
-                        </section>
-                        <section>
+                            <span>133 Beds</span>
+                        </div>
+                        <div>
                             <i class="fa fa-stethoscope"></i>
-                            <p>Famous Treatments</p>
-                        </section>
-                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i></aside>
-                        <button id="bookBtn">Call Now</button>
+                            <span>Famous Treatments</span>
+                        </div>
+                        <aside class="more"><i>Multiorgan Transplant</i><i>Orthopedic Surgery</i><i>Infertility Treatment</i><i>Dentistry</i><i>Cardiology</i><i>Cancer</i><i>+40 More</i>
+                        </aside>
+                        <button class="bookBtn">Call Now</button>
                     </figcaption>
                     <figure>
                         <img src="../assets/images/hospital.jpg" alt="hospital_image">
                     </figure>
-                </section>
+                </div>
             </section>
         </section>
         <section class="enquiry">
-            <h1>Need Help?</h1>
+            <h2>Need Help?</h2>
             <p>Just let us know, we will happy to assist you.</p>
-            <button id="qrBtn">Submit your enquiry</button>
+            <button class="qrBtn">Submit your enquiry</button>
         </section>
     </main>
     <footer>
@@ -201,19 +208,23 @@
             <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
         " alt="tvastra_logo">
         </figure>
-        <nav id="sectionNav">
-            <a>Doctor</a>
-            <a>Hospital</a>
-            <a>Treatment</a>
-            <a>Other Service</a>
-            <a>FAQs</a>
+        <nav class="sectionNav">
+            <ul>
+                <li><a>Doctor</a></li>
+                <li><a>Hospital</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a>FAQs</a></li>
+            </ul>
         </nav>
-        <nav id=socialMedia>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-pinterest"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-instagram"></i>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
         </nav>
         <p>All Rights Reserved. &#169 tvastra 2018</p>
     </footer>

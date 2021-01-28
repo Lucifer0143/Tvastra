@@ -13,24 +13,27 @@
     --textblack: #525659;
     --white: #fff;
     --lightblue: #99c2ff;
+    --lighterblue: #e2ecfa;
     --blue: #741dc5;
+    --hardsilver: #ada9a9;
     --silver: #ccc;
     --lightsilver: #e9e9e9;
     --cuteblue: #266df1;
     --blackblue: #021433;
     --skyblue: #0000ff;
-    --lightyellow: #dbe645;
     --lightblack: #525659;
     --smokyblack: #636668;
+    --shadowblack: #00000080;
 }
 
 * {
     font-family: 'Nexa-light';
+    box-sizing: border-box;
+    display: block;
 }
 
 body {
     background-color: var(--white);
-    box-sizing: border-box;
 }
 
 header {
@@ -40,7 +43,6 @@ header {
 
 main {
     background-color: var(--white);
-    box-sizing: border-box;
 }
 
 section {
@@ -48,24 +50,20 @@ section {
 }
 
 nav {
-    box-sizing: border-box;
     text-align: center;
     padding: 0.5rem;
 }
 
 div {
-    box-sizing: border-box;
     padding: 0.5rem;
 }
 
 aside {
-    display: block;
-    box-sizing: border-box;
+    padding: 0.5rem;
 }
 
 form {
     padding: 1rem;
-    box-sizing: border-box;
 }
 
 h1,
@@ -74,53 +72,41 @@ h3,
 h4,
 h5,
 h6 {
-    display: block;
     text-align: center;
     text-transform: capitalize;
     font-family: 'Nexa-bold';
     color: var(--textblack);
+    margin-bottom: 0.5rem;
 }
 
 h1,
 h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.8rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
 }
 
 h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
 }
 
 h4 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
     line-height: 1.3rem;
 }
 
 h5 {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
     line-height: 1.2rem;
-}
-
-h5 {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.1rem;
 }
 
 h6 {
     font-size: 0.8rem;
-    margin-bottom: 0.5rem;
     line-height: 1rem;
 }
 
 p {
     font-size: 1rem;
-    display: block;
     text-align: center;
     margin-bottom: 0.5rem;
     line-height: 1.25rem;
@@ -150,17 +136,16 @@ span {
 ul,
 ol {
     padding: 1rem;
-    box-sizing: border-box;
 }
 
-ul>li {
+ul li {
     font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--textblack);
 }
 
-ol>li {
+ol li {
     font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: 0.5rem;
@@ -181,9 +166,8 @@ input[type=password] {
     margin: 0.5rem 0;
     padding: 1rem 0.5rem;
     border-radius: 0;
-    border: none;
+    border: 0.1rem solid var(--silver);
     width: 100%;
-    box-sizing: border-box;
     font-size: 1rem;
     color: var(--textblack);
 }
@@ -215,7 +199,6 @@ textarea {
     padding: 0.6rem;
     color: var(--textblack);
     width: 100%;
-    box-sizing: border-box;
 }
 
 select {
@@ -227,7 +210,7 @@ select:focus {
     outline: none;
 }
 
-select>option {
+select option {
     font-size: 1rem;
     background-color: var(--black);
     color: var(--white);
@@ -235,33 +218,28 @@ select>option {
 
 figure {
     margin: 1rem;
-    display: block;
 }
 
 figcaption {
     padding: 1rem;
     color: var(--textblack);
-    box-sizing: border-box;
 }
 
 img {
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
 }
 
 button {
     border: none;
     padding: 0.8rem;
     font-size: 1rem;
-    background-color: none;
-    color: var(--textblack);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 footer {
-    display: block;
     padding: 1rem;
-    box-sizing: border-box;
 }
 
 @media only screen and (min-width: 768px) {
@@ -319,12 +297,12 @@ footer {
     ol {
         padding: 1.2rem;
     }
-    ul>li {
+    ul li {
         font-size: 1.1rem;
         line-height: 1.6rem;
         margin-bottom: 0.6rem;
     }
-    ol>li {
+    ol li {
         font-size: 1.1rem;
         line-height: 1.6rem;
         margin-bottom: 0.6rem;
@@ -356,7 +334,7 @@ footer {
     select {
         font-size: 1.1rem;
     }
-    select>option {
+    select option {
         font-size: 1.1rem;
     }
     figure {
@@ -380,17 +358,17 @@ footer {
     }
     h1,
     h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         line-height: 2.5rem;
         margin-bottom: 0.8rem;
     }
     h3 {
         font-size: 1.8rem;
         margin-bottom: 0.8rem;
-        line-height: 1rem;
+        line-height: 2rem;
     }
     h4 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-bottom: 0.8rem;
         line-height: 2rem;
     }
@@ -407,7 +385,7 @@ footer {
     p {
         font-size: 1.2rem;
         margin-bottom: 0.7rem;
-        line-height: 1.4rem;
+        line-height: 1.5rem;
     }
     a {
         font-size: 1.1rem;
@@ -428,12 +406,12 @@ footer {
     ol {
         padding: 1.3rem;
     }
-    ul>li {
+    ul li {
         font-size: 1.2rem;
         line-height: 1.7rem;
         margin-bottom: 0.7rem;
     }
-    ol>li {
+    ol li {
         font-size: 1.2rem;
         line-height: 1.7rem;
         margin-bottom: 0.7rem;
@@ -466,7 +444,7 @@ footer {
     select {
         font-size: 1.2rem;
     }
-    select>option {
+    select option {
         font-size: 1.2rem;
     }
     figure {
