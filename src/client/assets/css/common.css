@@ -1,4 +1,5 @@
-@import './theme.css';
+/* @import './theme.css'; */
+
 header {
     background-color: white;
     display: flex;
@@ -107,7 +108,7 @@ footer p {
         grid-row-gap: 1rem;
         margin: 0rem;
         padding: 1rem 2rem;
-        border-bottom: 0.5rem solid var(--cuteblue);
+        border-bottom: 0.5rem solid var(--deepblue);
     }
     footer figure {
         display: grid;

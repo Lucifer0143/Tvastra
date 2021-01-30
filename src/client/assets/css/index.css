@@ -135,7 +135,7 @@ section[class=doctors] div figure figcaption ul li {
 }
 
 section[class=doctors] div figure figcaption h4 {
-    color: var(--cuteblue);
+    color: var(--deepblue);
     margin-bottom: 0;
     margin-left: 2rem;
     position: relative;
@@ -147,7 +147,7 @@ section[class=doctors] div figure figcaption h4::before {
     content: "";
     display: block;
     position: absolute;
-    border-bottom: 0.15rem solid var(--cuteblue);
+    border-bottom: 0.15rem solid var(--deepblue);
     top: 0.8rem;
     left: -2rem;
     width: 1.8rem;
@@ -246,7 +246,7 @@ section[class=enquiry] h1 {
 section[class=enquiry] button {
     display: grid;
     margin: auto;
-    background-color: var(--cuteblue);
+    background-color: var(--deepblue);
     border-radius: 0.3rem;
     color: var(--white);
     font-weight: bold;
@@ -472,7 +472,7 @@ section[class=enquiry] button {
         margin-left: 71%;
         margin-top: -5rem;
         position: absolute;
-        background-color: var(--cuteblue);
+        background-color: var(--deepblue);
         border-radius: 0.3rem;
         color: var(--white);
         font-weight: bold;

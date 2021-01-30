@@ -42,7 +42,7 @@ div[class=contactDetail] div {
 }
 
 div[class=contactDetail] i {
-    color: var(--cuteblue);
+    color: var(--deepblue);
     font-size: 2rem;
     margin: auto;
 }
@@ -87,7 +87,7 @@ div[class=sendQuery] textarea {
 }
 
 div[class=sendQuery] button {
-    background-color: var(--cuteblue);
+    background-color: var(--deepblue);
     color: var(--white);
     display: block;
     margin-right: 0%;

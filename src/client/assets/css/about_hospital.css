@@ -43,7 +43,7 @@ section[class=apolloHospital] button {
 section[class=apolloHospital] div[class=intro] h2 {
     margin-top: 2rem;
     text-align: left;
-    color: var(--cuteblue);
+    color: var(--deepblue);
     margin-left: 3rem;
 }
 
@@ -51,21 +51,22 @@ section[class=apolloHospital] div[class=intro] h2::before {
     content: "";
     display: block;
     position: absolute;
-    border-bottom: 0.15rem solid var(--cuteblue);
+    border-bottom: 0.15rem solid var(--deepblue);
     margin-top: 1.1rem;
     margin-left: -4.1rem;
     width: 3.5rem;
 }
 
 section[class=apolloHospital] div[class=intro] i {
-    color: var(--cuteblue);
+    color: var(--deepblue);
     display: block;
     font-size: 1.3rem;
 }
 
-section[class=apolloHospital] div[class=intro] span {
-    /* display: inline-block; */
-}
+
+/* section[class=apolloHospital] div[class=intro] span {
+    display: inline-block;
+} */
 
 section[class=apolloHospital] div[class=intro] p {
     text-align: left;
@@ -83,13 +84,13 @@ section[class=apolloHospital] div[class=icons] {
 
 section[class=apolloHospital] div[class=icons] i {
     margin-right: 0.5rem;
-    color: var(--cuteblue);
+    color: var(--deepblue);
     font-size: 1.3rem;
     padding-top: 0.35rem;
 }
 
 section[class=apolloHospital] div[class=icons] span {
-    color: var(--cuteblue);
+    color: var(--deepblue);
     font-family: 'Nexa-bold';
     padding-top: 0.35rem;
     margin-bottom: 0;
@@ -116,7 +117,7 @@ section[class=enquiry] h2 {
 section[class=enquiry] button {
     margin: auto;
     margin-top: 0.5rem;
-    background-color: var(--cuteblue);
+    background-color: var(--deepblue);
     border-radius: 0.3rem;
     font-family: 'Nexa-bold';
 }

@@ -36,7 +36,7 @@ section[class=faqs] div[class=icons] {
 }
 
 section[class=faqs] div[class=icons] span {
-    color: var(--cuteblue);
+    color: var(--deepblue);
     font-family: 'Nexa-bold';
     padding: 0;
     margin-bottom: 0;
@@ -46,7 +46,7 @@ section[class=faqs] div[class=icons] span {
 section[class=faqs] div[class=icons] i {
     margin: auto;
     margin-right: 0;
-    color: var(--cuteblue);
+    color: var(--deepblue);
     background-color: var(--lighterblue);
     padding: 0.35rem 0.5rem;
     border-radius: 50%;
@@ -65,7 +65,7 @@ section[class=enquiry] h2 {
 section[class=enquiry] button {
     margin: auto;
     margin-top: 0.5rem;
-    background-color: var(--cuteblue);
+    background-color: var(--deepblue);
     border-radius: 0.3rem;
     font-family: 'Nexa-bold';
 }

@@ -18,7 +18,7 @@
     --hardsilver: #ada9a9;
     --silver: #ccc;
     --lightsilver: #e9e9e9;
-    --cuteblue: #266df1;
+    --deepblue: #266df1;
     --blackblue: #021433;
     --skyblue: #0000ff;
     --lightblack: #525659;
@@ -29,19 +29,15 @@
 * {
     font-family: 'Nexa-light';
     box-sizing: border-box;
-    display: block;
 }
 
 body {
-    background-color: var(--white);
+    letter-spacing: 0.07rem;
+    word-spacing: 0.05rem;
 }
 
 header {
     padding: 1rem;
-    background-color: var(--white);
-}
-
-main {
     background-color: var(--white);
 }
 
@@ -52,6 +48,9 @@ section {
 nav {
     text-align: center;
     padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 div {
@@ -232,7 +231,7 @@ img {
 
 button {
     border: none;
-    padding: 0.8rem;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
     background-color: var(--black);
     color: var(--white);
@@ -344,7 +343,7 @@ footer {
         padding: 1.2rem;
     }
     button {
-        padding: 0.9rem;
+        padding: 0.9rem 1.1rem;
         font-size: 1.1rem;
     }
     footer {
@@ -454,7 +453,7 @@ footer {
         padding: 1.3rem;
     }
     button {
-        padding: 1rem;
+        padding: 1rem 1.2rem;
         font-size: 1.2rem;
     }
     footer {

@@ -17,7 +17,7 @@
         --blue: rgb(116, 29, 197);
         --silver: #ccc;
         --lightsilver: rgb(233, 233, 233);
-        --cuteblue: rgb(58, 143, 212);
+        --deepblue: rgb(58, 143, 212);
         --blackblue: #021433;
         --skyblue: blue;
     }
@@ -92,7 +92,7 @@
     }
     
     section[id=doctorInfo] figcaption h2 {
-        color: var(--cuteblue);
+        color: var(--deepblue);
         position: relative;
         text-align: left;
         margin-left: 2.7rem;
@@ -102,14 +102,14 @@
         content: "";
         display: block;
         position: absolute;
-        border-bottom: 0.2rem solid var(--cuteblue);
+        border-bottom: 0.2rem solid var(--deepblue);
         top: 1.1rem;
         margin-left: -2.75rem;
         width: 2.5rem;
     }
     
     section[id=doctorInfo] figcaption div i {
-        color: var(--cuteblue);
+        color: var(--deepblue);
         grid-area: i;
         margin: auto;
         margin-left: 0%;
@@ -132,7 +132,7 @@
     section[class=enquiry] button {
         display: grid;
         margin: auto;
-        background-color: var(--cuteblue);
+        background-color: var(--deepblue);
         border-radius: 0.3rem;
         color: var(--white);
         font-weight: bold;
@@ -204,7 +204,7 @@
         section[id=filterItem] i {
             margin: 1rem auto 1rem auto;
             margin-right: 10%;
-            color: var(--cuteblue);
+            color: var(--deepblue);
             position: relative;
             font-size: 1.1rem;
         }
@@ -227,7 +227,7 @@
         }
         section[id=filterItem] a {
             grid-area: a;
-            color: var(--cuteblue);
+            color: var(--deepblue);
             font-weight: normal;
             margin: 1rem 0rem;
         }
@@ -315,7 +315,7 @@
         section[id=filterItem] i {
             margin: 1rem auto 1rem auto;
             margin-right: 10%;
-            color: var(--cuteblue);
+            color: var(--deepblue);
             position: relative;
             font-size: 1.1rem;
         }
@@ -338,7 +338,7 @@
         }
         section[id=filterItem] a {
             grid-area: a;
-            color: var(--cuteblue);
+            color: var(--deepblue);
             font-weight: normal;
             margin: 1rem 0rem;
         }
@@ -381,7 +381,7 @@
         margin-left: 71.5%;
         margin-top: -4.5rem;
         position: absolute;
-        background-color: var(--cuteblue);
+        background-color: var(--deepblue);
         border-radius: 0.3rem;
         color: var(--white);
         font-weight: bold;
@@ -414,7 +414,7 @@
             margin-right: 0;
             grid-column: 2;
             grid-row: 1/ span 2;
-            background-color: var(--cuteblue);
+            background-color: var(--deepblue);
             border-radius: 0.3rem;
             color: var(--white);
         }
