@@ -6,7 +6,7 @@ main {
     display: block;
     margin: auto;
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: 3rem;
     width: 90%;
     background-color: var(--white);
     box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
@@ -32,6 +32,7 @@ button[id=signupBtn] {
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position-x: 95%;
+    letter-spacing: 0.3rem;
 }
 
 select {
@@ -50,13 +51,9 @@ form {
 
 form div {
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-div input {
-    width: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5rem;
 }
 
 p a {
@@ -69,12 +66,17 @@ footer {
     background-color: var(--lightblue);
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: var(--textblack);
 }
 
 @media only screen and (min-width: 768px) {
     main {
-        width: 50%;
+        width: 70%;
+        margin-top: 5rem;
     }
 }
 

@@ -1,7 +1,7 @@
 /* @import './theme.css'; */
 
 header {
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,12 +44,7 @@ footer nav {
 
 footer nav ul {
     padding: 0;
-    margin: 0;
-}
-
-footer nav ul li a,
-footer nav ul li i {
-    color: var(--silver);
+    margin: auto;
 }
 
 footer nav[class=sectionNav] ul li {
@@ -63,6 +58,11 @@ footer nav[class=socialMedia] ul li {
     display: inline-block;
     margin-left: 0.6rem;
     margin-right: 0.6rem;
+}
+
+footer nav ul li a,
+footer nav ul li i {
+    color: var(--silver);
 }
 
 footer p {
@@ -117,41 +117,29 @@ footer p {
         width: 10rem;
         height: 2.5rem;
     }
-    footer nav ul {
-        padding: 0;
-    }
     footer nav ul li {
         display: inline-block;
     }
-    footer nav ul li a,
+    footer nav ul li a {
+        color: var(--textblack);
+        padding: 0.5rem;
+    }
     footer nav ul li i {
         color: var(--textblack);
+    }
+    footer nav[class=sectionNav] {
+        margin-top: 1.7rem;
+        grid-area: sectionNav;
     }
     footer nav[class=sectionNav] ul {
         display: flex;
         flex-direction: row;
-    }
-    footer nav[class=sectionNav] {
-        text-align: left;
-        margin-top: 1.7rem;
-        grid-area: sectionNav;
         margin-left: 0;
     }
     footer nav[class=socialMedia] {
-        margin-top: 0rem;
         text-align: right;
         grid-area: socialMedia;
-    }
-    footer nav[class=socialMedia] ul li {
-        margin-right: 0;
-        margin-left: 0.5rem;
-    }
-    footer nav a {
-        margin: 0.5rem;
-        text-align: left;
-    }
-    footer nav i {
-        margin-left: 1rem;
+        margin: auto;
         margin-right: 0;
     }
     footer p {

@@ -38,7 +38,6 @@ body {
 
 header {
     padding: 1rem;
-    background-color: var(--white);
 }
 
 section {
@@ -90,8 +89,8 @@ h3 {
 }
 
 h4 {
-    font-size: 1.1rem;
-    line-height: 1.3rem;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
 }
 
 h5 {
@@ -154,8 +153,7 @@ ol li {
 label {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    line-height: 1rem;
-    font-weight: 500;
+    line-height: 1.25rem;
     color: var(--textblack);
 }
 
@@ -173,6 +171,7 @@ input[type=password] {
 
 input[type=radio] {
     margin: 0.4rem;
+    padding: 0.5rem;
 }
 
 input[type=checkbox] {

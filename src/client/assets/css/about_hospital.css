@@ -9,12 +9,13 @@ section[class=hero] figure {
 
 section[class=hero] figure img {
     object-fit: cover;
+    object-position: left;
 }
 
 section[class=hero] figure figcaption {
     position: absolute;
-    top: 18%;
     width: 100%;
+    top: 9rem;
 }
 
 section[class=hero] figure figcaption h1,
@@ -31,6 +32,7 @@ section[class=apolloHospital] {
 
 section[class=apolloHospital] figure {
     margin: 0;
+    height: 12rem;
 }
 
 section[class=apolloHospital] button {
@@ -57,19 +59,21 @@ section[class=apolloHospital] div[class=intro] h2::before {
     width: 3.5rem;
 }
 
-section[class=apolloHospital] div[class=intro] i {
-    color: var(--deepblue);
-    display: block;
-    font-size: 1.3rem;
-}
-
-
-/* section[class=apolloHospital] div[class=intro] span {
-    display: inline-block;
-} */
-
 section[class=apolloHospital] div[class=intro] p {
     text-align: left;
+}
+
+section[class=apolloHospital] div[class=intro] div {
+    display: grid;
+    grid-template-areas: 'i span';
+    padding-left: 0;
+    padding-right: 0;
+    grid-column-gap: 1rem;
+}
+
+section[class=apolloHospital] div[class=intro] div i {
+    color: var(--deepblue);
+    font-size: 1.3rem;
 }
 
 section[class=apolloHospital] p[class=details] {
@@ -128,21 +132,23 @@ section[class=enquiry] button {
     }
     section[class=apolloHospital] {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 2fr 1fr;
         grid-column-gap: 1rem;
+        grid-auto-flow: dense;
     }
     section[class=apolloHospital] figure {
         grid-column: 2;
-        grid-row: 1/span 3;
+        /* grid-row: 1; */
     }
     section[class=apolloHospital] button {
         grid-column: 2;
-        grid-row: 4;
+        /* grid-row: 1; */
     }
     section[class=apolloHospital] div,
     section[class=apolloHospital] p {
         grid-column: 1;
     }
+    section[class=apolloHospital] div[class=intro] {}
     section[class=apolloHospital] div[class=intro] h2 {
         margin-left: 0rem;
     }
@@ -172,7 +178,7 @@ section[class=enquiry] button {
         margin: 1rem 5rem;
     }
     section[class=enquiry] {
-        grid-template-columns: 1fr frr;
+        grid-template-columns: 1fr 1fr;
     }
     section[class=enquiry] h2,
     section[class=enquiry] p {

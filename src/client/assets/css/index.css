@@ -8,7 +8,6 @@
     src: url("../fonts/Nexa-Light.otf");
 }
 
-@import './theme.css';
 section[class=discription] {
     margin-top: 0;
     display: block;
@@ -108,10 +107,8 @@ section[class=doctors] div {
 
 section[class=doctors] div figure {
     margin: 0;
-}
-
-section[class=doctors] div figure img {
-    height: 20rem;
+    display: grid;
+    grid-template-rows: 25rem 1fr;
 }
 
 section[class=doctors] div figure figcaption {
@@ -219,8 +216,7 @@ section[class=service] div figure {
     background-color: var(--white);
     border-radius: 1rem;
     margin: 0;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 1rem 0;
 }
 
 section[class=service] div figure figcaption {
@@ -228,28 +224,29 @@ section[class=service] div figure figcaption {
     text-align: center;
     padding: 0;
     font-family: 'Nexa-bold';
-    margin-top: -0.5rem;
 }
 
 section[class=service] div figure img {
+    display: block;
     height: 80%;
+    width: 60%;
+    margin: auto;
 }
 
 section[class=enquiry] {
     background-color: var(--lightblue);
+    display: grid;
 }
 
-section[class=enquiry] h1 {
+section[class=enquiry] h2 {
     color: var(--white);
 }
 
 section[class=enquiry] button {
-    display: grid;
     margin: auto;
     background-color: var(--deepblue);
     border-radius: 0.3rem;
-    color: var(--white);
-    font-weight: bold;
+    font-family: 'Nexa-bold';
 }
 
 @media only screen and (min-width:768px) {
@@ -321,9 +318,6 @@ section[class=enquiry] button {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    section[class=doctors] div figure figcaption {
-        height: 8rem;
-    }
     section[class=feature] {
         margin: 1rem 0;
         padding: 1rem 0;
@@ -343,6 +337,10 @@ section[class=enquiry] button {
     }
     section[class=service] div figure {
         height: 10rem;
+    }
+    section[class=enquiry] h2,
+    section[class=enquiry] p {
+        grid-column: 1;
     }
 }
 
@@ -395,9 +393,8 @@ section[class=enquiry] button {
         padding: 0;
         padding-top: 1rem;
     }
-    section[class=doctors] div figure figcaption {
-        min-height: 10rem;
-        height: auto;
+    section[class=doctors] div figure {
+        flex: 1;
     }
     section[class=doctors] div figure figcaption h2 {
         font-size: 1.8rem;
@@ -460,21 +457,17 @@ section[class=enquiry] button {
         border-radius: 0;
     }
     section[class=enquiry] {
-        background-color: var(--lightblue);
-        margin: 0rem 0rem;
-        padding: 3rem 5%;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5rem;
     }
-    section[class=enquiry] h2 {
-        color: var(--white);
+    section[class=enquiry] h2,
+    section[class=enquiry] p {
+        text-align: left;
+        margin-bottom: 0;
     }
     section[class=enquiry] button {
-        padding: 1.2rem 2rem;
-        margin-left: 71%;
-        margin-top: -5rem;
-        position: absolute;
-        background-color: var(--deepblue);
-        border-radius: 0.3rem;
-        color: var(--white);
-        font-weight: bold;
+        grid-column: 2;
+        grid-row: 1/ span 2;
+        margin-right: 0;
     }
 }

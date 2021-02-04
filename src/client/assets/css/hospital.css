@@ -23,7 +23,6 @@
 }
 
 section section {
-    margin: 0;
     padding: 0;
 }
 
@@ -39,26 +38,25 @@ section[class=sortBy] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 0;
 }
 
-section[class=sortBy] button {
-    margin: 0;
-}
-
-section[class=sortBy] h3 {
+section[class=sortBy] h4 {
     font-family: 'Nexa-light';
     font-weight: 600;
-    margin-top: 1rem;
+    text-align: left;
 }
 
 section[class=sortBy] button {
     background-color: var(--silver);
+    color: var(--textblack);
+    font-weight: 600;
 }
 
 section[class=doctorList] div[class=doctorInfo] {
     border: 0.1rem solid var(--black);
-    margin: 0rem -0.5rem 1rem -0.5rem;
     padding: 0;
+    margin: 0 0.5rem 1rem 0.5rem;
 }
 
 div[class=doctorInfo] figure {
@@ -75,6 +73,7 @@ div[class=doctorInfo] figcaption button {
 }
 
 div[class=doctorInfo] figcaption div {
+    padding: 0.3rem;
     display: grid;
     grid-template-areas: 'i span';
     justify-content: start;
@@ -138,6 +137,9 @@ section[class=enquiry] button {
 }
 
 @media only screen and (min-width: 768px) {
+    section[class=sortBy] h4 {
+        font-size: 1.5rem;
+    }
     section[class=allDoctors] section[class=doctorList] div[class=doctorInfo] {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -226,6 +228,12 @@ section[class=enquiry] button {
         grid-gap: 0.5rem;
         justify-content: start;
         border-bottom: 0.1rem solid var(--black);
+    }
+    section[class=allDoctors] aside[class=doctorFilter] div[class=filterItem] input[type=checkbox] {
+        zoom: 1.3;
+    }
+    section[class=allDoctors] aside[class=doctorFilter] div[class=filterItem] label {
+        padding-top: 0.2rem;
     }
     section[class=allDoctors] aside[class=doctorFilter] button {
         background-color: var(--silver);

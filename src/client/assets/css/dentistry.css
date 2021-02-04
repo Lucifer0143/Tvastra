@@ -3,9 +3,14 @@ section[class=doctorsImg] {
 }
 
 section[class=doctorsImg] figure {
-    height: 15rem;
+    height: 15.5rem;
     position: relative;
     margin: 0;
+}
+
+section[class=doctorsImg] figure img {
+    object-fit: cover;
+    object-position: left;
 }
 
 section[class=doctorsImg] figcaption {
@@ -28,7 +33,7 @@ section[class=doctorsImg] figure::before {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to left, transparent, var(--deepblue));
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 section[class=vaccination] {
@@ -117,7 +122,7 @@ div[class=diseaseDetail] h3::before {
     border-bottom: 0.2rem solid var(--deepblue);
     margin-top: 0.6rem;
     left: 0rem;
-    width: 2rem;
+    width: 1.8rem;
 }
 
 section[class=services] {
@@ -158,6 +163,7 @@ section[class=services] figure figcaption {
 section[class=services] figure figcaption h3 {
     text-align: left;
     margin-left: 1rem;
+    margin-bottom: 0;
 }
 
 section[class=services] figure figcaption h3::before {
@@ -171,6 +177,12 @@ section[class=services] figure figcaption h3::before {
 }
 
 @media only screen and (min-width: 768px) {
+    section[class=doctorsImg] figure {
+        height: 16rem;
+    }
+    section[class=doctorsImg] figure img {
+        object-position: top;
+    }
     section[class=vaccination] h2 {
         text-align: left;
     }
@@ -206,7 +218,6 @@ section[class=services] figure figcaption h3::before {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 'h2 h2 p' 'figure figure figure';
         grid-column-gap: 1rem;
-        padding-bottom: 8rem;
     }
     section[class=services] h2 {
         grid-area: h2;
@@ -217,15 +228,13 @@ section[class=services] figure figcaption h3::before {
         grid-area: p;
         text-align: right;
     }
-    section[class=services] figure figcaption {
-        height: 5rem;
+    section[class=services] figure {
+        display: grid;
+        grid-template-rows: 15rem 1fr;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    section[class=doctorsImg] figure {
-        height: 20rem;
-    }
     section[class=doctorsImg] figcaption h1,
     section[class=doctorsImg] figcaption p {
         text-align: left;
@@ -239,8 +248,11 @@ section[class=services] figure figcaption h3::before {
     }
     section[class=vaccination] figure {
         display: grid;
-        grid-template-areas: 'img figcaption';
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 1rem;
+    }
+    section[class=vaccination] figure figcaption {
+        padding: 0;
     }
     section[class=vaccination] h2 {
         text-align: left;
@@ -275,8 +287,5 @@ section[class=services] figure figcaption h3::before {
     section[class=vaccination] div div {
         display: block;
         margin: 2rem 0.5rem;
-    }
-    section[class=services] figure figcaption {
-        height: 6.5rem;
     }
 }

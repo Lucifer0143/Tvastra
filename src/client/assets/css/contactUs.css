@@ -8,11 +8,14 @@ section[class=doctorsImg] figure {
     margin: 0;
 }
 
+section[class=doctorsImg] figure img {
+    object-fit: cover;
+}
+
 section[class=doctorsImg] figcaption {
     position: absolute;
-    top: 35%;
+    top: 30%;
     width: 100%;
-    color: var(--white);
 }
 
 section[class=doctorsImg] figcaption h1,
@@ -33,12 +36,11 @@ div[class=contactDetail] {
     padding-right: 1.5rem;
 }
 
-div[class=contactDetail] div {
+div[class=contactDetail] div[class=contactInfo] {
     padding: 0.2rem 0;
     display: grid;
     grid-template-areas: 'i div';
     justify-content: start;
-    grid-column-gap: 1rem;
 }
 
 div[class=contactDetail] i {
@@ -47,19 +49,21 @@ div[class=contactDetail] i {
     margin: auto;
 }
 
-div[class=contactDetail] div div {
+div[class=contactDetail] div[class=contactInfo] div {
     display: flex;
     flex-direction: column;
 }
 
-div[class=contactDetail] div h4 {
+div[class=contactDetail] div[class=contactInfo] h4 {
+    font-size: 1.3rem;
     line-height: 1.5rem;
 }
 
-div[class=contactDetail] div h4,
-div[class=contactDetail] div p {
+div[class=contactDetail] div[class=contactInfo] h4,
+div[class=contactDetail] div[class=contactInfo] p {
     text-align: left;
     margin-bottom: 0;
+    letter-spacing: 0;
 }
 
 div[class=sendQuery] {
@@ -102,8 +106,13 @@ div[class=sendQuery] button {
     }
     div[class=contactDetail] {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
+    }
+    div[class=contactDetail] div[class=contactInfo] h4 {
+        font-size: 1.2rem;
+    }
+    div[class=contactDetail] div[class=contactInfo] p {
+        font-size: 1rem;
     }
     div[class=sendQuery] {
         display: grid;
@@ -120,6 +129,9 @@ div[class=sendQuery] button {
 }
 
 @media only screen and (min-width: 1024px) {
+    section[class=doctorsImg] figcaption {
+        top: 25%;
+    }
     section[class=doctorsImg] figcaption h1,
     section[class=doctorsImg] figcaption p {
         text-align: left;

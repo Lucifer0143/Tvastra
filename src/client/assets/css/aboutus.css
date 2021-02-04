@@ -36,15 +36,19 @@ section[class=doctorsImg] figcaption p {
     margin: auto;
 }
 
-section[class=begine] h3 {
+section[class=begine] div {
+    padding: 0;
+}
+
+section[class=begine] div h3 {
     text-transform: none;
 }
 
-section[class=begine] p {
+section[class=begine] div p {
     margin: 1rem;
 }
 
-section[class=begine] figure[class=sign] {
+section[class=begine] div figure[class=sign] {
     margin: auto;
     padding: 0 20%;
     justify-content: center;
@@ -73,18 +77,22 @@ section[class=popularity] button {
     font-family: 'Nexa-bold';
 }
 
-section[class=popularity] div div {
+section[class=popularity] div[class=popularityMeasure] {
+    padding: 0;
+}
+
+section[class=popularity] div[class=popularityMeasure] div {
     border: 0.15rem solid var(--smokyblack);
     margin: 0.5rem;
     padding: 1.5rem;
     border-radius: 0.3rem;
 }
 
-section[class=popularity] div div h3 {
+section[class=popularity] div[class=popularityMeasure] div h3 {
     margin-bottom: 0;
 }
 
-section[class=popularity] div div span {
+section[class=popularity] div[class=popularityMeasure] div span {
     font-family: 'Nexa-bold';
     display: flex;
     justify-content: center;
@@ -121,18 +129,20 @@ section[class=joinTeam] button {
         display: grid;
         grid-template-columns: 2fr 1.5fr;
     }
-    section[class=begine] h3,
-    section[class=begine] figure[class=sign],
-    section[class=begine] p {
-        grid-column: 1;
+    section[class=begine] div h3,
+    section[class=begine] div figure[class=sign],
+    section[class=begine] div p {
         text-align: left;
         margin-left: 0;
         padding: 0;
     }
-    section[class=begine] figure[class=doctor] {
-        grid-column: 2;
-        grid-row: 1/span 4;
+    section[class=begine] div figure[class=sign] {
+        height: 5rem;
+        width: 15rem;
+    }
+    section[class=begine] div figure[class=doctor] {
         margin: auto;
+        height: 25rem;
     }
     section[class=popularity] h3,
     section[class=popularity] p,
@@ -140,20 +150,20 @@ section[class=joinTeam] button {
         text-align: left;
         margin-left: 0;
     }
-    section[class=popularity] div {
+    section[class=popularity] div[class=popularityMeasure] {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0;
         grid-gap: 1rem;
     }
-    section[class=popularity] div div {
+    section[class=popularity] div[class=popularityMeasure] div {
         display: flex;
         flex-direction: column;
         margin: 0;
         grid-gap: 0;
     }
-    section[class=popularity] div div h3,
-    section[class=popularity] div div span {
+    section[class=popularity] div[class=popularityMeasure] div h3,
+    section[class=popularity] div[class=popularityMeasure] div span {
         text-align: center;
     }
 }
@@ -168,13 +178,15 @@ section[class=joinTeam] button {
     section[class=doctorsImg] figure figcaption {
         top: 35%;
     }
-    section[class=begine] {
+    section[class=begine] div {
         grid-template-columns: 1fr 1fr;
     }
-    section[class=begine] h3,
-    section[class=begine] p {
-        margin: 0;
-        height: auto;
+    section[class=begine] div h3,
+    section[class=begine] div p {
+        margin-bottom: 2rem;
+    }
+    section[class=begine] div figure[class=doctor] {
+        margin: 0 7rem;
     }
     section[class=popularity] {
         background-color: transparent;
@@ -199,20 +211,20 @@ section[class=joinTeam] button {
     section[class=popularity] button {
         grid-column: 1;
     }
-    section[class=popularity] div[class=popularityMeasure] {
+    section[class=popularity] div[class=popularityMeasure][class=popularityMeasure] {
         grid-column: 2;
         grid-row: 1/ span 3;
     }
-    section[class=popularity] div div {
+    section[class=popularity] div[class=popularityMeasure] div {
         border: 0.15rem solid var(--hardsilver);
         padding: 2.5rem 1rem;
     }
-    section[class=popularity] div div h3 {
+    section[class=popularity] div[class=popularityMeasure] div h3 {
         color: var(--white);
         vertical-align: middle;
         margin: auto;
     }
-    section[class=popularity] div div span {
+    section[class=popularity] div[class=popularityMeasure] div span {
         color: var(--hardsilver);
         vertical-align: middle;
         margin: auto;

@@ -36,6 +36,7 @@ form button[class=signinBtn] {
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position-x: 95%;
+    letter-spacing: 0.3rem;
 }
 
 form {
@@ -62,6 +63,7 @@ footer {
 
 footer p {
     margin-bottom: 1rem;
+    color: var(--textblack);
 }
 
 @media only screen and (min-width: 768px) {
