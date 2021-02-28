@@ -1,0 +1,195 @@
+section[class=doctorsImg] {
+  padding: 0;
+}
+
+section[class=doctorsImg] figure {
+  height: 15rem;
+  position: relative;
+  margin: 0;
+}
+
+section[class=doctorsImg] figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section[class=doctorsImg] figcaption {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+section[class=doctorsImg] figcaption h1,
+section[class=doctorsImg] figcaption p {
+  color: var(--white);
+}
+
+section[class=map] {
+  padding: 1rem;
+}
+
+section[class=detailquery] {
+  padding: 0;
+}
+
+div[class=contactDetail] {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+div[class=contactDetail] div[class=contactInfo] {
+  padding: 0.2rem 0;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'i div';
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+div[class=contactDetail] i {
+  color: var(--deepblue);
+  font-size: 2rem;
+  margin: auto;
+}
+
+div[class=contactDetail] div[class=contactInfo] div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div[class=contactDetail] div[class=contactInfo] h4 {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+div[class=contactDetail] div[class=contactInfo] h4,
+div[class=contactDetail] div[class=contactInfo] p {
+  text-align: left;
+  margin-bottom: 0;
+  letter-spacing: 0;
+}
+
+div[class=sendQuery] {
+  background-color: var(--lightblue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 1.5rem;
+}
+
+div[class=sendQuery] div {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div[class=sendQuery] div input {
+  margin-top: 0;
+}
+
+div[class=sendQuery] textarea {
+  padding: 1rem 0.5rem 0rem 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1rem;
+  border: none;
+}
+
+div[class=sendQuery] button {
+  background-color: var(--deepblue);
+  color: var(--white);
+  display: block;
+  margin-right: 0%;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  section[class=map],
+  div[class=contactDetail],
+  div[class=sendQuery] {
+    padding: 1rem 2rem;
+  }
+  div[class=contactDetail] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  div[class=contactDetail] div[class=contactInfo] h4 {
+    font-size: 1.2rem;
+  }
+  div[class=contactDetail] div[class=contactInfo] p {
+    font-size: 1rem;
+  }
+  div[class=sendQuery] {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'section textarea' 'button button';
+  }
+  div[class=sendQuery] button {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: button;
+  }
+  div[class=sendQuery] textarea {
+    width: 97%;
+    margin-left: 3%;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section[class=doctorsImg] figcaption {
+    top: 25%;
+  }
+  section[class=doctorsImg] figcaption h1,
+  section[class=doctorsImg] figcaption p {
+    text-align: left;
+    margin-left: 4rem;
+  }
+  section[class=map] {
+    padding: 1rem 5rem;
+  }
+  div[class=sendQuery] textarea {
+    margin-bottom: 0.75rem;
+  }
+  div[class=contactDetail] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-left: 0;
+  }
+  section[class=detailquery] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    padding: 0 5rem 1rem 5rem;
+        grid-template-areas: 'section section';
+    border-bottom: 0.1rem solid var(--silver);
+  }
+}
+/*# sourceMappingURL=contactus.css.map */

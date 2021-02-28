@@ -1,87 +1,152 @@
 body {
-    background-color: var(--lightblue);
+  background-color: var(--lightblue);
+}
+
+section[class=alert] {
+  padding: 0;
+}
+
+div[class=alertMsg] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  position: absolute;
+  right: 1rem;
+  width: 18rem;
+  background-color: var(--white);
+  border-left: 0.3rem solid var(--red);
+  margin-top: 1rem;
+  padding: 0;
+}
+
+div[class=alertMsg] p,
+div[class=alertMsg] h6 {
+  color: var(--red);
+  margin-bottom: 0;
+  text-align: left;
+}
+
+div[class=alertMsg] p {
+  font-size: 0.8rem;
+}
+
+div[class=alertMsg] i {
+  color: var(--red);
+  margin: auto;
+}
+
+div[class=alertMsg] i[id=exit] {
+  color: var(--black);
 }
 
 main {
-    display: block;
-    margin: auto;
-    padding: 1rem 0;
-    margin-top: 3rem;
-    width: 90%;
-    background-color: var(--white);
-    box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+  display: block;
+  margin: auto;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  width: 90%;
+  background-color: var(--white);
+  -webkit-box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+          box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
 }
 
-h1 {
-    color: var(--lightblue);
-    margin: 1.5rem 0;
+main h1 {
+  color: var(--lightblue);
+  margin: 1.5rem 0;
 }
 
-input[id=email] {
-    background-image: url(../images/questionmark.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 1.2rem;
-    background-position-x: 95%;
-}
-
-button[id=signupBtn] {
-    margin: 0.5rem 0;
-    background-image: url(../images/arrow.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    background-position-x: 95%;
-    letter-spacing: 0.3rem;
-}
-
-select {
-    padding: 1rem;
-    border: 0.1rem solid var(--silver);
-    background: none;
-    margin: 0.5rem 0;
+main a {
+  color: var(--deepblue);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    border-top: 0.1rem solid var(--silver);
-    padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: 0.1rem solid var(--silver);
+  padding-top: 1rem;
+}
+
+input[type=date]::-webkit-input-placeholder {
+  color: var(--silver);
+}
+
+input[type=date]:-ms-input-placeholder {
+  color: var(--silver);
+}
+
+input[type=date]::-ms-input-placeholder {
+  color: var(--silver);
+}
+
+input[type=date]::placeholder {
+  color: var(--silver);
+}
+
+form button[id=signupBtn] {
+  margin: 0.5rem 0;
+  background-image: url(../images/arrow.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position-x: 95%;
+  letter-spacing: 0.3rem;
+}
+
+form select {
+  padding: 1rem 0.3rem;
+  border: 0.1rem solid var(--silver);
+  background: none;
+  margin: 0.5rem 0;
 }
 
 form div {
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0.5rem;
-}
-
-p a {
-    color: var(--deepblue);
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5rem;
 }
 
 footer {
-    width: 100%;
-    border: none;
-    background-color: var(--lightblue);
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+  width: 100%;
+  border: none;
+  background-color: var(--lightblue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
 }
 
 footer p {
-    color: var(--textblack);
+  color: var(--black);
 }
 
 @media only screen and (min-width: 768px) {
-    main {
-        width: 70%;
-        margin-top: 5rem;
-    }
+  main {
+    width: 70%;
+    margin-top: 5rem;
+  }
+  form select {
+    padding: 1.1rem 0.6rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    main {
-        width: 50%;
-    }
+  main {
+    width: 50%;
+  }
+  form select {
+    padding: 1.2rem 0.7rem;
+  }
 }
+/*# sourceMappingURL=signup.css.map */

@@ -1,0 +1,118 @@
+body {
+    background-color: var(--lightblue);
+}
+
+section[class=alert] {
+    padding: 0;
+}
+
+main {
+    background-color: var(--white);
+    margin: auto;
+    padding: 1rem 0;
+    width: 80%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+    a {
+        color: var(--deepblue);
+    }
+    h1 {
+        color: var(--lightblue);
+        margin: 1rem 0;
+    }
+}
+
+input[id=email] {
+    background-image: url(../images/questionmark.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-position-x: 95%;
+}
+
+form button[class=signinBtn] {
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0.5rem 0;
+    background-image: url(../images/arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 95%;
+    letter-spacing: 0.3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid var(--silver);
+    padding: 1rem;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+form div a {
+    font-size: 1rem;
+}
+
+div[class=alertMsg] {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    position: absolute;
+    right: 1rem;
+    width: 18rem;
+    background-color: var(--white);
+    border-left: 0.3rem solid var(--red);
+    margin-top: 1rem;
+    padding: 0;
+    p,
+    h6 {
+        color: var(--red);
+        margin-bottom: 0;
+        text-align: left;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    i {
+        color: var(--red);
+        margin: auto;
+    }
+    i[id=exit] {
+        color: var(--black);
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    p {
+        margin-bottom: 1rem;
+        color: var(--black);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        width: 45%;
+    }
+}

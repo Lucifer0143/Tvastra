@@ -1,0 +1,118 @@
+body {
+    background-color: var(--lightblue);
+}
+
+section[class=alert] {
+    padding: 0;
+}
+
+div[class=alertMsg] {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    position: absolute;
+    right: 1rem;
+    width: 18rem;
+    background-color: var(--white);
+    border-left: 0.3rem solid var(--red);
+    margin-top: 1rem;
+    padding: 0;
+    p,
+    h6 {
+        color: var(--red);
+        margin-bottom: 0;
+        text-align: left;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    i {
+        color: var(--red);
+        margin: auto;
+    }
+    i[id=exit] {
+        color: var(--black);
+    }
+}
+
+main {
+    display: block;
+    margin: auto;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    width: 90%;
+    background-color: var(--white);
+    box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+    h1 {
+        color: var(--lightblue);
+        margin: 1.5rem 0;
+    }
+    a {
+        color: var(--deepblue);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid var(--silver);
+    padding-top: 1rem;
+}
+
+input[type=date]::placeholder {
+    color: var(--silver);
+}
+
+form button[id=signupBtn] {
+    margin: 0.5rem 0;
+    background-image: url(../images/arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 95%;
+    letter-spacing: 0.3rem;
+}
+
+form select {
+    padding: 1rem 0.3rem;
+    border: 0.1rem solid var(--silver);
+    background: none;
+    margin: 0.5rem 0;
+}
+
+form div {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5rem;
+}
+
+footer {
+    width: 100%;
+    border: none;
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    p {
+        color: var(--black);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 70%;
+        margin-top: 5rem;
+    }
+    form select {
+        padding: 1.1rem 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        width: 50%;
+    }
+    form select {
+        padding: 1.2rem 0.7rem;
+    }
+}

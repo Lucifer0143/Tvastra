@@ -1,0 +1,204 @@
+section[class=hero] {
+    padding: 0;
+}
+
+section[class=hero] figure {
+    margin: 0;
+    height: 15rem;
+}
+
+section[class=hero] figure img {
+    object-fit: cover;
+}
+
+section[class=hero] figure figcaption {
+    position: absolute;
+    width: 100%;
+    height: 15rem;
+    padding-top: 6rem;
+}
+
+section[class=hero] figure figcaption h1,
+section[class=hero] figure figcaption p {
+    text-align: center;
+    color: var(--white);
+}
+
+section[class=johnNission] {
+    border: 0.1rem solid var(--silver);
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+section[class=johnNission] div[class=col1],
+section[class=johnNission] div[class=col2] {
+    padding: 0;
+}
+
+section[class=johnNission] div[class=col1] figure {
+    margin: 0;
+    height: 25rem;
+}
+
+section[class=johnNission] div[class=col1] figure img {
+    object-fit: fill;
+}
+
+section[class=johnNission] div button {
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: var(--blackblue);
+    font-family: 'Nexa-bold';
+}
+
+section[class=johnNission] div div[class=intro] {
+    border-bottom: 0.1rem dashed var(--silver);
+}
+
+section[class=johnNission] div div[class=intro] h2 {
+    margin-top: 2rem;
+    text-align: left;
+    color: var(--deepblue);
+    margin-left: 3rem;
+}
+
+section[class=johnNission] div div[class=intro] h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 0.15rem solid var(--deepblue);
+    margin-top: 1.1rem;
+    margin-left: -4.1rem;
+    width: 3.5rem;
+}
+
+section[class=johnNission] div p[class=details] {
+    background-color: var(--lighterblue);
+    text-align: left;
+    padding: 0.5rem;
+    display: none;
+}
+
+section[class=johnNission] div div[class=icons] {
+    border-bottom: 0.1rem dashed var(--silver);
+    display: flex;
+}
+
+section[class=johnNission] div div[class=icons] i {
+    margin-right: 0.5rem;
+    color: var(--deepblue);
+    font-size: 1.3rem;
+    padding-top: 0.35rem;
+}
+
+section[class=johnNission] div div[class=icons] span {
+    color: var(--deepblue);
+    font-family: 'Nexa-bold';
+    padding-top: 0.35rem;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+
+section[class=johnNission] div div[class=icons] #rightIcon {
+    margin: auto;
+    margin-right: 0;
+    background-color: var(--lighterblue);
+    padding: 0.35rem 0.5rem;
+    border-radius: 50%;
+}
+
+section[class=enquiry] {
+    background-color: var(--lightblue);
+    display: grid;
+}
+
+section[class=enquiry] h2 {
+    color: var(--white);
+}
+
+section[class=enquiry] button {
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: var(--deepblue);
+    border-radius: 0.3rem;
+    font-family: 'Nexa-bold';
+}
+
+@media only screen and (min-width:768px) {
+    section[class=hero] figure img {
+        object-fit: cover;
+        object-position: left;
+    }
+    section[class=johnNission] {
+        margin: 1.5rem;
+        display: grid;
+        grid-template-areas: 'col2 col1';
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 1rem;
+        padding: 1rem;
+    }
+    section[class=johnNission] div[class=col1] {
+        grid-column: 1;
+        grid-area: col1;
+    }
+    section[class=johnNission] div[class=col2] {
+        grid-column: 2;
+        grid-area: col2;
+    }
+    section[class=johnNission] div[class=col1] figure {
+        height: 15rem;
+    }
+    section[class=johnNission] div div[class=intro] h2 {
+        margin-top: 0;
+        margin-left: 0rem;
+    }
+    section[class=johnNission] div div[class=intro] h2::before {
+        margin-left: -1.8rem;
+        width: 1.5rem;
+    }
+    section[class=johnNission] div div[class=intro] p {
+        text-align: left;
+    }
+    section[class=johnNission] div div[class=icons] {
+        padding: 1rem 1rem;
+    }
+    section[class=enquiry] h2,
+    section[class=enquiry] p {
+        grid-column: 1;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section[class=hero] figure figcaption {
+        padding-left: 5rem;
+        padding-top: 5rem;
+    }
+    section[class=hero] figure figcaption h1,
+    section[class=hero] figure figcaption p {
+        text-align: left;
+    }
+    section[class=johnNission] {
+        margin: 3rem 5rem;
+        padding: 1.5rem;
+    }
+    section[class=johnNission] div[class=col1] figure {
+        height: 25rem;
+    }
+    section[class=johnNission] div div[class=intro] h2::before {
+        margin-left: -2.3rem;
+        width: 2rem;
+    }
+    section[class=enquiry] {
+        grid-template-columns: 1fr 1fr;
+    }
+    section[class=enquiry] h2,
+    section[class=enquiry] p {
+        text-align: left;
+    }
+    section[class=enquiry] button {
+        margin: auto;
+        grid-column: 2;
+        grid-row: 1/ span 2;
+        margin-right: 0;
+    }
+}

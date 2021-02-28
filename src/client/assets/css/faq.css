@@ -1,119 +1,136 @@
 section[class=hero] {
-    padding: 0;
+  padding: 0;
 }
 
 section[class=hero] figure {
-    margin: 0;
-    height: 15rem;
+  margin: 0;
+  height: 15rem;
 }
 
 section[class=hero] figure img {
-    object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 section[class=hero] figure figcaption {
-    position: absolute;
-    height: 15rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  height: 15rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section[class=hero] figure figcaption h1 {
-    margin: auto;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    color: var(--white);
+  margin: auto;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--white);
 }
 
 section[class=hero] figure figcaption p {
-    margin: auto;
-    margin-top: 0.5rem;
-    text-align: center;
-    color: var(--white);
+  margin: auto;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--white);
 }
 
 section[class=faqs] p[class=details] {
-    background-color: var(--lighterblue);
-    text-align: left;
-    padding: 0.5rem;
+  background-color: var(--lighterblue);
+  text-align: left;
+  padding: 0.5rem;
+  display: none;
 }
 
 section[class=faqs] div[class=icons] {
-    padding: 0.5rem 0;
-    margin: 1rem 0;
-    display: flex;
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 section[class=faqs] div[class=icons] span {
-    color: var(--deepblue);
-    font-family: 'Nexa-bold';
-    padding: 0;
-    margin-bottom: 0;
-    font-size: 1.3rem;
-    line-height: 1.8rem;
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 
 section[class=faqs] div[class=icons] i {
-    margin: auto;
-    margin-right: 0;
-    color: var(--deepblue);
-    background-color: var(--lighterblue);
-    padding: 0.35rem 0.5rem;
-    border-radius: 50%;
-    font-size: 1.25rem;
+  margin: auto;
+  margin-right: 0;
+  color: var(--deepblue);
+  background-color: var(--lighterblue);
+  padding: 0.35rem 0.5rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
 }
 
 section[class=enquiry] {
-    background-color: var(--lightblue);
-    display: grid;
+  background-color: var(--lightblue);
+  display: -ms-grid;
+  display: grid;
 }
 
 section[class=enquiry] h2 {
-    color: var(--white);
+  color: var(--white);
 }
 
 section[class=enquiry] button {
-    margin: auto;
-    margin-top: 0.5rem;
-    background-color: var(--deepblue);
-    border-radius: 0.3rem;
-    font-family: 'Nexa-bold';
+  margin: auto;
+  margin-top: 0.5rem;
+  background-color: var(--deepblue);
+  border-radius: 0.3rem;
+  font-family: 'Nexa-bold';
 }
 
-@media only screen and (min-width:768px) {
-    section[class=hero] figure {
-        height: 13rem;
-    }
-    section[class=hero] figure img {
-        object-position: right;
-    }
-    section[class=hero] figure figcaption {
-        height: 13rem;
-    }
-    section[class=enquiry] h2,
-    section[class=enquiry] p {
-        grid-column: 1;
-    }
+@media only screen and (min-width: 768px) {
+  section[class=hero] figure {
+    height: 13rem;
+  }
+  section[class=hero] figure img {
+    -o-object-position: right;
+       object-position: right;
+  }
+  section[class=hero] figure figcaption {
+    height: 13rem;
+  }
+  section[class=enquiry] h2,
+  section[class=enquiry] p {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    section[class=hero] figure figcaption h1,
-    section[class=hero] figure figcaption p {
-        margin-left: 4rem;
-        text-align: left;
-    }
-    section[class=enquiry] {
+  section[class=hero] figure figcaption h1,
+  section[class=hero] figure figcaption p {
+    margin-left: 4rem;
+    text-align: left;
+  }
+  section[class=enquiry] {
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    }
-    section[class=enquiry] h2,
-    section[class=enquiry] p {
-        text-align: left;
-    }
-    section[class=enquiry] button {
-        margin: auto;
-        grid-column: 2;
-        grid-row: 1/ span 2;
-        margin-right: 0;
-    }
+  }
+  section[class=enquiry] h2,
+  section[class=enquiry] p {
+    text-align: left;
+  }
+  section[class=enquiry] button {
+    margin: auto;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/ span 2;
+    margin-right: 0;
+  }
 }
+/*# sourceMappingURL=faq.css.map */

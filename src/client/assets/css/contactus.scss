@@ -140,6 +140,9 @@ div[class=sendQuery] button {
     section[class=map] {
         padding: 1rem 5rem;
     }
+    div[class=sendQuery] textarea {
+        margin-bottom: 0.75rem;
+    }
     div[class=contactDetail] {
         display: flex;
         flex-direction: column;

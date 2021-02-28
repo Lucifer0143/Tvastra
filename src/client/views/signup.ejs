@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../assets/scripts/signup.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a>Doctors</a></li>
+                <li><a>Hospitals</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Services</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <!-- <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button> -->
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <section class="alert">
+        <% if(areValid == true){ %>
+            <div class="alertMsg" id="alertMsgs">
+                <i class="fas fa-times-circle"></i>
+                <div>
+                    <h6>Failure</h6>
+                    <p>Please fill all the details</p>
+                </div>
+                <i onclick="alertDiv()" id="exit" class="fas fa-times"></i>
+            </div>
+            <%}%>
+                <% if(isValid == true){ %>
+                    <div class="alertMsg" id="alertMsgs">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <h6>Failure</h6>
+                            <p>Already used email or phoneNo</p>
+                        </div>
+                        <i onclick="alertDiv()" id="exit" class="fas fa-times"></i>
+                    </div>
+                    <%}%>
+    </section>
+    <main>
+        <h1>Sign Up</h1>
+        <form action="/signup" method="post" id="signup">
+            <input type="text" name="name" id="name" placeholder="Enter name">
+            <input type="email" name="email" id="email" placeholder="Enter email" required>
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+            <select name="gender" id="gender">
+                <option selected disabled>Select your gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY">
+            <input type="text" name="phoneNo" id="phoneNo" placeholder="Enter phone number">
+            <div>
+                <input type="text" name="city" id="city" placeholder="Enter city">
+                <input type="text" name="state" id="state" placeholder="Enter state">
+            </div>
+            <select name="country" id="country">
+                <option selected disabled>Select your country</option>
+                <option>Australia</option>
+                <option>Bahrain</option>
+                <option>China</option>
+                <option>India</option>
+                <option>United Kingdom</option>
+            </select>
+
+            <button type="submit" id="signupBtn">Sign Up</button>
+        </form>
+        <p>AlreadyResistered?<a href="./signin">SignIn</a></p>
+
+    </main>
+    <footer>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+</body>
+
+</html>

@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/signin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../assets/scripts/signin.js"></script>
 </head>
 
 <body>
@@ -28,20 +30,32 @@
             </ul>
         </nav>
         <nav>
-            <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
-            <button class="quoteBtn">Get a Quotes</button>
+            <!-- <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button> -->
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
+    <section class="alert">
+        <% if(!isValid){ %>
+            <div class="alertMsg" id="alertMsgs">
+                <i class="fas fa-times-circle"></i>
+                <div>
+                    <h6>Failure</h6>
+                    <p>Incorrect password or email</p>
+                </div>
+                <i onclick="alertDiv()" id="exit" class="fas fa-times"></i>
+            </div>
+            <%}%>
+    </section>
     <main>
-        <h1>Login</h1>
-        <form action="/signin" method="post" class="signin">
-            <input type="email" name="email" , id="email" , placeholder="Enter your username" required>
-            <input type="password" name="password" , id="password" , placeholder="Enter your password" required>
-
+        <h1>OTP Login</h1>
+        <form action="/otp" method="post" class="signin">
+            <p>We have send a One Time Password(otp) to your resistered mobile number</p>
+            <input type="number" name="number" id="number" required>
+            <input type="hidden" name="requestId" value="{{requestId}}">
+            <span>Resend in 30sec</span>
             <button type="submit" class="signinBtn">LOGIN</button>
         </form>
-        <p>NotResistered?<a href="./signup.html">SignUp</a></p>
 
     </main>
     <footer>

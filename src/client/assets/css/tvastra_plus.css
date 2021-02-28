@@ -1,0 +1,634 @@
+section[class=hero] {
+  padding-bottom: 10rem;
+  background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/tvastraPlus_heroSection.webp);
+  background-repeat: no-repeat;
+  background-position: 30% 95%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+section[class=hero] h1 {
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+section[class=hero] button {
+  background-color: var(--deepblue);
+  border-radius: 0.2rem;
+  margin: auto;
+  padding-top: 0.6rem;
+  padding-bottom: 0.4rem;
+}
+
+section[class=tvastraPlans] {
+  margin: auto;
+  -webkit-box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+          box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+  position: absolute;
+  margin-top: -9rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: var(--white);
+  width: 90%;
+  border-radius: 0.4rem;
+  z-index: 1;
+}
+
+section h2 {
+  text-transform: none;
+}
+
+section[class=tvastraPlans] div[class=allPlans] div {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5rem;
+  width: 100%;
+}
+
+section[class=tvastraPlans] div[class=allPlans] div h3 {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.01rem solid var(--silver);
+}
+
+section[class=tvastraPlans] div[class=allPlans] div h2 {
+  margin-top: 1rem;
+}
+
+section[class=tvastraPlans] div[class=allPlans] div span[class=planDetail] {
+  color: var(--deepblue);
+  display: block;
+  text-align: center;
+}
+
+section[class=tvastraPlans] div[class=allPlans] div button {
+  background-color: var(--deepblue);
+  border-radius: 0.2rem;
+  margin: auto;
+}
+
+section[class=tvastraPlans] div[class=allPlans] div[class=basic] {
+  border-top: 0.01rem solid var(--silver);
+}
+
+section[class=tvastraPlans] div[class=allPlans] div[class=advanced] {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 0;
+}
+
+section[class=tvastraPlans] div[class=allPlans] div[class=advanced] i {
+  position: absolute;
+  background-color: var(--green);
+  margin: auto;
+  margin-top: -1rem;
+  padding: 0.3rem;
+  color: var(--white);
+  border-radius: 1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+section[class=tvastraPlans] div[class=allPlans] div[class=advanced]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(var(--lightblue)));
+  background-image: linear-gradient(to top, transparent, var(--lightblue));
+  opacity: 0.9;
+  z-index: -5;
+}
+
+section[class=rating] {
+  padding-top: 95rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--lightblue)), color-stop(transparent), color-stop(transparent), to(transparent));
+  background-image: linear-gradient(var(--lightblue), transparent, transparent, transparent);
+  opacity: 0.9;
+}
+
+section[class=rating] p {
+  margin-bottom: 1rem;
+}
+
+section[class=rating] span {
+  color: var(--deepblue);
+}
+
+section[class=rating] i {
+  color: var(--deepblue);
+}
+
+section[class=rating] div[class=rate] div[class=ratingTotal] {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.3rem;
+}
+
+section[class=rating] span[class=totalRating] {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  font-family: 'Nexa-bold';
+}
+
+section[class=rating] span[class=totalReview] {
+  display: block;
+  text-align: center;
+}
+
+section[class=rating] div[class=individualRating] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+section[class=rating] div[class=individualRating] span {
+  color: var(--deepblue);
+  margin-right: 1rem;
+  font-family: 'Nexa-bold';
+}
+
+section[class=rating] div[class=rate] div[class=ratings] {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+section[class=rating] div[class=individualRating] div[class=ratingGraph] {
+  height: 1rem;
+  width: 100%;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: var(--silver);
+}
+
+section[class=rating] div[class=individualRating] div[class=ratingGraph] div[class=ratingFill5] {
+  height: 1rem;
+  width: 70%;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: var(--deepblue);
+}
+
+section[class=rating] div[class=individualRating] div[class=ratingGraph] div[class=ratingFill4] {
+  height: 1rem;
+  width: 55%;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: var(--deepblue);
+}
+
+section[class=rating] div[class=individualRating] div[class=ratingGraph] div[class=ratingFill3] {
+  height: 1rem;
+  width: 30%;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: var(--deepblue);
+}
+
+section[class=rating] div[class=individualRating] div[class=ratingGraph] div[class=ratingFill2] {
+  height: 1rem;
+  width: 10%;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: var(--deepblue);
+}
+
+section[class=rating] div[class=individualRating] div[class=ratingGraph] div[class=ratingFill1] {
+  height: 1rem;
+  width: 20%;
+  padding: 0;
+  border-radius: 0.5rem;
+  background-color: var(--deepblue);
+}
+
+section[class=rating] div[class=quantityFeature] {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'div div';
+  grid-gap: 0.5rem;
+}
+
+section[class=rating] div[class=quantityFeature] div {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5rem;
+  padding: 0;
+}
+
+section[class=rating] div[class=quantityFeature] div span {
+  display: block;
+  font-size: 1.5rem;
+  font-family: 'Nexa-bold';
+  margin: auto;
+}
+
+section[class=rating] div[class=quantityFeature] div i {
+  margin: auto;
+  font-size: 2rem;
+}
+
+section[class=rating] div[class=quantityFeature] div p {
+  color: var(--deepblue);
+}
+
+section[class=memberBenefit] div[class=borderbottom] {
+  width: 80%;
+  margin: 1rem auto 0.5rem auto;
+  padding: 0;
+  height: 0.3rem;
+  background-color: var(--lightblue);
+  border-radius: 0.5rem;
+}
+
+section[class=memberBenefit] div div[class=iconPara] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section[class=memberBenefit] div div[class=iconPara] i {
+  color: var(--deepblue);
+  margin-right: 1rem;
+}
+
+section[class=memberBenefit] div div[class=iconPara] p {
+  text-align: left;
+}
+
+section[class=memberBenefit] div[class=hospitalLogo] div {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'figure figure';
+  grid-gap: 0.1rem solid var(--lightblue);
+  padding: 0;
+  margin: 1rem 0;
+}
+
+section[class=memberBenefit] div[class=hospitalLogo] figure {
+  margin: 0;
+  padding: 1rem;
+}
+
+section[class=memberBenefit] div[class=hospitalLogo] figure img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section[class=memberBenefit] div[class=hospitalLogo] figure:nth-child(1),
+section[class=memberBenefit] div[class=hospitalLogo] figure:nth-child(3),
+section[class=memberBenefit] div[class=hospitalLogo] figure:nth-child(5) {
+  border-right: 0.1rem solid var(--lightblue);
+}
+
+section[class=memberBenefit] div[class=hospitalLogo] figure:nth-child(3),
+section[class=memberBenefit] div[class=hospitalLogo] figure:nth-child(4) {
+  border-top: 0.1rem solid var(--lightblue);
+  border-bottom: 0.1rem solid var(--lightblue);
+}
+
+section[class=memberBenefit] div[class=memberService] {
+  margin-top: 1rem;
+}
+
+section[class=memberBenefit] div[class=memberService] figure {
+  margin: 0;
+}
+
+section[class=memberBenefit] div[class=memberService] figure img {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+          box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+}
+
+section[class=memberBenefit] div[class=memberTest] span {
+  text-align: center;
+  display: block;
+  margin: 1rem 0;
+}
+
+section[class=memberBenefit] div[class=memberTest] div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+section[class=memberBenefit] div[class=memberTest] figure {
+  display: -ms-grid;
+  display: grid;
+  border-radius: 0.1rem;
+  -webkit-box-shadow: 0 0.1rem 0.5rem 0 var(--shadowblack);
+          box-shadow: 0 0.1rem 0.5rem 0 var(--shadowblack);
+  margin: 0;
+}
+
+section[class=memberBenefit] div[class=memberTest] figure img {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem auto;
+}
+
+section[class=memberBenefit] div[class=memberTest] figure figcaption {
+  padding-top: 0;
+}
+
+section[class=whyTvastra] h2 {
+  margin-bottom: 2rem;
+}
+
+section[class=whyTvastra] h2 button {
+  background-color: var(--deepblue);
+  border-radius: 0.2rem;
+  padding: 0.4rem 0.5rem 0.2rem 0.5rem;
+}
+
+section[class=whyTvastra] div {
+  -webkit-box-shadow: 0 0.05rem 0.25rem 0 var(--shadowblack);
+          box-shadow: 0 0.05rem 0.25rem 0 var(--shadowblack);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+section[class=whyTvastra] div p {
+  font-family: 'Nexa-bold';
+  text-align: left;
+}
+
+section[class=whyTvastra] div figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+}
+
+section[class=whyTvastra] div figure img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin: auto 0;
+}
+
+section[class=whyTvastra] div figure figcaption {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+section[class=whyTvastra] div figure figcaption h4 {
+  text-align: left;
+}
+
+section[class=whyTvastra] div figure figcaption button {
+  background-color: var(--lighterblue);
+  border-radius: 0.4rem;
+  color: var(--deepblue);
+  padding: 0.4rem 0.5rem;
+}
+
+section[class=faqs] p[class=details] {
+  background-color: var(--lighterblue);
+  text-align: left;
+  padding: 0.5rem;
+  display: none;
+}
+
+section[class=faqs] div[class=icons] {
+  padding: 0.5rem 0;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section[class=faqs] div[class=icons] span {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+section[class=faqs] div[class=icons] i {
+  margin: auto;
+  margin-right: 0;
+  color: var(--deepblue);
+  background-color: var(--lighterblue);
+  padding: 0.35rem 0.5rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  section[class=hero] {
+    background-position: none;
+    background-size: cover;
+    height: 27rem;
+    padding-bottom: 15rem;
+  }
+  section[class=hero] button {
+    margin-left: 0;
+  }
+  section[class=hero] h1,
+  section[class=hero] p {
+    text-align: left;
+  }
+  section[class=tvastraPlans] {
+    margin-top: -14rem;
+    width: 92%;
+  }
+  section[class=tvastraPlans] div[class=allPlans] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  section[class=tvastraPlans] div[class=allPlans] div[class=advanced] {
+    margin-top: 0;
+    border-top: 0.1rem solid var(--silver);
+  }
+  section[class=tvastraPlans] div[class=allPlans] div[class=comprehensive] {
+    border-top: 0.1rem solid var(--silver);
+  }
+  section[class=rating] {
+    padding-top: 36rem;
+  }
+  section[class=rating] div[class=rate] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  section[class=rating] div[class=rate] div[class=ratingTotal] {
+    grid-gap: 0;
+    justify-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  section[class=rating] div[class=rate] div[class=ratingTotal] span {
+    margin: auto;
+  }
+  section[class=rating] div[class=rate] div[class=ratings] {
+    padding-left: 0rem;
+  }
+  section[class=rating] div[class=quantityFeature] {
+        grid-template-areas: 'div div div div';
+    grid-gap: 0.6rem;
+  }
+  section[class=memberBenefit] div[class=borderbottom] {
+    width: 50%;
+  }
+  section[class=memberBenefit] div[class=zeroFee] {
+    display: -ms-grid;
+    display: grid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  section[class=memberBenefit] div[class=zeroFee] div[class=hospitalLogo] {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1/span 4;
+  }
+  section[class=memberBenefit] div[class=memberService] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  section[class=memberBenefit] #first figure {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1/span 4;
+  }
+  section[class=memberBenefit] #second figure {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1/span 4;
+  }
+  section[class=memberBenefit] #third figure {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    grid-row: 1/span 5;
+  }
+  section[class=memberBenefit] div[class=memberTest] {
+    padding: 0;
+  }
+  section[class=memberBenefit] div[class=memberTest] h5 {
+    font-size: 1.15rem;
+  }
+  section[class=memberBenefit] div[class=memberTest] span {
+    text-align: left;
+  }
+  section[class=whyTvastra] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+  section[class=whyTvastra] h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/span 2;
+    margin: 0;
+    text-align: left;
+  }
+  section[class=whyTvastra] h2 button {
+    padding: 0.5rem 0.6rem 0.2rem 0.6rem;
+  }
+  section[class=whyTvastra] div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section[class=whyTvastra] div figure {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  section[class=faqs] h2 {
+    text-align: left;
+  }
+  footer {
+    border-top: 0.1rem solid var(--silver);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section[class=hero] {
+    padding-top: 10rem;
+    padding-bottom: 18rem;
+    height: 25rem;
+    background-position-y: top;
+  }
+  section[class=tvastraPlans] {
+    margin-top: -7rem;
+    width: 88%;
+  }
+  section[class=rating] {
+    padding-top: 44rem;
+  }
+  section[class=memberBenefit] div[class=memberService] {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2rem;
+  }
+  section[class=memberBenefit] #second {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  section[class=memberBenefit] div[class=memberTest] div {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  section[class=whyTvastra] {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  section[class=whyTvastra] h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/span 3;
+  }
+  section[class=whyTvastra] h2 button {
+    padding: 0.7rem 0.6rem 0.4rem 0.6rem;
+  }
+  section[class=whyTvastra] div {
+    padding: 1.5rem;
+  }
+}
+/*# sourceMappingURL=tvastra_plus.css.map */

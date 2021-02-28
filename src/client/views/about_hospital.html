@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/about_hospital.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="../assets/scripts/about_hospital.js"></script>
 </head>
 
 <body>
@@ -44,10 +45,12 @@
             </figure>
         </section>
         <section class="apolloHospital">
-            <figure>
-                <img src="../assets/images/hospital1.jpg" alt="doctor_image">
-            </figure>
-            <button>Call</button>
+            <div class="hospitalView">
+                <figure>
+                    <img src="../assets/images/hospital1.jpg" alt="doctor_image">
+                </figure>
+                <button>Call</button>
+            </div>
             <div class="intro">
                 <h2>Apollo Hospital</h2>
                 <div>
@@ -58,15 +61,22 @@
                     nodels. The group also has Telemedicine facilities across several countries, Health Insurance Services, Global Projects Consultancy, Medical Colleges, Medvarsity for E-Learning. Colleges of Nursing and Hospital Management and a Reasearch
                     Foundation. In addition, 'ASK Apollo' - an online consultation portal and Apollo Home Health provide the care continuum.</p>
             </div>
-            <div class="icons"><i class="fas fa-award"></i><span>Specialization</span><i class="fa fa-angle-up" id="rightIcon"></i></div>
-            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
-            <div class="icons"><i class="fa fa-stethoscope"></i><span>Famous Treatments</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
-            <div class="icons"><i class="fa fa-user-md"></i><span>Famous Doctors</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
-            <div class="icons"><i class="fa fa-hospital-o"></i><span>Infrastructure</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
-            <div class="icons"><i class="fa fa-map-marker"></i><span>Complete Address</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
-            <div class="icons"><i class="fa fa-h-square"></i><span>Hospital Packages</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
-            <div class="icons"><i class="fa fa-inr"></i><span>Hospital Charges</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
-            <div class="icons"><i class="fa fa-address-card"></i><span>Membership</span><i class="fa fa-angle-down" id="rightIcon"></i></div>
+            <div class="icons"><i class="fas fa-award"></i><span>Specialization</span><i onclick="detail1(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-stethoscope"></i><span>Famous Treatments</span><i onclick="detail2(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-user-md"></i><span>Famous Doctors</span><i onclick="detail3(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-hospital-o"></i><span>Infrastructure</span><i onclick="detail4(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-map-marker"></i><span>Complete Address</span><i onclick="detail5(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-h-square"></i><span>Hospital Packages</span><i onclick="detail6(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-inr"></i><span>Hospital Charges</span><i onclick="detail7(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
+            <div class="icons"><i class="fa fa-address-card"></i><span>Membership</span><i onclick="detail8(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
+            <p class="details" id="about8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur eius.</p>
 
         </section>
         <section class="enquiry">

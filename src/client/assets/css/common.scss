@@ -1,0 +1,195 @@
+/* @import './theme.css'; */
+
+header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header figure {
+    width: 8rem;
+    height: 2.5rem;
+}
+
+header figure img {
+    object-fit: fill;
+}
+
+header .fa {
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+
+header nav {
+    display: none;
+}
+
+footer {
+    background-color: var(--blackblue);
+}
+
+footer figure {
+    display: grid;
+    margin: auto;
+    width: 10rem;
+    height: 2.5rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+footer nav {
+    text-align: center;
+    padding: 0;
+}
+
+footer nav ul {
+    padding: 0;
+    margin: auto;
+}
+
+footer nav[class=sectionNav] ul li {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.1rem;
+}
+
+footer nav[class=socialMedia] ul li {
+    display: inline-block;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+footer nav ul li a,
+footer nav ul li i {
+    color: var(--silver);
+}
+
+footer p {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: var(--silver);
+    font-family: 'Nexa-light';
+}
+
+@media only screen and (min-width: 768px) {
+    header nav ul li {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    header nav a {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    header button {
+        border: 0.1rem solid var(--black);
+        margin: 0.5rem;
+    }
+    button[class=loginBtn] {
+        background-color: var(--white);
+        color: var(--black);
+    }
+    button[class=quoteBtn] {
+        background-color: var(--black);
+        color: var(--white);
+    }
+    header figure {
+        height: 2rem;
+        width: 8rem;
+    }
+    header .fa {
+        font-size: 1.3rem;
+        color: var(--black);
+    }
+    footer {
+        background-color: var(--white);
+        display: grid;
+        grid-template-areas: 'sectionNav figure' 'p socialMedia';
+        grid-row-gap: 1rem;
+        margin: 0rem;
+        padding: 1rem 2rem;
+        border-bottom: 0.5rem solid var(--deepblue);
+    }
+    footer figure {
+        display: grid;
+        margin-left: auto;
+        margin-right: 1%;
+        width: 10rem;
+        height: 2.5rem;
+    }
+    footer nav ul li {
+        display: inline-block;
+    }
+    footer nav ul li a {
+        color: var(--textblack);
+        padding: 0.5rem;
+    }
+    footer nav ul li i {
+        color: var(--textblack);
+    }
+    footer nav[class=sectionNav] {
+        margin-top: 1.7rem;
+        grid-area: sectionNav;
+    }
+    footer nav[class=sectionNav] ul {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+    }
+    footer nav[class=socialMedia] {
+        text-align: right;
+        grid-area: socialMedia;
+        margin: auto;
+        margin-right: 0;
+    }
+    footer p {
+        text-align: left;
+        margin-left: 0.4rem;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--textblack);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header nav {
+        display: block;
+        padding: 0;
+    }
+    header nav li a {
+        font-size: 1rem;
+    }
+    header figure {
+        margin: 0.5rem;
+        margin-left: 2rem;
+        height: 2.4rem;
+        width: 10rem;
+    }
+    header nav button {
+        font-size: 0.8rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        border-radius: .3rem;
+    }
+    header .fa {
+        display: none;
+    }
+    footer {
+        grid-row-gap: 1rem;
+        padding: 1rem 4rem;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+}

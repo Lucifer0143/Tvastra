@@ -1,0 +1,490 @@
+@font-face {
+    font-family: 'Nexa-bold';
+    src: url("../fonts/Nexa-Bold.otf");
+}
+
+@font-face {
+    font-family: 'Nexa-light';
+    src: url("../fonts/Nexa-Light.otf");
+}
+
+:root {
+    --black: #000;
+    --textblack: #021433;
+    --white: #fff;
+    --lightblue: #99c2ff;
+    --lighterblue: #e2ecfa;
+    --blue: #741dc5;
+    --hardsilver: #ada9a9;
+    --silver: #ccc;
+    --lightsilver: #e9e9e9;
+    --deepblue: #266df1;
+    --blackblue: #021433;
+    --skyblue: #0000ff;
+    --lightblack: #525659;
+    --smokyblack: #636668;
+    --shadowblack: #00000080;
+    --green: #009900;
+    --red: #ff000d;
+}
+
+* {
+    font-family: 'Nexa-light';
+    box-sizing: border-box;
+}
+
+body {
+    letter-spacing: 0.05rem;
+    word-spacing: 0.05rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+nav {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div {
+    padding: 0.5rem;
+}
+
+aside {
+    padding: 0.5rem;
+}
+
+form {
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Nexa-bold';
+    color: var(--textblack);
+    margin-bottom: 0.5rem;
+}
+
+h1,
+h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+h6 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    line-height: 1.25rem;
+    color: var(--textblack);
+}
+
+a {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--textblack);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+i {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: var(--lightblack);
+    cursor: pointer;
+}
+
+span {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--textblack);
+}
+
+ul,
+ol {
+    padding: 1rem;
+}
+
+ul li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--textblack);
+    font-family: 'Nexa-light';
+}
+
+ol li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--textblack);
+    font-family: 'Nexa-light';
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25rem;
+    color: var(--textblack);
+}
+
+input[type=text],
+input[type=number],
+input[type=tel],
+input[type=date],
+input[type=email],
+input[type=password] {
+    margin: 0.5rem 0;
+    padding: 1rem 0.5rem;
+    border-radius: 0;
+    border: 0.1rem solid var(--silver);
+    width: 100%;
+    font-size: 1rem;
+    color: var(--textblack);
+}
+
+input[type=radio] {
+    margin: 0.4rem;
+    padding: 0.5rem;
+}
+
+input[type=checkbox] {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 1rem;
+    color: var(--smokyblack);
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+textarea {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.6rem;
+    color: var(--textblack);
+    width: 100%;
+}
+
+select {
+    font-size: 1rem;
+    color: var(--smokyblack);
+}
+
+select:focus {
+    outline: none;
+}
+
+select option {
+    font-size: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+figure {
+    margin: 1rem;
+}
+
+figcaption {
+    padding: 1rem;
+    color: var(--textblack);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    outline: none;
+}
+
+footer {
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        padding: 1rem 1.2rem;
+    }
+    section {
+        padding: 1.5rem 2rem;
+    }
+    nav,
+    div {
+        padding: 0.7rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.65rem;
+    }
+    h1,
+    h2 {
+        font-size: 1.65rem;
+        line-height: 1.85rem;
+    }
+    h3 {
+        font-size: 1.35rem;
+        line-height: 1.55rem;
+    }
+    h4 {
+        font-size: 1.15rem;
+        line-height: 1.35rem;
+    }
+    h5 {
+        font-size: 1.05rem;
+        line-height: 1.25rem;
+    }
+    h5 {
+        font-size: 0.85rem;
+        line-height: 1.05rem;
+    }
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.3rem;
+    }
+    a {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.6rem;
+    }
+    i {
+        font-size: 1.1rem;
+        line-height: 1.35rem;
+    }
+    span {
+        font-size: 1.1rem;
+        line-height: 1.35rem;
+        margin-bottom: 0.6rem;
+    }
+    ul,
+    ol {
+        padding: 1.2rem;
+    }
+    ul li {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+    ol li {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+    label {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.3rem;
+    }
+    input[type=text],
+    input[type=number],
+    input[type=tel],
+    input[type=date],
+    input[type=email],
+    input[type=password] {
+        margin: 0.6rem 0;
+        padding: 1.1rem 0.6rem;
+        font-size: 1.1rem;
+    }
+    input[type=radio] {
+        margin: 0.6rem;
+    }
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 1.1rem;
+    }
+    textarea {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        padding: 0.8rem;
+    }
+    select {
+        font-size: 1.1rem;
+    }
+    select option {
+        font-size: 1.1rem;
+    }
+    figure {
+        margin: 1.1rem;
+    }
+    figcaption {
+        padding: 1.2rem;
+    }
+    button {
+        padding: 0.9rem 1.1rem;
+        font-size: 1.1rem;
+    }
+    footer {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section {
+        padding: 3rem 5rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.8rem;
+    }
+    h1,
+    h2 {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    h5 {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+    h6 {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+        line-height: 1.5rem;
+    }
+    a {
+        font-size: 1.1rem;
+        line-height: 1.55rem;
+        margin-bottom: 0.5rem;
+    }
+    i {
+        font-size: 1.1rem;
+        line-height: 1.55rem;
+        margin-bottom: 0.5rem;
+    }
+    span {
+        font-size: 1.2rem;
+        line-height: 1.45rem;
+        margin-bottom: 0.7rem;
+    }
+    ul,
+    ol {
+        padding: 1.3rem;
+    }
+    ul li {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 0.7rem;
+    }
+    ol li {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 0.7rem;
+    }
+    label {
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+        line-height: 1.4rem;
+    }
+    input[type=text],
+    input[type=number],
+    input[type=tel],
+    input[type=date],
+    input[type=email],
+    input[type=password] {
+        margin: 0.7rem 0;
+        padding: 1.2rem 0.7rem;
+        font-size: 1.2rem;
+    }
+    input[type=radio] {
+        margin: 0.7rem;
+        padding: 0.7rem;
+    }
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 1.2rem;
+    }
+    textarea {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding: 1rem;
+    }
+    select {
+        font-size: 1.2rem;
+    }
+    select option {
+        font-size: 1.2rem;
+    }
+    figure {
+        margin: 1.2rem;
+    }
+    figcaption {
+        padding: 1.3rem;
+    }
+    button {
+        padding: 1rem 1.2rem;
+        font-size: 1.2rem;
+    }
+    footer {
+        padding: 3rem 5rem;
+    }
+}

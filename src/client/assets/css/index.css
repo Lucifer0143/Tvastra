@@ -1,473 +1,546 @@
 @font-face {
-    font-family: 'Nexa-bold';
-    src: url("../fonts/Nexa-Bold.otf");
+  font-family: 'Nexa-bold';
+  src: url("../fonts/Nexa-Bold.otf");
 }
 
 @font-face {
-    font-family: 'Nexa-light';
-    src: url("../fonts/Nexa-Light.otf");
+  font-family: 'Nexa-light';
+  src: url("../fonts/Nexa-Light.otf");
 }
 
 section[class=discription] {
-    margin-top: 0;
-    display: block;
-    background-color: var(--lightblue);
-    justify-content: center;
+  margin-top: 0;
+  display: block;
+  background-color: var(--lightblue);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 input[class=searchCity] {
-    background-image: url(../images/mapmarker.jpeg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    background-position-x: 0.3rem;
-    padding-left: 1.5rem;
-    border: none;
+  background-image: url(../images/mapmarker.jpeg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position-x: 0.3rem;
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+  border: none;
 }
 
 input[class=searchDoctor] {
-    margin: 0;
-    border: none;
+  margin: 0;
+  border: none;
 }
 
 section[class=discription] div .fa-crosshairs {
-    position: absolute;
-    margin-top: 1.5rem;
-    right: 10%;
+  position: absolute;
+  margin-top: 1.5rem;
+  left: 90%;
+  z-index: 5;
 }
 
 section[class=discription] div {
-    padding: 0;
+  padding: 0;
 }
 
 section[class=discription] div button {
-    display: grid;
-    margin: 1rem auto 0 auto;
-    padding: 1rem 2rem;
-    background-color: var(--black);
-    color: var(--white);
-}
-
-section[class=protocols] aside {
-    display: none;
+  display: -ms-grid;
+  display: grid;
+  margin: 1rem auto 0 auto;
+  padding: 1rem 2rem;
+  background-color: var(--blackblue);
+  color: var(--white);
 }
 
 section[class=protocols] section {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 section[class=protocols] section button {
-    width: 100%;
-    margin: 0.4rem 0rem;
-    padding: 1.1rem 1rem;
-    border: 0.1rem solid var(--black);
-    border-radius: 0.4rem;
-    text-align: left;
-    background-color: var(--white);
-    font-family: 'Nexa-bold';
-    font-size: 1.3rem;
-    letter-spacing: -0.05rem;
-    text-transform: capitalize;
-    opacity: 0.5;
-    color: var(--textblack);
+  width: 100%;
+  margin: 0.4rem 0rem;
+  padding: 1.1rem 1rem;
+  border: 0.1rem solid var(--black);
+  border-radius: 0.4rem;
+  text-align: left;
+  background-color: var(--white);
+  font-family: 'Nexa-bold';
+  font-size: 1.3rem;
+  letter-spacing: -0.05rem;
+  text-transform: capitalize;
+  opacity: 0.3;
+  color: var(--textblack);
 }
 
-section[class=protocols] section h2 {
-    text-align: center;
-    margin: 1rem;
+section[class=protocols] section button[id=Btn1] {
+  opacity: 1;
 }
 
-section[class=protocols] section button[id=Btn01] {
-    opacity: 1;
+button > i {
+  color: var(--lightblue);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
 }
 
-button>i {
-    color: var(--lightblue);
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
+section[class=protocols] section div {
+  display: none;
+}
+
+section[class=protocols] section div[id=fixConsultation] {
+  display: block;
 }
 
 section[class=doctors] {
-    background-color: var(--blackblue);
-    padding: 2rem 1rem;
+  background-color: var(--blackblue);
 }
 
 section[class=doctors] h2,
 section[class=doctors] p {
-    color: var(--white);
+  color: var(--white);
 }
 
 section[class=doctors] div {
-    display: grid;
-    grid-template-areas: 'figure';
-    padding: 0;
-    grid-gap: 1rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'figure';
+  padding: 0;
+  grid-gap: 1rem;
 }
 
 section[class=doctors] div figure {
-    margin: 0;
-    display: grid;
-    grid-template-rows: 25rem 1fr;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 25rem 1fr;
+      grid-template-rows: 25rem 1fr;
+}
+
+section[class=doctors] div figure img {
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
 }
 
 section[class=doctors] div figure figcaption {
-    background-color: var(--white);
-    color: var(--black);
-    margin-top: -0.5rem;
-    padding-left: 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.25rem solid var(--lightblue);
+  background-color: var(--white);
+  color: var(--black);
+  margin-top: -0.5rem;
+  padding-left: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.25rem solid var(--lightblue);
 }
 
 section[class=doctors] div figure figcaption ul {
-    margin-left: 2rem;
-    padding: 0;
+  margin-left: 2rem;
+  padding: 0;
 }
 
 section[class=doctors] div figure figcaption ul li {
-    margin-bottom: 0;
-    font-size: 0.95rem;
-    line-height: 1.15rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.15rem;
 }
 
 section[class=doctors] div figure figcaption h4 {
-    color: var(--deepblue);
-    margin-bottom: 0;
-    margin-left: 2rem;
-    position: relative;
-    text-align: left;
-    margin-bottom: 0.4rem;
+  color: var(--deepblue);
+  margin-bottom: 0;
+  margin-left: 2rem;
+  position: relative;
+  text-align: left;
+  margin-bottom: 0.4rem;
 }
 
 section[class=doctors] div figure figcaption h4::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-bottom: 0.15rem solid var(--deepblue);
-    top: 0.8rem;
-    left: -2rem;
-    width: 1.8rem;
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 0.15rem solid var(--deepblue);
+  top: 0.8rem;
+  left: -2rem;
+  width: 1.8rem;
 }
 
-section[class=feature] {
-    padding: 2rem 0.5rem;
+section[class=doctors] button {
+  background-color: var(--silver);
+  margin: 1rem 0.2rem 0 0.2rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+
+section[class=doctors] button[id=docBtn1] {
+  border: 0.2rem solid var(--deepblue);
+  background-color: var(--black);
 }
 
 section[class=feature] p {
-    padding: 0 1.5rem;
+  padding: 0 1.5rem;
 }
 
 section[class=feature] div {
-    display: grid;
-    grid-template-areas: 'figure';
-    grid-row-gap: 1rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'figure';
+  grid-row-gap: 1rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 section[class=feature] figure {
-    position: relative;
-    margin: 0;
+  position: relative;
+  margin: 0;
 }
 
 section[class=feature] figure::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, transparent, var(--black));
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--black)));
+  background-image: linear-gradient(to bottom, transparent, var(--black));
 }
 
 section[class=feature] figure figcaption {
-    position: absolute;
-    z-index: 5;
-    bottom: 0rem;
+  position: absolute;
+  z-index: 5;
+  bottom: 0rem;
 }
 
 section[class=feature] figure figcaption h4 {
-    text-align: left;
-    line-height: 0.1rem;
-    color: var(--white);
+  text-align: left;
+  line-height: 0.1rem;
+  color: var(--white);
 }
 
 section[class=feature] figure figcaption i {
-    font-size: 0.9rem;
-    color: var(--white);
+  font-size: 0.9rem;
+  color: var(--white);
 }
 
 section[class=feature] figure img {
-    min-height: 20rem;
+  min-height: 20rem;
+}
+
+section[class=feature] button {
+  background-color: var(--silver);
+  margin: 1rem 0.2rem 0 0.2rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+
+section[class=feature] button[id=featureBtn1] {
+  border: 0.2rem solid var(--deepblue);
+  background-color: var(--white);
 }
 
 section[class=service] {
-    background-color: var(--lightsilver);
+  background-color: var(--lightsilver);
 }
 
 section[class=service] div {
-    background-color: var(--lightsilver);
-    display: grid;
-    position: relative;
-    grid-gap: 0.5rem;
-    grid-template-columns: 49% 49%;
+  background-color: var(--lightsilver);
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  grid-gap: 0.5rem;
+  -ms-grid-columns: 49% 49%;
+      grid-template-columns: 49% 49%;
 }
 
 section[class=service] div figure {
-    background-color: var(--white);
-    border-radius: 1rem;
-    margin: 0;
-    padding: 1rem 0;
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 0;
+  padding: 1rem 0;
 }
 
 section[class=service] div figure figcaption {
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 0;
-    font-family: 'Nexa-bold';
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0;
+  font-family: 'Nexa-bold';
+  color: var(--smokyblack);
 }
 
 section[class=service] div figure img {
-    display: block;
-    height: 80%;
-    width: 60%;
-    margin: auto;
+  display: block;
+  height: 80%;
+  width: 60%;
+  margin: auto;
 }
 
 section[class=enquiry] {
-    background-color: var(--lightblue);
-    display: grid;
+  background-color: var(--lightblue);
+  display: -ms-grid;
+  display: grid;
 }
 
 section[class=enquiry] h2 {
-    color: var(--white);
+  color: var(--white);
 }
 
 section[class=enquiry] button {
-    margin: auto;
-    background-color: var(--deepblue);
-    border-radius: 0.3rem;
-    font-family: 'Nexa-bold';
+  margin: auto;
+  background-color: var(--deepblue);
+  border-radius: 0.3rem;
+  font-family: 'Nexa-bold';
 }
 
-@media only screen and (min-width:768px) {
-    section[class=discription] div {
-        display: flex;
-        flex-direction: row;
-    }
-    input[class=searchCity] {
-        width: 65%;
-        border-right: 0.11rem solid var(--lightsilver);
-        margin: 0.5rem 0;
-        padding: 1rem;
-        padding-left: 1.5rem;
-    }
-    input[class=searchDoctor] {
-        width: 145%;
-        margin: 0.5rem 0;
-        padding: 1rem 0.5rem;
-    }
-    input::placeholder {
-        font-size: 1rem;
-    }
-    section[class=discription] div .fa-crosshairs {
-        right: 72%;
-    }
-    section[class=discription] div button {
-        margin: auto;
-    }
-    section[class=protocols] h2 {
-        grid-area: h2;
-    }
-    section[class=protocols] p {
-        grid-area: p;
-    }
-    section[class=protocols] {
-        display: grid;
-        grid-template-areas: "h2 h2" "p p" "section aside";
-        grid-column-gap: 1rem;
-    }
-    section[class=protocols] section {
-        padding: 0;
-    }
-    section[class=protocols] section section {
-        display: none;
-    }
-    section[class=protocols] aside {
-        display: block;
-        padding: 0 1rem;
-        margin: auto;
-    }
-    section[class=protocols] aside h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    section[class=protocols] aside p {
-        margin: 0;
-    }
-    section[class=protocols] aside figure {
-        margin: auto;
-    }
-    section[class=doctors] {
-        background-color: var(--black);
-        color: var(--white);
-    }
-    section[class=doctors] div {
-        display: grid;
+@media only screen and (min-width: 768px) {
+  section[class=discription] div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  input[class=searchCity] {
+    width: 65%;
+    border-right: 0.11rem solid var(--lightsilver);
+    margin: 0.5rem 0;
+    padding: 1rem 2rem 1rem 1.5rem;
+  }
+  input[class=searchDoctor] {
+    width: 145%;
+    margin: 0.5rem 0;
+    padding: 1rem 0.5rem;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  input::placeholder {
+    font-size: 1rem;
+  }
+  section[class=discription] div .fa-crosshairs {
+    margin-top: 1.55rem;
+    left: 28%;
+  }
+  section[class=discription] div button {
+    margin: auto;
+  }
+  section[class=protocols] section {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "button div";
+    grid-column-gap: 1rem;
+  }
+  section[class=protocols] section div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: div;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 7;
+    grid-row: 1/ span 7;
+    margin: auto;
+    justify-items: center;
+  }
+  section[class=doctors] {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  section[class=doctors] div {
+    display: -ms-grid;
+    display: grid;
         grid-template-areas: 'figure figure';
-        grid-gap: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    section[class=feature] {
-        margin: 1rem 0;
-        padding: 1rem 0;
-    }
-    section[class=feature] div {
-        display: grid;
+    grid-gap: 1rem;
+  }
+  section[class=feature] {
+    margin: 1rem 0;
+  }
+  section[class=feature] div {
+    display: -ms-grid;
+    display: grid;
         grid-template-areas: 'figure figure';
-        grid-gap: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    section[class=service] div {
-        padding: 0 0 1rem 0;
-        margin: 0;
-        grid-gap: 1rem;
+    grid-gap: 1rem;
+  }
+  section[class=service] div {
+    padding: 0 0 1rem 0;
+    margin: 0;
+    grid-gap: 1rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    section[class=service] div figure {
-        height: 10rem;
-    }
-    section[class=enquiry] h2,
-    section[class=enquiry] p {
-        grid-column: 1;
-    }
+  }
+  section[class=service] div figure {
+    height: 10rem;
+  }
+  section[class=enquiry] h2,
+  section[class=enquiry] p {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    section {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    h1,
-    h2,
-    p {
-        text-align: left;
-    }
-    p {
-        margin-bottom: 1.5rem;
-    }
-    section[class=discription] {
-        background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg);
-        background-position: center;
-        background-size: cover;
-        padding: 7rem 5rem;
-    }
-    section[class=discription] p {
-        padding-right: 50%;
-    }
-    section[class=discription] div {
-        width: 48rem;
-    }
-    section[class=discription] div .fa-crosshairs {
-        right: 79%;
-        opacity: 0.5;
-    }
-    section[class=protocols] {
-        grid-column-gap: 5rem;
-    }
-    section[class=protocols] section button {
-        border: 0.1rem solid var(--skyblue);
-        padding: 6% 1rem;
-    }
-    section[class=protocols] aside p {
-        text-align: center;
-    }
-    section[class=doctors] {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    section[class=doctors] div {
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-        padding-top: 1rem;
-    }
-    section[class=doctors] div figure {
-        flex: 1;
-    }
-    section[class=doctors] div figure figcaption h2 {
-        font-size: 1.8rem;
-        line-height: 2rem;
-    }
-    section[class=feature] {
-        padding: 1rem 4rem;
-    }
-    section[class=feature] h2,
-    section[class=feature] p {
-        margin-left: 0.5rem;
-        padding-left: 0.5rem;
-    }
-    section[class=feature] div {
-        display: grid;
+  section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  section[class=discription] {
+    background-image: url(https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 7rem 5rem;
+  }
+  section[class=discription] p {
+    padding-right: 50%;
+  }
+  section[class=discription] div {
+    width: 48rem;
+  }
+  section[class=discription] div .fa-crosshairs {
+    left: 17rem;
+    opacity: 0.5;
+  }
+  section[class=protocols] section {
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
+  }
+  section[class=protocols] section button {
+    border: 0.1rem solid var(--skyblue);
+    padding: 6% 1rem;
+  }
+  section[class=protocols] section div p {
+    text-align: center;
+  }
+  section[class=doctors] {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  section[class=doctors] div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  section[class=doctors] div figure {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-grid-rows: 19rem 1fr;
+        grid-template-rows: 19rem 1fr;
+  }
+  section[class=doctors] div figure img {
+    -o-object-position: 50% 10%;
+       object-position: 50% 10%;
+  }
+  section[class=doctors] div figure figcaption h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  section[class=feature] p {
+    padding: 0;
+  }
+  section[class=feature] div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-        grid-auto-rows: 15rem 5rem 5rem;
-        margin: 0;
-    }
-    #fig01 {
-        grid-column: 1;
-        grid-row: 1/span 1;
-    }
-    #fig02 {
-        grid-column: 2;
-        grid-row: 1/span 3;
-    }
-    #fig03 {
-        grid-column: 3;
-        grid-row: 1/span 2;
-    }
-    #fig04 {
-        grid-column: 1;
-        grid-row: 2/span 5;
-    }
-    #fig05 {
-        grid-column: 2;
-        grid-row: 4/span 3;
-    }
-    #fig06 {
-        grid-column: 3;
-        grid-row: 3/span 4;
-    }
-    section[class=feature] div h4 {
-        font-size: 1.2rem;
-        margin-bottom: 0.4rem;
-    }
-    section[class=feature] figure img {
-        min-height: 100%;
-    }
-    section[class=service] {
-        margin: 0;
-    }
-    section[class=service] div {
+    grid-gap: 1rem;
+    grid-auto-rows: 15rem 5rem 5rem;
+    margin: 0;
+  }
+  #feature1 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/span 1;
+  }
+  #feature2 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/span 3;
+  }
+  #feature3 {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/span 2;
+  }
+  #feature4 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 5;
+    grid-row: 2/span 5;
+  }
+  #feature5 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 3;
+    grid-row: 4/span 3;
+  }
+  #feature6 {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 4;
+    grid-row: 3/span 4;
+  }
+  section[class=feature] div h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  section[class=feature] figure img {
+    min-height: 100%;
+  }
+  section[class=service] {
+    margin: 0;
+  }
+  section[class=service] div {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-column-gap: 0.5rem;
-    }
-    section[class=service] div figure {
-        border-radius: 0;
-    }
-    section[class=enquiry] {
+    grid-column-gap: 0.5rem;
+  }
+  section[class=service] div figure {
+    border-radius: 0;
+  }
+  section[class=enquiry] {
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem;
-    }
-    section[class=enquiry] h2,
-    section[class=enquiry] p {
-        text-align: left;
-        margin-bottom: 0;
-    }
-    section[class=enquiry] button {
-        grid-column: 2;
-        grid-row: 1/ span 2;
-        margin-right: 0;
-    }
+    grid-gap: 0.5rem;
+  }
+  section[class=enquiry] h2,
+  section[class=enquiry] p {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  section[class=enquiry] button {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/ span 2;
+    margin-right: 0;
+  }
 }
+/*# sourceMappingURL=index.css.map */

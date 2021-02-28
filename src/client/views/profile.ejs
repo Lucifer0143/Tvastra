@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tvastra</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/profile.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../assets/scripts/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="doctor.html">Doctors</a></li>
+                <li><a href="hospital.html">Hospitals</a></li>
+                <li><a href="dentistry.html">Treatment</a></li>
+                <li><a href="">Other Services</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+        <nav class="userNav">
+            <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
+            <button class="userInfoBtn" onclick="userInfo()"><%= userName %><i class="fa fa-angle-down"></i></button>
+            <form action="/signOut" method="POST" id="signout" style="display: none;">
+                <figure>
+                    <img src="../assets/images/doctor3(1).jpg" alt="user_image">
+                    <figcaption>
+                        <h5>
+                            <%= userName %>
+                        </h5>
+                        <p>
+                            <%= userPhoneNo %>
+                        </p>
+                    </figcaption>
+                </figure>
+                <button>My Appointment</button>
+                <button>My Labtests</button>
+                <button>My Medicine Order</button>
+                <button>Payments</button>
+                <button type="submit" id="btn">LogOut</button>
+            </form>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <main>
+        <% if(isValid == true){ %>
+            <div class="alertMsg" id="alertMsgs">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <h6>Success</h6>
+                    <p>Login successfully</p>
+                </div>
+                <i onclick="alertDiv()" id="exit" class="fas fa-times"></i>
+            </div>
+            <%}%>
+                <section class="discription">
+                    <h1>Find Affordable Healthcare</h1>
+                    <p>Join thousands of others who have exercise their rights to quality healthcare at a price you can afford</p>
+                    <div>
+
+                        <input type="text" class="searchCity" placeholder="Search for city"><i class="fa fa-crosshairs"></i></input>
+                        <input type="text" class="searchDoctor" placeholder="Search for doctor, hospitals and treatments">
+                        <button class="searchBtn">Search</button>
+                    </div>
+                </section>
+                <section class="protocols">
+                    <h2>How it works</h2>
+                    <p>Various facilities are provided here. But there is a protocol which needs to be followed so that you get the service at its best.</p>
+                    <section>
+                        <button id="Btn1" onclick="myBtn1()"><i>01</i> Fix consultation</button>
+                        <div id="fixConsultation">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                        <button id="Btn2" onclick="myBtn2()"><i>02</i> Upload medical report</button>
+                        <div id="uploadReport">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img2.png" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                        <button id="Btn3" onclick="myBtn3()"><i>03</i> Consult with doctor</button>
+                        <div id="consultDoctor">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img3.jpeg" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                        <button id="Btn4" onclick="myBtn4()"><i>04</i> Fix surgury</button>
+                        <div id="fixSurgury">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img4.jpeg" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                        <button id="Btn5" onclick="myBtn5()"><i>05</i> Hospital sent estimates</button>
+                        <div id="hospitalEstimate">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img5.jpg" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                        <button id="Btn6" onclick="myBtn6()"><i>06</i> Payments</button>
+                        <div id="payments">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img6.jpg" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                        <button id="Btn7" onclick="myBtn7()"><i>07</i> Surgery completed</button>
+                        <div id="surguryComplete">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img7.jpeg" alt="fix_consultation">
+                            </figure>
+                            <h3>Fix consultation</h3>
+                            <p>This dipicts that user will have to fix appointment first when it selects a particular doctor</p>
+                        </div>
+                    </section>
+                </section>
+                <section class="doctors">
+                    <h2>World class expert doctors!</h2>
+                    <p>The university of Texas Southastern has been a long works renowned research hospital. But untill the 80s, you couldn't go there. Now, with the addition of Aston Center and Zale Lipshy Hospital, UT Southastern is also a mecca for patients.</p>
+                    <div>
+                        <figure class="docCard1" id="docCards1">
+                            <img src="../assets/images/doctor1(1).jpg" alt="doctor">
+                            <figcaption>
+                                <h4>Duke Sanson</h4>
+                                <ul>
+                                    <li>Neuro Sergeon</li>
+                                    <li>Department of Neurological Surgery</li>
+                                    <li>Australia</li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <figure class="docCard2" id="docCards2">
+                            <img src="../assets/images/doctor2(1).jpg" alt="doctor">
+                            <figcaption>
+                                <h4>Georgea Peter</h4>
+                                <ul>
+                                    <li>Breast Cancer Surgeon</li>
+                                    <li>Director, UT. Southwest</li>
+                                    <li>London</li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <figure class="docCard3" id="docCards3">
+                            <img src="../assets/images/doctor3(1).jpg" alt="doctor">
+                            <figcaption>
+                                <h4>Charlie Moon</h4>
+                                <ul>
+                                    <li>Cardiac surgeon</li>
+                                    <li>MBBS, MD, FRCP, MRCP, Fellowship</li>
+                                    <li>New Delhi, India</li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                        <figure class="docCard4" id="docCards4">
+                            <img src="../assets/images/doctor4(1).jpg" alt="doctor">
+                            <figcaption>
+                                <h4>Rose Moon</h4>
+                                <ul>
+                                    <li>Plastic surgeon</li>
+                                    <li>Deparment of Plastic and Reconstructive Sergery</li>
+                                    <li>Dubai</li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <button id="docBtn1" onclick="doc1()"></button><button id="docBtn2" onclick="doc2()"></button><button id="docBtn3" onclick="doc3()"></button><button id="docBtn4" onclick="doc4()"></button>
+                </section>
+                <section class="feature">
+                    <h2>Feature Medical Treatments</h2>
+                    <p>Join thousands of others who have exercise their rights to quality healthcare at a price you can afford</p>
+                    <div>
+                        <figure id="feature1">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--009.jpg" alt="treatments">
+                            <figcaption>
+                                <h4>Dentistry</h4>
+                                <i>50+ Specialists</i>
+                            </figcaption>
+                        </figure>
+                        <figure id="feature2">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg" alt="treatments">
+                            <figcaption>
+                                <h4>Cancer</h4>
+                                <i>50+ Specialists</i>
+                            </figcaption>
+                        </figure>
+                        <figure id="feature3">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg" alt="treatments">
+                            <figcaption>
+                                <h4>Cardiology Treatments</h4>
+                                <i>50+ Specialists</i>
+                            </figcaption>
+                        </figure>
+                        <figure id="feature4">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--006.jpg" alt="treatments">
+                            <figcaption>
+                                <h4>Multiorgan Transplant</h4>
+                                <i>50+ Specialists</i>
+                            </figcaption>
+                        </figure>
+                        <figure id="feature5">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg" alt="treatments">
+                            <figcaption>
+                                <h4>Orthopadics Surgery</h4>
+                                <i>50+ Specialists</i>
+                            </figcaption>
+                        </figure>
+                        <figure id="feature6">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--007.jpg" alt="treatments">
+                            <figcaption>
+                                <h4>Infertility Treatment</h4>
+                                <i>50+ Specialists</i>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <button id="featureBtn1" onclick="featureFun1()"></button><button id="featureBtn2" onclick="featureFun2()"></button><button id="featureBtn3" onclick="featureFun3()"></button>
+                </section>
+                <section class="service">
+                    <h2>Exclucive Services</h2>
+                    <p>We want to be cofortable and apart from threating you illness, we provide you with some other services that you can see.</p>
+                    <div class=serviceLink>
+                        <figure>
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-01.png
+                    " alt="service">
+                            <figcaption>TRAVEL</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-02.png
+                    " alt="service">
+                            <figcaption>FOOD</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-03.png
+                    " alt="service">
+                            <figcaption>ACOMODATION</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-07.png
+                    " alt="service">
+                            <figcaption>LABS</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-10.png
+                    " alt="service">
+                            <figcaption>REPORTS</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-06.png
+                    " alt="service">
+                            <figcaption>AMBULANCE</figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="enquiry">
+                    <h2>Need Help?</h2>
+                    <p>Just let us know, we will happy to assist you.</p>
+                    <button>Submit your enquiry</button>
+                </section>
+    </main>
+    <footer>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
+        " alt="tvastra_logo">
+        </figure>
+        <nav class="sectionNav">
+            <ul>
+                <li><a href="doctor.html">Doctor</a></li>
+                <li><a href="hospital.html">Hospital</a></li>
+                <li><a href="dentistry.html">Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
+        </nav>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+</body>
+
+</html>

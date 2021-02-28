@@ -1,0 +1,123 @@
+header nav[class=userNav] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav button {
+  border: none;
+}
+
+header nav button[class=tvastraPlusBtn] {
+  background-color: var(--deepblue);
+  border: none;
+}
+
+header nav button[class=userInfoBtn] {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+header nav button[class=userInfoBtn] i {
+  display: block;
+  display: inline;
+  line-height: 0;
+  margin-bottom: 0;
+}
+
+header nav[class=userNav] form {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  top: 4rem;
+  background-color: var(--white);
+  margin: auto 3rem auto 3rem;
+  padding: 0;
+  border: 0.1rem solid var(--silver);
+}
+
+header nav[class=userNav] form figure {
+  height: auto;
+  margin: 0;
+  width: 100%;
+  padding: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  grid-gap: 0.5rem;
+}
+
+header nav[class=userNav] form figure img {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: auto;
+  border-radius: 50%;
+}
+
+header nav[class=userNav] form figure figcaption {
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0;
+}
+
+header nav[class=userNav] form figure figcaption h5,
+header nav[class=userNav] form figure figcaption p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+header nav[class=userNav] form button {
+  background-color: var(--white);
+  width: 100%;
+  text-align: left;
+  color: var(--black);
+  margin: 0;
+  padding: 1rem 1rem;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+header nav[class=userNav] form button:hover {
+  background-color: var(--silver);
+  border-left: 0.3rem solid var(--lightblue);
+}
+
+main div[class=alertMsg] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  position: absolute;
+  right: 1rem;
+  width: 18rem;
+  background-color: var(--white);
+  border-left: 0.3rem solid var(--green);
+  margin-top: 1rem;
+  padding: 0;
+}
+
+main div[class=alertMsg] p {
+  font-size: 0.8rem;
+}
+
+main div[class=alertMsg] p,
+main div[class=alertMsg] h6 {
+  color: var(--green);
+  margin-bottom: 0;
+  text-align: left;
+}
+
+main div[class=alertMsg] i {
+  color: var(--green);
+  margin: auto;
+}
+
+main div[class=alertMsg] i[id=exit] {
+  color: var(--black);
+}
+/*# sourceMappingURL=profile.css.map */
