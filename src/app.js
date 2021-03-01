@@ -14,13 +14,13 @@ const otpSender = require("./otpSender")
 
 const otpManager = new OtpManager(otpRepository, { otpLength: 5, validityTime: 5 });
 
-app.post("/signin_otp", (req, res) => {
+app.post("/signin_otp/:token", (req, res) => {
     const otp = otpManager.create(req.params.token);
     otpSender.send(otp, req.body);
     res.sendStatus(201);
 });
 
-app.get("/otp", (req, res) => {
+app.get("/otp/:token/:code", (req, res) => {
     const verificationResults = otpManager.VerificationResults;
     const verificationResult = otpManager.verify(req.params.token, req.params.code);
     let statusCode;

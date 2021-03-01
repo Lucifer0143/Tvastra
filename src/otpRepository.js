@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const baseRepositoryPath = "./otpItems";
+const baseRepositoryPath = "../otpItems";
 
 function add(otpItem) {
     checkBaseFolder();

@@ -103,19 +103,7 @@ function signOut(req, res) {
 
 
 function signin_otp(req, res) {
-    nexmo.verify.request({
-        number: req.body.number,
-        brand: 'tvastra'
-    }, (error, result) => {
-        // if (result.status != 0) {
-        //     res.render('signin_otp', { message: result.error_text })
-        // } else {
-        //     res.render('otp', { requestId: result.request_id })
-        // }
-        res.render('otp', {
-            isValid: false
-        });
-    })
+    res.render('/otp/:123456789')
 };
 
 function otp(req, res) {
