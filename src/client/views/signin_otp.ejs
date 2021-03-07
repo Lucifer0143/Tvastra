@@ -36,12 +36,12 @@
         <i class="fa fa-bars"></i>
     </header>
     <section class="alert">
-        <% if(!isValid){ %>
+        <% if(isValid == true){ %>
             <div class="alertMsg" id="alertMsgs">
                 <i class="fas fa-times-circle"></i>
                 <div>
                     <h6>Failure</h6>
-                    <p>Incorrect password or email</p>
+                    <p>Number not associated with any user</p>
                 </div>
                 <i onclick="alertDiv()" id="exit" class="fas fa-times"></i>
             </div>
@@ -49,10 +49,10 @@
     </section>
     <main>
         <h1>OTP Login</h1>
-        <form action="/signin_otp/:123456789" method="post" class="signin">
-            <input type="tel" name="telphone" id="telphone" placeholder="Enter your resistered number" required>
+        <form action="/otp/:123456" method="post" class="signin">
+            <input type="tel" name="phoneNo" id="phoneNO" placeholder="Enter your resistered number" required>
             <div>
-                <a href="./signin">Login with password</a>
+                <a class="loginPass" href="./signin">Login with password</a>
             </div>
             <button type="submit" class="signinBtn">LOGIN</button>
         </form>

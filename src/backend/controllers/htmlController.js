@@ -6,29 +6,6 @@ const path = require("path");
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database(path.resolve(__dirname, "../databases/database.sqlite"));
 
-// let profile = (req, res) => {
-//     let userId = req.session.userId;
-//     let sql = "SELECT item, id, done FROM lists WHERE user_id = ?";
-//     let arr = [];
-//     let arr1 = [];
-//     let arr2 = [];
-//     db.all(sql, [userId], (err, row) => {
-//         if (err) {
-//             throw err
-//         }
-//         row.forEach((row) => {
-//             arr.push(row.item);
-//             arr1.push(row.id);
-//             arr2.push(row.done);
-//         });
-//         console.log(arr);
-//         return res.render("profile", {
-//             todo: arr,
-//             todoId: arr1,
-//             todoColor: arr2
-//         })
-//     });
-// };
 let profile = (req, res) => {
     let userId = req.session.userId;
     let usersName, usersNo;
@@ -63,31 +40,91 @@ let signup = (req, res) => {
 
 let signin_otp = (req, res) => {
     res.render("signin_otp", {
-        isValid: true
+        isValid: false,
+        areValid: false
     });
 };
 
 let reset_password = (req, res) => {
     res.render("reset_password", {
-        isValid: true
+        isValid: true,
+        areValid: false
     });
 };
 
-let otp = (req, res) => {
-    res.render("otp", {
-        isValid: true
+let otps = (req, res) => {
+    res.render("otps", {
+        isValid: false,
+        areValid: true,
+        nonValid: false
     });
 };
 
 let tvastra_plus = (req, res) => {
     res.render('tvastra_plus');
 }
+
+let dentistry = (req, res) => {
+    res.render('dentistry');
+}
+
+let about_hospital = (req, res) => {
+    res.render('about_hospital');
+}
+
+let aboutus = (req, res) => {
+    res.render('aboutus');
+}
+
+let appointment = (req, res) => {
+    res.render('appointment');
+}
+
+let contactus = (req, res) => {
+    res.render('contactus');
+}
+
+let doctor = (req, res) => {
+    res.render('doctor');
+}
+
+let doctors_profile = (req, res) => {
+    res.render('doctors_profile');
+}
+
+let faq = (req, res) => {
+    res.render('faq');
+}
+
+let hospital = (req, res) => {
+    res.render('hospital');
+}
+
+let index = (req, res) => {
+    res.render('index');
+}
+
+let passOtp = (req, res) => {
+    res.render('passOtp');
+}
+
 module.exports = {
     profile: profile,
     signin: signin,
     signup: signup,
+    dentistry: dentistry,
+    about_hospital: about_hospital,
+    aboutus: aboutus,
+    appointment: appointment,
+    contactus: contactus,
+    doctor: doctor,
+    doctors_profile: doctors_profile,
+    faq: faq,
+    hospital: hospital,
+    index: index,
     signin_otp: signin_otp,
     reset_password: reset_password,
-    otp: otp,
+    otps: otps,
+    passOtp: passOtp,
     tvastra_plus: tvastra_plus
 };

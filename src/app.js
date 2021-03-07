@@ -8,55 +8,10 @@ const compressions = require("compression");
 const morgan = require("morgan");
 const app = express();
 const path = require("path");
-const OtpManager = require("./OtpManager");
-const otpRepository = require("./otpRepository");
-const otpSender = require("./otpSender")
+// const OtpManager = require("./OtpManager");
+// const otpRepository = require("./otpRepository");
+// const otpSender = require("./otpSender")
 
-const otpManager = new OtpManager(otpRepository, { otpLength: 5, validityTime: 5 });
-
-app.post("/signin_otp/:token", (req, res) => {
-    const otp = otpManager.create(req.params.token);
-    otpSender.send(otp, req.body);
-    res.sendStatus(201);
-});
-
-app.get("/otp/:token/:code", (req, res) => {
-    const verificationResults = otpManager.VerificationResults;
-    const verificationResult = otpManager.verify(req.params.token, req.params.code);
-    let statusCode;
-    let bodyMessage;
-
-    switch (verificationResult) {
-        case verificationResults.valid:
-            statusCode = 200;
-            bodyMessage = "OK";
-            break;
-        case verificationResults.notValid:
-            statusCode = 404;
-            bodyMessage = "Not found"
-            break;
-        case verificationResults.checked:
-            statusCode = 409;
-            bodyMessage = "The code has already been verified";
-            break;
-        case verificationResults.expired:
-            statusCode = 410;
-            bodyMessage = "The code is expired";
-            break;
-        default:
-            statusCode = 404;
-            bodyMessage = "The code is invalid for unknown reason";
-    }
-    res.status(statusCode).send(bodyMessage);
-});
-app.post("/webhooks/message-status", (req, res) => {
-    console.log(req.body);
-    res.status(200).end();
-});
-
-app.post("/webhooks/inbound-message", (req, res) => {
-    res.send("inbound-message called");
-});
 
 app.use(cors());
 app.use(compressions());
@@ -89,6 +44,63 @@ app.set("views", __dirname + "/client/views");
 app.set("css", __dirname + "/client/assets/css");
 
 app.use("/", routes);
+
+// const otpManager = new OtpManager(otpRepository, { otpLength: 5, validityTime: 5 });
+// let url;
+// app.post("/otp/:token", (req, res) => {
+//     const otp = otpManager.create(req.params.token);
+//     otpSender.send(otp, req.body);
+//     url = '/otp/:123456/' + otp.code;
+//     res.render('otps', {
+//         urlCode: url,
+//         isValid: false
+//     });
+// });
+
+// app.post("/otpcode", (req, res) => {
+//     const num = req.body.num;
+//     const verificationResults = otpManager.VerificationResults;
+//     const verificationResult = otpManager.verify(':123456', num);
+//     let statusCode;
+//     let bodyMessage;
+
+//     switch (verificationResult) {
+//         case verificationResults.valid:
+//             statusCode = 200;
+//             // bodyMessage = "OK";
+//             return res.render('profile', {
+//                 isValid: true,
+//                 userName: 'mukesh',
+//                 userPhoneNo: '2234353424'
+//             })
+//             break;
+//         case verificationResults.notValid:
+//             statusCode = 404;
+//             bodyMessage = "Not found"
+//             break;
+//         case verificationResults.checked:
+//             statusCode = 409;
+//             bodyMessage = "The code has already been verified";
+//             break;
+//         case verificationResults.expired:
+//             statusCode = 410;
+//             bodyMessage = "The code is expired";
+//             break;
+//         default:
+//             statusCode = 404;
+//             bodyMessage = "The code is invalid for unknown reason";
+//     }
+//     res.status(statusCode).send(bodyMessage);
+// });
+
+app.post("/webhooks/message-status", (req, res) => {
+    // console.log(req.body);
+    res.status(200).end();
+});
+
+app.post("/webhooks/inbound-message", (req, res) => {
+    res.send("inbound-message called");
+});
 
 app.set("port", process.env.PORT || 5000);
 app.listen(app.get("port"), () => {

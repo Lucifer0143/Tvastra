@@ -23,26 +23,26 @@
         </figure>
         <nav>
             <ul>
-                <li><a href="doctor.html">Doctors</a></li>
-                <li><a href="hospital.html">Hospitals</a></li>
-                <li><a href="dentistry.html">Treatment</a></li>
-                <li><a href="">Other Services</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="./doctor">Doctors</a></li>
+                <li><a href="./hospital">Hospitals</a></li>
+                <li><a href="./dentistry">Treatment</a></li>
+                <li><a href="#">Other Services</a></li>
+                <li><a href="./aboutus">About</a></li>
             </ul>
         </nav>
         <nav class="userNav">
             <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
             <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
-            <button class="userInfoBtn" onclick="userInfo()"><%= userName %><i class="fa fa-angle-down"></i></button>
+            <button class="userInfoBtn" onclick="userInfo()"><%= userName%><i class="fa fa-angle-down"></i></button>
             <form action="/signOut" method="POST" id="signout" style="display: none;">
                 <figure>
                     <img src="../assets/images/doctor3(1).jpg" alt="user_image">
                     <figcaption>
                         <h5>
-                            <%= userName %>
+                            <%= userName%>
                         </h5>
                         <p>
-                            <%= userPhoneNo %>
+                            <%= userPhoneNo%>
                         </p>
                     </figcaption>
                 </figure>

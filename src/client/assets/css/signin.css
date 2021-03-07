@@ -73,6 +73,15 @@ form div {
 
 form div a {
   font-size: 1rem;
+  margin-bottom: 0;
+}
+
+form div button[type=submit] {
+  padding: 0;
+  margin: 0;
+  background-color: var(--white);
+  color: var(--deepblue);
+  font-size: 1rem;
 }
 
 div[class=alertMsg] {
@@ -109,6 +118,74 @@ div[class=alertMsg] i[id=exit] {
   color: var(--black);
 }
 
+div[class=alertMsgInfo] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  position: absolute;
+  right: 1rem;
+  width: 18rem;
+  background-color: var(--white);
+  border-left: 0.3rem solid var(--blue);
+  margin-top: 1rem;
+  padding: 0;
+}
+
+div[class=alertMsgInfo] p,
+div[class=alertMsgInfo] h6 {
+  color: var(--blue);
+  margin-bottom: 0;
+  text-align: left;
+}
+
+div[class=alertMsgInfo] p {
+  color: var(--blue);
+}
+
+div[class=alertMsgInfo] i {
+  color: var(--blue);
+  margin: auto;
+}
+
+div[class=alertMsgInfo] i[id=exit] {
+  color: var(--black);
+}
+
+div[class=alertMsgSuccess] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  position: absolute;
+  right: 1rem;
+  width: 18rem;
+  background-color: var(--white);
+  border-left: 0.3rem solid var(--green);
+  margin-top: 1rem;
+  padding: 0;
+}
+
+div[class=alertMsgSuccess] p,
+div[class=alertMsgSuccess] h6 {
+  color: var(--green);
+  margin-bottom: 0;
+  text-align: left;
+}
+
+div[class=alertMsgSuccess] p {
+  color: var(--green);
+}
+
+div[class=alertMsgSuccess] i {
+  color: var(--green);
+  margin: auto;
+}
+
+div[class=alertMsgSuccess] i[id=exit] {
+  color: var(--black);
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -127,6 +204,11 @@ footer {
 footer p {
   margin-bottom: 1rem;
   color: var(--black);
+}
+
+a[class=loginPass] {
+  text-align: center;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
