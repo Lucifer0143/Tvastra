@@ -37,6 +37,8 @@ function onFocusEvent(index) {
 }
 
 
+
+
 function otpTimer() {
     var timeLeft = 30;
     var elem = document.getElementById('timer');
@@ -57,3 +59,35 @@ function otpTimer() {
     }
 }
 window.onload = otpTimer;
+
+
+
+//-------------------for reset_password page----------------------------------
+
+
+function passShowHide1(z) {
+
+    var x = document.getElementById('pass1');
+    if (x.type === 'password') {
+        x.type = 'text';
+        z.classList.remove('fa-eye-slash');
+        z.classList.add('fa-eye');
+    } else {
+        x.type = 'password';
+        z.classList.remove('fa-eye');
+        z.classList.add('fa-eye-slash');
+    }
+}
+
+function passShowHide2(z) {
+    var x = document.getElementById('pass2');
+    if (x.type === 'password') {
+        x.type = 'text';
+        z.classList.remove('fa-eye-slash');
+        z.classList.add('fa-eye');
+    } else {
+        x.type = 'password';
+        z.classList.remove('fa-eye');
+        z.classList.add('fa-eye-slash');
+    }
+}

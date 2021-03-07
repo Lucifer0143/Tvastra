@@ -176,6 +176,16 @@ a[class=loginPass] {
     width: 100%;
 }
 
+// ----------------reset_password page-------------
+.field-icon {
+    margin: auto;
+    margin-right: 1rem;
+    margin-top: -3.1rem;
+    padding-bottom: 2rem;
+    color: var(--deepblue);
+    // z-index: 2;
+}
+
 @media only screen and (min-width: 768px) {
     main {
         width: 50%;
