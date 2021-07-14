@@ -52,6 +52,7 @@
         <form method="post" class="signin">
             <input type="email" name="email" id="email" placeholder="Enter your username" required>
             <input type="password" name="password" id="password" placeholder="Enter your password">
+            <i onclick="showHidePass(this)" class="fa fa-eye-slash eyeIcon"></i>
             <div>
                 <a href="./signin_otp">Login with OTP</a>
                 <button type="submit" formaction="/forgotPass/:123456">Forgot Password</button>

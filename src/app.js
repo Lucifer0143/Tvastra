@@ -1,4 +1,5 @@
 const express = require("express");
+const app = express();
 const routes = require("./backend/routes/htmlRoutes");
 const session = require("express-session");
 const bodyParser = require("body-parser");
@@ -6,21 +7,30 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const compressions = require("compression");
 const morgan = require("morgan");
-const app = express();
+const multer = require('multer');
 const path = require("path");
-// const OtpManager = require("./OtpManager");
-// const otpRepository = require("./otpRepository");
-// const otpSender = require("./otpSender")
+const moment = require('moment');
+const flash = require('connect-flash');
 
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(compressions());
 app.use(morgan("dev"));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "client")));
 
+
+var storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './src/client/assets/images/uploads')
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+var upload = multer({ storage: storage });
 
 
 app.use(session({
@@ -31,9 +41,11 @@ app.use(session({
         path: "/",
         sameSite: true,
         secure: false,
-        maxAge: 24 * 60 * 60 * 60
+        maxAge: 24 * 60 * 60 * 60 * 60
     }
 }));
+
+app.use(flash());
 
 app.engine("html", require("ejs").renderFile);
 
@@ -43,55 +55,23 @@ app.set("views", __dirname + "/client/views");
 
 app.set("css", __dirname + "/client/assets/css");
 
+app.use('/changeProfile', upload.single('profile_picture'), (req, res, next) => {
+    next();
+});
+
+app.use('/complete_profile', upload.single('profile_picture'), (req, res, next) => {
+    next();
+});
+
+app.use('/addRecords', upload.array('reportImage', 6), (req, res, next) => {
+    next();
+});
+
+app.use('/newRecord', upload.array('reportImage', 6), (req, res, next) => {
+    next();
+});
+
 app.use("/", routes);
-
-// const otpManager = new OtpManager(otpRepository, { otpLength: 5, validityTime: 5 });
-// let url;
-// app.post("/otp/:token", (req, res) => {
-//     const otp = otpManager.create(req.params.token);
-//     otpSender.send(otp, req.body);
-//     url = '/otp/:123456/' + otp.code;
-//     res.render('otps', {
-//         urlCode: url,
-//         isValid: false
-//     });
-// });
-
-// app.post("/otpcode", (req, res) => {
-//     const num = req.body.num;
-//     const verificationResults = otpManager.VerificationResults;
-//     const verificationResult = otpManager.verify(':123456', num);
-//     let statusCode;
-//     let bodyMessage;
-
-//     switch (verificationResult) {
-//         case verificationResults.valid:
-//             statusCode = 200;
-//             // bodyMessage = "OK";
-//             return res.render('profile', {
-//                 isValid: true,
-//                 userName: 'mukesh',
-//                 userPhoneNo: '2234353424'
-//             })
-//             break;
-//         case verificationResults.notValid:
-//             statusCode = 404;
-//             bodyMessage = "Not found"
-//             break;
-//         case verificationResults.checked:
-//             statusCode = 409;
-//             bodyMessage = "The code has already been verified";
-//             break;
-//         case verificationResults.expired:
-//             statusCode = 410;
-//             bodyMessage = "The code is expired";
-//             break;
-//         default:
-//             statusCode = 404;
-//             bodyMessage = "The code is invalid for unknown reason";
-//     }
-//     res.status(statusCode).send(bodyMessage);
-// });
 
 app.post("/webhooks/message-status", (req, res) => {
     // console.log(req.body);

@@ -15,9 +15,29 @@ div[class=doctorFilter] {
 section[class=sortBy] {
     display: flex;
     flex-direction: row;
-    padding: 0 1rem;
+    padding: 0 1.5rem 0 1rem;
     margin-top: 1rem;
     justify-content: space-between;
+    form[class=sortBtnDropdown] {
+        display: none;
+        padding: 0;
+        position: absolute;
+        background-color: var(--black);
+        min-width: 10rem;
+        overflow: auto;
+        right: 1rem;
+        margin-top: 2.8rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        button {
+            background-color: var(--black);
+            color: var(--white);
+            width: 100%;
+            &:hover {
+                background-color: var(--skyblue);
+            }
+        }
+    }
 }
 
 section[class=sortBy] h4 {
@@ -36,6 +56,7 @@ section[class=sortBy] button {
     }
 }
 
+// }
 div[class=doctorList] div[class=doctorInfo] {
     border: 0.1rem solid var(--black);
     margin: 0rem 0.5rem 1rem 0.5rem;
@@ -93,6 +114,45 @@ div[class=doctorInfo] figcaption h3 {
         top: 0.6rem;
         margin-left: -2.75rem;
         width: 2.5rem;
+    }
+}
+
+div[class=bookSlotNow] {
+    display: none;
+    div {
+        border-bottom: 0.1rem solid var(--black);
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        grid-gap: 0.5rem;
+        i {
+            font-size: 0.7rem;
+        }
+        p {
+            text-align: left;
+            margin-bottom: 0;
+        }
+        div {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border: none;
+            margin: auto;
+            padding: 0;
+            p[class=slots] {
+                color: var(--green);
+                border: 0.1rem solid var(--green);
+                padding: 0.2rem 0.3rem;
+            }
+        }
+        button {
+            background-color: var(--deepblue);
+            border-radius: 0.3rem;
+        }
+    }
+    h6[class=hospitalName] {
+        margin: 0.3rem;
+        color: var(--green);
     }
 }
 
@@ -275,6 +335,42 @@ section[class=enquiry] {
         figure {
             height: 18rem;
         }
+        form {
+            padding: 0;
+        }
+        div[class=container] {
+            display: none;
+            grid-column: 1/ span 2;
+            div[class=MultiCarousel] {
+                padding: 0.5rem;
+                .MultiCarousel-inner {
+                    padding: 0 2.5rem;
+                }
+                .left {
+                    position: absolute;
+                    margin: -2.8rem auto auto 0.5rem;
+                    border-radius: 50%;
+                    padding: 0.3rem 0.5rem;
+                    background-color: var(--hardsilver);
+                    i {
+                        margin: 0.1rem 0 0 0;
+                        color: var(--deepblue);
+                    }
+                }
+                .right {
+                    position: absolute;
+                    margin: -2.7rem auto auto auto;
+                    right: 6rem;
+                    border-radius: 50%;
+                    padding: 0.3rem 0.5rem;
+                    background-color: var(--hardsilver);
+                    i {
+                        margin: 0.1rem 0 0 0;
+                        color: var(--deepblue);
+                    }
+                }
+            }
+        }
     }
     section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] figcaption {
         grid-row-gap: 0rem;
@@ -286,7 +382,8 @@ section[class=enquiry] {
         top: 0.8rem;
     }
     section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] figcaption button {
-        padding: 1rem 4rem;
+        padding: 0.3rem 3rem;
+        font-family: 'Nexa-bold';
     }
     section[class=enquiry] {
         background-color: var(--lightblue);
@@ -321,3 +418,68 @@ section[class=enquiry] {
         color: var(--white);
     }
 }
+
+//-------------------for carousel-------------------------
+// .container {
+//     // display: none;
+//     .row {
+//         // display: initial;
+//         .MultiCarousel {
+//             // float: left;
+//             overflow: hidden;
+//             padding: 1rem;
+//             margin: 0 5%;
+//             width: 90%;
+//             position: relative;
+//             .MultiCarousel-inner {
+//                 transition: 1s ease all;
+//                 // float: left;
+//                 .item {
+//                     // float: left;
+//                     h6,
+//                     p {
+//                         margin-bottom: 0;
+//                     }
+//                     p {
+//                         color: var(--deepblue);
+//                         font-family: 'Nexa-bold';
+//                     }
+//                     .pad15 {
+//                         text-align: center;
+//                         padding: 10px 0;
+//                         margin: 10px;
+//                         &:hover {
+//                             border-bottom: 0.1rem solid var(--smokyblack);
+//                         }
+//                     }
+//                 }
+//             }
+//             .leftLst,
+//             .rightLst {
+//                 position: absolute;
+//                 border-radius: 50%;
+//                 top: calc(50% - 1rem);
+//             }
+//             .leftLst {
+//                 left: 0;
+//                 color: var(--deepblue);
+//             }
+//             .rightLst {
+//                 right: 0;
+//             }
+//             .leftLst.over,
+//             .rightLst.over {
+//                 pointer-events: none;
+//                 background: #ccc;
+//             }
+//             .btn {
+//                 padding: 0.3rem 0.5rem;
+//                 i {
+//                     margin: auto;
+//                     vertical-align: middle;
+//                     color: var(--deepblue);
+//                 }
+//             }
+//         }
+//     }
+// }

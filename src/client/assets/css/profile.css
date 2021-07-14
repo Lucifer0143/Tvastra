@@ -2,6 +2,7 @@ header nav[class=userNav] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 99;
 }
 
 header nav button {
@@ -31,9 +32,10 @@ header nav[class=userNav] form {
   position: absolute;
   display: -ms-grid;
   display: grid;
-  top: 4rem;
+  top: 3.5rem;
   background-color: var(--white);
-  margin: auto 3rem auto 3rem;
+  width: 15rem;
+  margin-left: 10rem;
   padding: 0;
   border: 0.1rem solid var(--silver);
 }
@@ -66,9 +68,10 @@ header nav[class=userNav] form figure figcaption {
 
 header nav[class=userNav] form figure figcaption h5,
 header nav[class=userNav] form figure figcaption p {
-  margin: 0;
+  margin: auto 0;
   padding: 0;
   text-align: left;
+  vertical-align: middle;
 }
 
 header nav[class=userNav] form button {

@@ -39,51 +39,55 @@
         <section class="hero">
             <figure>
                 <figcaption>
-                    <h1>About John Nission</h1>
+                    <h1>About
+                        <%= Name%>
+                    </h1>
                     <p>Home / Doctor's Profile</p>
                 </figcaption>
-                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png" alt="hero_image">
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
             </figure>
         </section>
         <section class="johnNission">
             <div class="col1">
                 <figure>
-                    <img src="../assets/images/doctor3(1).jpg" alt="doctor_image">
+                    <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
                 </figure>
                 <button>Book an appointment</button>
             </div>
             <div class="col2">
                 <div class="intro">
-                    <h2>john Nission</h2>
+                    <h2>
+                        <%= Name%>
+                    </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, illo ratiione asperiores voluptates a vel eos laboriosam, distinctio sed dolorem, saepe repellendus incidunt, Veritatis nodi harum unde officiis, placeat blanditiis.</p>
                 </div>
                 <div class="icons"><i class="fas fa-award"></i><span>Specialization</span><i onclick="detail1(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about1">
+                    <%= specialization%>
                 </p>
                 <div class="icons"><i class="fa fa-stethoscope"></i><span>List Of Treatment</span><i onclick="detail2(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about2">
+                    <%= treatments%>
                 </p>
                 <div class="icons"><i class="fa fa-hospital-o"></i><span>Word Experience</span><i onclick="detail3(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about3">
+                    <%= experience%>
                 </p>
                 <div class="icons"><i class="fa fa-star"></i><span>Qualification</span><i onclick="detail4(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about4">
+                    <%= qualification%>
                 </p>
                 <div class="icons"><i class="fa fa-trophy"></i><span>Awards</span><i onclick="detail5(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about5">
+                    <%= award%>
                 </p>
                 <div class="icons"><i class="fa fa-map-marker"></i><span>Location</span><i onclick="detail6(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about6">
+                    <%= country%>
                 </p>
                 <div class="icons"><i class="fa fa-inr"></i><span>Avg Fees</span><i onclick="detail7(this)" class="fa fa-angle-down" id="rightIcon"></i></div>
-                <p class="details" id="about7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repudiandae enim obcaecati! Doloremque alias, harum suscipit, enim ipsum cupiditate qui, ipsum delectus deleniti sestinctio, alias, earum officiis acccusamus consectetur
-                    eius.
+                <p class="details" id="about7">
+                    <%= avgFees%>
                 </p>
             </div>
         </section>

@@ -1,0 +1,183 @@
+body {
+    background-color: var(--lightblue);
+    span {
+        margin-bottom: 0rem;
+    }
+}
+
+.tagify__tag {
+    background-color: lightgreen;
+}
+
+header nav[class=userNav] {
+    display: flex;
+}
+
+header nav button {
+    border: none;
+}
+
+header nav button[class=tvastraPlusBtn] {
+    background-color: var(--deepblue);
+    border: none;
+}
+
+header nav button[class=userInfoBtn] {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1rem;
+    padding-left: 0;
+}
+
+header nav button[class=userInfoBtn] i {
+    display: block;
+    display: inline;
+    line-height: 0;
+    margin-bottom: 0;
+}
+
+header nav[class=userNav] form {
+    position: absolute;
+    display: grid;
+    top: 4rem;
+    background-color: var(--white);
+    margin: auto 3rem auto 3rem;
+    padding: 0;
+    border: 0.1rem solid var(--silver);
+}
+
+header nav[class=userNav] form figure {
+    height: auto;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 0.5rem;
+}
+
+header nav[class=userNav] form figure img {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: auto;
+    border-radius: 50%;
+}
+
+header nav[class=userNav] form figure figcaption {
+    padding: 0;
+    display: grid;
+    grid-gap: 0;
+}
+
+header nav[class=userNav] form figure figcaption h5,
+header nav[class=userNav] form figure figcaption p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+header nav[class=userNav] form button {
+    background-color: var(--white);
+    width: 100%;
+    text-align: left;
+    color: var(--black);
+    margin: 0;
+    padding: 1rem 1rem;
+    border-radius: 0;
+    font-size: 1rem;
+}
+
+header nav[class=userNav] form button:hover {
+    background-color: var(--silver);
+    border-left: 0.3rem solid var(--lightblue);
+}
+
+main {
+    display: block;
+    margin: auto;
+    padding: 1rem 0rem;
+    margin-top: 2rem;
+    width: 90%;
+    background-color: var(--white);
+    box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+}
+
+h1 {
+    color: var(--deepblue);
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+p {
+    font-size: 1.7rem;
+}
+
+h4 {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--deepblue);
+}
+
+textarea::placeholder {
+    font-family: 'Nexa-bold';
+    color: var(--silver);
+}
+
+input[type=file] {
+    font-size: 1.5rem;
+    margin-top: 0;
+    border: 0.1rem solid var(--silver);
+    padding: 1rem;
+}
+
+input[type=number],
+input[type=text] {
+    margin-top: 0;
+}
+
+button[id=bookBtn] {
+    margin: 0.5rem 0;
+    background-image: url(../images/arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 95%;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid var(--silver);
+    padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    border: none;
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer p {
+    color: var(--black);
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 70%;
+        margin-top: 4rem;
+    }
+    footer {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        width: 50%;
+    }
+}

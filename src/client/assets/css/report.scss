@@ -1,0 +1,162 @@
+main {
+    background-color: var(--silver);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+section[class=dashboardNav] {
+    padding: 1rem;
+    width: 16rem;
+    form {
+        padding: 0;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        background-color: var(--silver);
+        width: 100%;
+        i {
+            color: var(--deepblue);
+        }
+        h5 {
+            padding-left: 0.5rem;
+            margin-bottom: 0;
+            text-align: left;
+            font-family: 'Nexa-light';
+        }
+        &:hover {
+            background-color: var(--white);
+            border-left: 0.1rem solid var(--deepblue);
+            h5 {
+                color: var(--deepblue);
+                font-family: 'Nexa-bold';
+            }
+        }
+        // h5[id=navBtn4h5] {
+        //     color: var(--deepblue);
+        //     font-family: 'Nexa-bold';
+        // }
+    }
+}
+
+section[class=showRecord] {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+    div[class=reportHead] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid var(--silver);
+        margin-bottom: 1rem;
+        button {
+            background-color: var(--deepblue);
+            border-radius: 0.5rem;
+        }
+    }
+    div[class=records] {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+        figure {
+            position: relative;
+            figcaption {
+                display: grid;
+                position: absolute;
+                grid-template-columns: 1fr 1fr;
+                padding: 0.3rem;
+                width: 100%;
+                div {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    h6 {
+                        color: var(--deepblue);
+                        margin-bottom: 0;
+                        text-align: left;
+                    }
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+                button[class=deleteBtn] {
+                    padding: 0.3rem 0 0.1rem 0;
+                    margin: 0 0 auto auto;
+                    height: 1.6rem;
+                    width: 0.7rem;
+                    border-radius: 50%;
+                    background-color: var(--white);
+                    i {
+                        margin: 0;
+                        font-size: 0.9rem;
+                    }
+                }
+                form {
+                    display: none;
+                    position: relative;
+                    grid-column: 2;
+                    padding: 0;
+                    margin-left: auto;
+                    margin-right: 0;
+                    button {
+                        padding: 0.1rem 0.3rem;
+                        background-color: var(--white);
+                        color: var(--deepblue);
+                        font-family: 'Nexa-bold';
+                        border-radius: 50%;
+                        i {
+                            margin: 0;
+                            line-height: 0;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div[class=addrecordform] {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        width: 50%;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0.2rem 1rem 0 var(--shadowblack);
+        div[class=addpic] {
+            background-color: var(--black);
+            width: 6rem;
+            height: 5rem;
+            input[type=file] {
+                opacity: 0;
+            }
+            label {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                i,
+                span {
+                    color: var(--white);
+                    margin: auto;
+                    text-align: center;
+                    margin-bottom: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+        div[class=buttons] {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1rem;
+            button[id=cancel] {
+                background-color: var(--red);
+            }
+            button[id=done] {
+                background-color: var(--deepblue);
+            }
+        }
+    }
+}

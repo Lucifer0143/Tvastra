@@ -1,0 +1,182 @@
+main {
+    background-color: var(--lightsilver);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+span {
+    margin-bottom: 0rem;
+}
+
+section[class=dashboardNav] {
+    padding: 1rem;
+    width: 16rem;
+    form {
+        padding: 0;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        background-color: var(--lightsilver);
+        width: 100%;
+        i {
+            color: var(--deepblue);
+        }
+        h5 {
+            padding-left: 0.5rem;
+            margin-bottom: 0;
+            text-align: left;
+            font-family: 'Nexa-light';
+        }
+        &:hover {
+            background-color: var(--white);
+            border-left: 0.1rem solid var(--deepblue);
+            h5 {
+                color: var(--deepblue);
+                font-family: 'Nexa-bold';
+            }
+        }
+        h5[id=navBtn1h5] {
+            color: var(--deepblue);
+            font-family: 'Nexa-bold';
+        }
+    }
+}
+
+section[class=dashboardDetail] {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+    form {
+        padding: 0;
+    }
+    div[class=profile] form div[class=top] div[class=labelInput] {
+        figure {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            margin-top: 0.3rem;
+            img {
+                border-radius: 50%;
+                height: 4rem;
+                width: 4rem;
+            }
+            figcaption {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                padding-left: 1rem;
+                margin: auto;
+                margin-left: 0;
+                span {
+                    margin-bottom: 0;
+                    font-family: 'Nexa-light';
+                }
+            }
+        }
+    }
+    div[class=profile] div[class=edit] {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0.5rem;
+    }
+    div[class=profile] div[class=edit] div[class=labelInput] {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        label {
+            font-family: 'Nexa-bold';
+            margin: 0.5rem 0 0.3rem 0;
+        }
+        textarea {
+            overflow: hidden;
+            resize: none;
+        }
+        input {
+            margin-top: 0;
+        }
+    }
+    div[class=profile] div[class=description] div[class=labelInput] {
+        textarea {
+            margin-top: 0.3rem;
+        }
+        label {
+            font-family: 'Nexa-bold';
+        }
+    }
+}
+
+section[class=dashboardDetail] div[class=top] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--silver);
+    div[class=labelInput] {
+        font-family: 'Nexa-bold';
+    }
+    h3 {
+        margin: auto;
+        margin-left: 0;
+    }
+    button {
+        margin: auto;
+        margin-right: 0;
+        background-color: var(--deepblue);
+        border-radius: 0.5rem;
+    }
+    select {
+        border: 0.1rem solid var(--silver);
+    }
+}
+
+section[class=dashboardDetail] div[class=description] {
+    grid-template-columns: 1fr;
+    padding: 0;
+}
+
+div[class=edit] {
+    border-bottom: 0.1rem solid var(--silver);
+}
+
+input[type=file] {
+    position: absolute;
+    z-index: -1;
+}
+
+label[class=selectFile] {
+    color: var(--deepblue);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+// ---------------------autocomplete autosuggesion-------------------------
+ul[class=autocomplete] {
+    position: relative;
+    padding: 0;
+}
+
+.autocomplete-items {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+
+.autocomplete-items ul {
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.5rem;
+}
+
+.autocomplete-items ul:hover {
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}

@@ -9,6 +9,7 @@
 }
 
 :root {
+    --tag-bg: lightgreen;
     --black: #000;
     --textblack: #021433;
     --white: #fff;
@@ -34,7 +35,7 @@
 }
 
 body {
-    letter-spacing: 0.05rem;
+    // letter-spacing: 0.05rem;
     word-spacing: 0.05rem;
 }
 
@@ -175,6 +176,7 @@ input[type=password] {
     border: 0.1rem solid var(--silver);
     width: 100%;
     font-size: 1rem;
+    line-height: 1.1rem;
     color: var(--textblack);
 }
 
@@ -210,6 +212,7 @@ textarea {
 
 select {
     font-size: 1rem;
+    padding: 1rem 0.5rem;
     color: var(--smokyblack);
 }
 
@@ -330,6 +333,7 @@ footer {
         margin-bottom: 0.6rem;
         line-height: 1.3rem;
     }
+    input,
     input[type=text],
     input[type=number],
     input[type=tel],
@@ -339,6 +343,7 @@ footer {
         margin: 0.6rem 0;
         padding: 1.1rem 0.6rem;
         font-size: 1.1rem;
+        line-height: 1.2rem;
     }
     input[type=radio] {
         margin: 0.6rem;
@@ -354,6 +359,7 @@ footer {
     }
     select {
         font-size: 1.1rem;
+        padding: 1.1rem 0.6rem;
     }
     select option {
         font-size: 1.1rem;
@@ -383,67 +389,67 @@ footer {
     h4,
     h5,
     h6 {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.6rem;
     }
     h1,
     h2 {
-        font-size: 2.2rem;
-        line-height: 2.5rem;
+        font-size: 2.0rem;
+        line-height: 2.3rem;
     }
     h3 {
-        font-size: 1.8rem;
-        line-height: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
     }
     h4 {
-        font-size: 1.6rem;
-        line-height: 2rem;
-    }
-    h5 {
         font-size: 1.4rem;
         line-height: 1.6rem;
     }
-    h6 {
+    h5 {
         font-size: 1.2rem;
         line-height: 1.4rem;
     }
+    h6 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
     p {
-        font-size: 1.1rem;
-        margin-bottom: 0.7rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        line-height: 1.3rem;
     }
     a {
-        font-size: 1.1rem;
-        line-height: 1.55rem;
-        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.35rem;
+        margin-bottom: 0.3rem;
     }
     i {
-        font-size: 1.1rem;
-        line-height: 1.55rem;
-        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.35rem;
+        margin-bottom: 0.3rem;
     }
     span {
-        font-size: 1.2rem;
-        line-height: 1.45rem;
-        margin-bottom: 0.7rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.5rem;
     }
     ul,
     ol {
-        padding: 1.3rem;
+        padding: 1.1rem;
     }
     ul li {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-        margin-bottom: 0.7rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
     }
     ol li {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-        margin-bottom: 0.7rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
     }
     label {
-        font-size: 1.2rem;
-        margin-bottom: 0.7rem;
-        line-height: 1.4rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2rem;
     }
     input[type=text],
     input[type=number],
@@ -451,38 +457,43 @@ footer {
     input[type=date],
     input[type=email],
     input[type=password] {
-        margin: 0.7rem 0;
-        padding: 1.2rem 0.7rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
         font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+    input[type=password] {
+        line-height: 0;
     }
     input[type=radio] {
-        margin: 0.7rem;
-        padding: 0.7rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
     }
     input::placeholder,
     textarea::placeholder {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     textarea {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0.5rem;
     }
     select {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
     }
     select option {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     figure {
-        margin: 1.2rem;
+        margin: 1rem;
     }
     figcaption {
-        padding: 1.3rem;
+        padding: 1.1rem;
     }
     button {
-        padding: 1rem 1.2rem;
-        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
     }
     footer {
         padding: 3rem 5rem;

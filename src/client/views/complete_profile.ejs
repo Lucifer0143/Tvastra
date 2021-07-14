@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/complete_profile.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/tagify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a>Doctors</a></li>
+                <li><a>Hospitals</a></li>
+                <li><a>Treatment</a></li>
+                <li><a>Other Services</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </nav>
+        <nav class="userNav">
+            <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
+            <button class="quoteBtn">Get a Quotes</button>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <main>
+        <h1>Welcome</h1>
+        <form action="/complete_profile" method="post" id="signin" enctype="multipart/form-data">
+            <p>Complete your profile to access the site.</p>
+            <h4>Describe yourself</h4>
+            <textarea rows="7" placeholder="How would you describe yourself" name="describe_yourself"></textarea>
+
+            <h4>Upload your profile picture</h4>
+            <input type='file' placeholder="No file selected" name="profile_picture">
+
+            <h4>Your Hospital</h4>
+            <input type="text" name="hospital" id="hospital">
+
+            <h4>Years of experience</h4>
+            <input type="number" placeholder="your experience" name="experience">
+
+            <h4>Qualification</h4>
+            <input type="text" name="qualification" id="qualification">
+
+            <h4>Awards</h4>
+            <input type="text" name="award" id="award">
+
+            <h4>Specialization</h4>
+            <input type="text" name="specialization" id="specialization">
+
+            <h4>Your average fees</h4>
+            <input type="number" placeholder="your avg fees" name="avg_fees">
+
+            <button type="submit" id="bookBtn">SUBMIT</button>
+        </form>
+
+    </main>
+    <footer>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+    <script src="../assets/scripts/complete_profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script>
+        var input1 = document.getElementById('hospital');
+        var tagify = new Tagify(input1);
+        var input3 = document.getElementById('qualification');
+        var tagify = new Tagify(input3);
+        var input4 = document.getElementById('award');
+        var tagify = new Tagify(input4);
+        var input5 = document.getElementById('specialization');
+        var tagify = new Tagify(input5);
+    </script>
+</body>
+
+</html>

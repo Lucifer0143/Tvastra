@@ -1,0 +1,68 @@
+main {
+  background-color: var(--lightsilver);
+  padding: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+section[class=dashboardNav] {
+  padding: 1rem;
+  width: 16rem;
+}
+
+section[class=dashboardNav] form {
+  padding: 0;
+}
+
+section[class=dashboardNav] button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--lightsilver);
+  width: 100%;
+}
+
+section[class=dashboardNav] button i {
+  color: var(--deepblue);
+}
+
+section[class=dashboardNav] button h5 {
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: 'Nexa-light';
+}
+
+section[class=dashboardNav] button:hover {
+  background-color: var(--white);
+  border-left: 0.1rem solid var(--deepblue);
+}
+
+section[class=dashboardNav] button:hover h5 {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardNav] button h5[id=navBtn2h5] {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=appointment] {
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+section[class=appointment] h3 {
+  color: var(--silver);
+  text-align: left;
+}
+/*# sourceMappingURL=dashboard.css.map */

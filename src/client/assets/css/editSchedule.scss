@@ -1,0 +1,209 @@
+main {
+    background-color: var(--lightsilver);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+div {
+    padding: 0;
+}
+
+section[class=dashboardNav] {
+    padding: 1rem;
+    width: 16rem;
+    form {
+        padding: 0;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        background-color: var(--lightsilver);
+        width: 100%;
+        i {
+            color: var(--deepblue);
+        }
+        h5 {
+            padding-left: 0.5rem;
+            margin-bottom: 0;
+            text-align: left;
+            font-family: 'Nexa-light';
+        }
+        &:hover {
+            background-color: var(--white);
+            border-left: 0.1rem solid var(--deepblue);
+            h5 {
+                color: var(--deepblue);
+                font-family: 'Nexa-bold';
+            }
+        }
+        h5[id=navBtn3h5] {
+            color: var(--deepblue);
+            font-family: 'Nexa-bold';
+        }
+    }
+}
+
+section[class=dashboardNav] button[class=scheduleBtn] {
+    background-color: var(--deepblue);
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    width: 6rem;
+}
+
+section[class=schedule] {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+    div[class=top] {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid var(--silver);
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        button {
+            background-color: var(--deepblue);
+            border-radius: 0.5rem;
+        }
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 0.5rem;
+        div[class=scheduleCard] {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1.3fr;
+            justify-content: space-between;
+            border: 0.1rem solid var(--silver);
+            border-radius: 1rem;
+            padding: 0.7rem;
+            div[class=day] {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0;
+                h5 {
+                    color: var(--deepblue);
+                    margin: auto;
+                }
+            }
+            div[class=hospitalTime] {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                h5 {
+                    margin: auto;
+                    text-transform: uppercase;
+                }
+                h5[class=times] {
+                    font-family: 'Nexa-light';
+                }
+            }
+            div[class=btnCheckbox] {
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0;
+                }
+                button {
+                    background-color: var(--deepblue);
+                    padding: 0.5rem;
+                    margin: auto;
+                    border-radius: 0.25rem;
+                    margin-right: 0.5rem;
+                }
+                input {
+                    margin: auto;
+                }
+            }
+            div[class=slots] {
+                display: none;
+                grid-column: 1/ span 3;
+                div {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                    grid-gap: 0.5rem;
+                    form {
+                        display: inline-block;
+                        margin: auto 0;
+                        padding: 0;
+                        text-align: center;
+                        border: 0.1rem solid var(--green);
+                        line-height: 0;
+                        color: var(--green);
+                        font-size: 0.9rem;
+                    }
+                    form[id=checked] {
+                        color: var(--red);
+                        border: 0.1rem solid var(--red);
+                    }
+                }
+            }
+        }
+        div[id=checked] {
+            background-color: var(--silver);
+        }
+    }
+    div[class=setSchedule] {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0.5rem solid var(--shadowblack);
+        background-color: var(--white);
+        padding: 0.7rem;
+        form {
+            background-color: var(--silver);
+            div[class=cdBtn] {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 0;
+            }
+            button {
+                margin-left: 1rem;
+                margin-top: 1rem;
+                border-radius: 0.5rem;
+            }
+            button[class=cancel] {
+                background-color: var(--red);
+            }
+            button[class=done] {
+                background-color: var(--deepblue);
+            }
+        }
+        div[class=labelInput] {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            select[class=hospital] {
+                height: auto;
+                padding: 0.7rem;
+            }
+        }
+        label {
+            font-family: 'Nexa-bold';
+            margin-bottom: 0;
+            margin-top: 0.5rem;
+        }
+        input {
+            margin: 0;
+            padding: 0.7rem;
+        }
+        select {
+            height: 5rem;
+            padding: 0;
+            option {
+                background-color: var(--white);
+                color: var(--textblack);
+                &:hover {
+                    background-color: var(--silver);
+                }
+            }
+        }
+    }
+}

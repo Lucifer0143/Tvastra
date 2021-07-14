@@ -72,30 +72,20 @@ form {
   padding-top: 1rem;
 }
 
-input[type=date]::-webkit-input-placeholder {
-  color: var(--silver);
+form .eyeIcon {
+  margin: auto;
+  margin-right: 3%;
+  margin-top: -3.1rem;
+  padding-bottom: 2.1rem;
 }
 
-input[type=date]:-ms-input-placeholder {
-  color: var(--silver);
+form input[type=date] {
+  color: var(--smokyblack);
+  background: none;
 }
 
-input[type=date]::-ms-input-placeholder {
-  color: var(--silver);
-}
-
-input[type=date]::placeholder {
-  color: var(--silver);
-}
-
-form button[id=signupBtn] {
-  margin: 0.5rem 0;
-  background-image: url(../images/arrow.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 1rem;
-  background-position-x: 95%;
-  letter-spacing: 0.3rem;
+form input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
 }
 
 form select {
@@ -103,6 +93,18 @@ form select {
   border: 0.1rem solid var(--silver);
   background: none;
   margin: 0.5rem 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../images/dropdown.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position-x: 97%;
+}
+
+form select::after {
+  opacity: 0.5;
 }
 
 form div {
@@ -114,11 +116,24 @@ form div {
   grid-column-gap: 0.5rem;
 }
 
-.eyeIcon {
+form input[type=checkbox] {
   margin: auto;
-  margin-right: 1rem;
-  margin-top: -3.1rem;
-  padding-bottom: 2.1rem;
+  margin-right: 0;
+}
+
+form label {
+  color: var(--deepblue);
+  margin-bottom: 0;
+}
+
+form button[id=signupBtn] {
+  margin: 0.5rem 0;
+  background-image: url(../images/arrow.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position-x: 95%;
+  letter-spacing: 0.3rem;
 }
 
 footer {
@@ -153,7 +168,7 @@ footer p {
     width: 50%;
   }
   form select {
-    padding: 1.2rem 0.7rem;
+    padding: 1.2rem 0.5rem;
   }
 }
 /*# sourceMappingURL=signup.css.map */

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/report</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/profile.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/report.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="./doctor">Doctors</a></li>
+                <li><a href="./hospital">Hospitals</a></li>
+                <li><a href="./dentistry">Treatment</a></li>
+                <li><a href="#">Other Services</a></li>
+                <li><a href="./aboutus">About</a></li>
+            </ul>
+        </nav>
+        <nav class="userNav">
+            <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
+            <button class="userInfoBtn" onclick="userInfo()"><%= userName%><i class="fa fa-angle-down"></i></button>
+            <form action="/signOut" method="POST" id="signout" style="display: none;">
+                <figure>
+                    <!-- <img src="data:image/jpg;base64,<%= profilePic%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image"> -->
+                    <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
+                    <figcaption>
+                        <h5>
+                            <%= userName%>
+                        </h5>
+                        <p>
+                            <%= userPhoneNo%>
+                        </p>
+                    </figcaption>
+                </figure>
+                <button>My Appointment</button>
+                <button>My Labtests</button>
+                <button>My Medicine Order</button>
+                <button>Payments</button>
+                <button type="submit" id="btn">LogOut</button>
+            </form>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <main>
+        <section class="dashboardNav">
+            <h2>Dashboard</h2>
+            <form method="POST">
+                <button id="navBtn1" type="submit" formaction="/editProfile">
+                  <a href="./editProfile.ejs"></a>
+                  <i class="fas fa-user-edit"></i>
+                  <h5 id="navBtn1h5">Profile</h5>
+                </button>
+                <button id="navBtn2" type="submit" formaction="/dashboard">
+                  <a href="./dashboard.ejs"></a>
+                  <i class="fas fa-th-list"></i>
+                  <h5 id="navBtn2h5">Appointment</h5>
+                </button>
+                <button id="navBtn3" type="submit" formaction="/editSchedule">
+                  <i class="fas fa-scroll"></i>
+                  <h5 id="navBtn3h5">Edit schedule</h5>
+                </button>
+                <button id="navBtn4" type="submit" formaction="/medicalReport">
+                    <a href="./medicalReport.ejs"></a>
+                  <i class="fas fa-notes-medical"></i>
+                  <h5 id="navBtn4h5">Medical Reposts</h5>
+                </button>
+                <button id="navBtn5" type="submit" formaction="/setting">
+                    <a href="./setting"></a>
+                  <i class="fas fa-user-cog"></i>
+                  <h5 id="navBtn5h5">Settings</h5>
+                </button>
+                <input type="hidden" name="userPhoneNo" value="<%= userPhoneNo%>">
+            </form>
+        </section>
+        <section class="showRecord" id="showRecord">
+            <div class="reportHead">
+                <h2>Records</h2>
+                <button onclick="showRecordForm()">Add records</button>
+            </div>
+            <div class="records">
+                <% for(var j = (reportImage.length - 1); j >= 0; j--){ %>
+                    <figure>
+                        <figcaption>
+                            <div>
+                                <h6>
+                                    <%=title%>
+                                </h6>
+                                <p>
+                                    <%=typeOfReport%>
+                                </p>
+                            </div>
+                            <button class="deleteBtn" onclick="showBtn('<%=imageId[j]%>')"><i class="fas fa-ellipsis-v"></i></button>
+                            <form action="/deleteReportImg" method="POST" id="<%=imageId[j]%>">
+                                <input type="hidden" value="<%= reportId%>" name="report_id">
+                                <input type="hidden" name="image_id" value="<%=imageId[j]%>">
+                                <button type="submit"><i>DELETE</i></button>
+                            </form>
+                        </figcaption>
+                        <img src="data:<%= imageType[j]%>;base64,<%= reportImage[j].toString('base64')%>" alt="record_images">
+                    </figure>
+                    <%}%>
+            </div>
+            <div class="addrecordform" id="addrecordform">
+                <form action="/newRecord" enctype="multipart/form-data" method="POST">
+                    <div class="addpic">
+                        <label for="uploadPicInput"><i class="fas fa-plus"></i><span>Add Photo</span></label>
+                        <input type="file" name="reportImage" id="uploadPicInput" onchange="previewFiles(this.files)" multiple>
+                    </div>
+                    <div id="reportImg"></div>
+                    <div class="buttons">
+                        <input type="hidden" value="<%= reportId%>" name="reportId">
+                        <button id="done" type="submit">Done</button>
+                        <button id="cancel" onclick="hideRecordForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
+        " alt="tvastra_logo">
+        </figure>
+        <nav class="sectionNav">
+            <ul>
+                <li><a href="doctor.html">Doctor</a></li>
+                <li><a href="hospital.html">Hospital</a></li>
+                <li><a href="dentistry.html">Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
+        </nav>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="../assets/scripts/index.js"></script>
+    <script src="../assets/scripts/dashboard.js"></script>
+
+</body>
+
+</html>

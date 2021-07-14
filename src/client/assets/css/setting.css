@@ -1,0 +1,114 @@
+main {
+  background-color: var(--lightsilver);
+  padding: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+section[class=dashboardNav] {
+  padding: 1rem;
+  width: 16rem;
+}
+
+section[class=dashboardNav] form {
+  padding: 0;
+}
+
+section[class=dashboardNav] button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--lightsilver);
+  width: 100%;
+}
+
+section[class=dashboardNav] button i {
+  color: var(--deepblue);
+}
+
+section[class=dashboardNav] button h5 {
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: 'Nexa-light';
+}
+
+section[class=dashboardNav] button:hover {
+  background-color: var(--white);
+  border-left: 0.1rem solid var(--deepblue);
+}
+
+section[class=dashboardNav] button:hover h5 {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardNav] button h5[id=navBtn5h5] {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=setting] {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section[class=setting] div[class=pass] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.05rem solid var(--silver);
+}
+
+section[class=setting] div[class=pass] button {
+  background-color: var(--deepblue);
+  border-radius: 0.5rem;
+}
+
+section[class=setting] div[class=labelInput] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section[class=setting] div[class=labelInput] label {
+  font-family: 'Nexa-bold';
+  margin-bottom: 0;
+}
+
+section[class=setting] div[class=passOld] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  border-bottom: 0.05rem solid var(--silver);
+}
+
+section[class=setting] div[class=passNew] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border-bottom: 0.05rem solid var(--silver);
+}
+/*# sourceMappingURL=setting.css.map */

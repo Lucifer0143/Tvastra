@@ -25,50 +25,51 @@ main {
     }
 }
 
-input[id=email] {
-    background-image: url(../images/questionmark.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 1.2rem;
-    background-position-x: 95%;
-}
-
-form button[class=signinBtn] {
-    background-color: var(--black);
-    color: var(--white);
-    margin: 0.5rem 0;
-    background-image: url(../images/arrow.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    background-position-x: 95%;
-    letter-spacing: 0.3rem;
-}
-
 form {
     display: flex;
     flex-direction: column;
     border-top: 0.1rem solid var(--silver);
     padding: 1rem;
-}
-
-form div {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-}
-
-form div a {
-    font-size: 1rem;
-    margin-bottom: 0;
-}
-
-form div button[type=submit] {
-    padding: 0;
-    margin: 0;
-    background-color: var(--white);
-    color: var(--deepblue);
-    font-size: 1rem;
+    button[class=signinBtn] {
+        background-color: var(--black);
+        color: var(--white);
+        margin: 0.5rem 0;
+        background-image: url(../images/arrow.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        background-position-x: 95%;
+        letter-spacing: 0.3rem;
+    }
+    input[id=email] {
+        background-image: url(../images/questionmark.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 1.2rem;
+        background-position-x: 95%;
+    }
+    .eyeIcon {
+        position: absolute;
+        right: 7.5%;
+        top: 48.5%;
+        color: var(--deepblue);
+    }
+    div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        a {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        button[type=submit] {
+            padding: 0;
+            margin: 0;
+            background-color: var(--white);
+            color: var(--deepblue);
+            font-size: 1rem;
+        }
+    }
 }
 
 div[class=alertMsg] {
@@ -164,6 +165,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 0;
+    z-index: -2;
     p {
         margin-bottom: 1rem;
         color: var(--black);
@@ -194,6 +196,11 @@ a[class=loginPass] {
 
 @media only screen and (min-width: 1024px) {
     main {
-        width: 45%;
+        width: 35%;
+    }
+    footer {
+        p {
+            margin-bottom: 0.5rem;
+        }
     }
 }

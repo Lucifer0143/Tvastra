@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/dashboard</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css"> -->
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/profile.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/editProfile.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/tagify.css" type="text/css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="./doctor">Doctors</a></li>
+                <li><a href="./hospital">Hospitals</a></li>
+                <li><a href="./dentistry">Treatment</a></li>
+                <li><a href="#">Other Services</a></li>
+                <li><a href="./aboutus">About</a></li>
+            </ul>
+        </nav>
+        <nav class="userNav">
+            <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
+            <button class="userInfoBtn" onclick="userInfo()"><%= userName%><i class="fa fa-angle-down"></i></button>
+            <form action="/signOut" method="POST" id="signout" style="display: none;">
+                <figure>
+                    <!-- <img src="data:image/jpg;base64,<%= profilePic%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image"> -->
+                    <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
+                    <figcaption>
+                        <h5>
+                            <%= userName%>
+                        </h5>
+                        <p>
+                            <%= userPhoneNo%>
+                        </p>
+                    </figcaption>
+                </figure>
+                <button>My Appointment</button>
+                <button>My Labtests</button>
+                <button>My Medicine Order</button>
+                <button>Payments</button>
+                <button type="submit" id="btn">LogOut</button>
+            </form>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <main>
+        <section class="dashboardNav">
+            <h2>Dashboard</h2>
+            <form method="POST">
+                <button id="navBtn1" type="submit" formaction="/editProfile">
+                  <a href="./editProfile.ejs"></a>
+                  <i class="fas fa-user-edit"></i>
+                  <h5 id="navBtn1h5">Profile</h5>
+                </button>
+                <button id="navBtn2" type="submit" formaction="/dashboard">
+                  <a href="./dashboard.ejs"></a>
+                  <i class="fas fa-th-list"></i>
+                  <h5 id="navBtn2h5">Appointment</h5>
+                </button>
+                <button id="navBtn3" type="submit" formaction="/editSchedule">
+                  <i class="fas fa-scroll"></i>
+                  <h5 id="navBtn3h5">Edit schedule</h5>
+                </button>
+                <button id="navBtn4" type="submit" formaction="/medicalReport">
+                    <a href="./medicalReport.ejs"></a>
+                  <i class="fas fa-notes-medical"></i>
+                  <h5 id="navBtn4h5">Medical Reposts</h5>
+                </button>
+                <button id="navBtn5" type="submit" formaction="/setting">
+                    <a href="./setting"></a>
+                  <i class="fas fa-user-cog"></i>
+                  <h5 id="navBtn5h5">Settings</h5>
+                </button>
+                <input type="hidden" name="userPhoneNo" value="<%= userPhoneNo%>">
+            </form>
+        </section>
+        <section class="dashboardDetail" id="dashboardDetail">
+            <div class="profile" id="profile">
+                <form action="/changeProfile" enctype="multipart/form-data" method="POST">
+                    <div class="top">
+                        <h3>Account</h3><button type="submit">Save Changes</button>
+                    </div>
+                    <div class="top">
+                        <div class="labelInput">
+                            <label for="profile_picture">Profile Photo</label>
+                            <figure>
+                                <!-- <img src="data:image/jpg;base64,<%= profilePic%>" onerror="this.src='../assets/images/doctor_icon.jpg'" id="profile_img" alt="profile_picture"> -->
+                                <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" id="profile_img" alt="user_image">
+                                <figcaption>
+                                    <!-- <input type="hidden" name="oldDP" value="<%= profilePic%>"> -->
+                                    <input type="file" onchange="document.getElementById('profile_img').src = window.URL.createObjectURL(this.files[0])" name="profile_picture" id="profile_picture">
+                                    <span>Choose a profile photo from your system</span>
+                                    <label class="selectFile" for="profile_picture">SelectPhoto</label>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="labelInput">
+                            <label>Name</label>
+                            <input type="text" name="name" id="name" value="<%= userName%>">
+                        </div>
+                    </div>
+                    <div class="edit">
+                        <div class="labelInput">
+                            <label for="phoneNo">Phone Number</label>
+                            <input type="text" name="phoneNo" id="phoneNo" value="<%= userPhoneNo%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" value="<%= userEmail%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="gender">Gender</label>
+                            <input type="text" id="gender" name="gender" list="genderType" value="<%= userGender%>">
+                            <datalist id="genderType">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </datalist>
+                        </div>
+                        <div class="labelInput">
+                            <label for="dob">Date of Birth</label>
+                            <input type="text" name="dob" id="dob" value="<%= userDob%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="timezone">Timezone</label>
+                            <input type="text" name="timezone" id="timezone" value="<%= userTimezone%>">
+                        </div>
+                    </div>
+                    <div class="edit">
+                        <div class="labelInput">
+                            <label for="houseName">House No/Street Name/Area</label>
+                            <input type="text" name="houseName" id="houseName" value="<%= userHouse%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="colony">Colony/Street/Locality</label>
+                            <input type="text" name="colony" id="colony" value="<%= userColony%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" value="<%= userCity%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state" value="<%= userState%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="country">Country</label>
+                            <ul class="autocomplete">
+                                <input autocomplete="off" id="myInput" type="text" name="country" value="<%= userCountry%>">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="edit">
+                        <div class="labelInput">
+                            <label for="hospital">Your Hospital</label>
+                            <textarea name="hospital" id="hospital" onkeyup="autoGrow(this);" rows="1"><%= userHospital%></textarea>
+                        </div>
+                        <div class="labelInput">
+                            <label for="achievement">Achievement</label>
+                            <textarea name="achievement" id="achievement" onkeyup="autoGrow(this);" rows="1"><%= userAchievement%></textarea>
+                        </div>
+                        <div class="labelInput">
+                            <label for="qualification">Qualification</label>
+                            <textarea name="qualification" id="qualification" onkeyup="autoGrow(this);" rows="1"><%= userQualification%></textarea>
+                        </div>
+                        <div class="labelInput">
+                            <label for="award">Award</label>
+                            <textarea name="award" id="award" onkeyup="autoGrow(this);" rows="1"><%= userAward%></textarea>
+                        </div>
+                        <div class="labelInput">
+                            <label for="specialization">Specialization</label>
+                            <textarea name="specialization" id="specialization" onkeyup="autoGrow(this);" rows="1"><%= userSpecialization%></textarea>
+                        </div>
+                        <div class="labelInput">
+                            <label for="treatments">Treatments</label>
+                            <textarea name="treatments" id="treatments" onkeyup="autoGrow(this);" rows="1"><%= userTreatment%></textarea>
+                        </div>
+                        <div class="labelInput">
+                            <label for="fees">Fees</label>
+                            <input type="text" name="fees" id="fees" value="<%= userFees%>">
+                        </div>
+                        <div class="labelInput">
+                            <label for="experience">Experience</label>
+                            <input type="text" name="experience" id="experience" value="<%= userExperience%>">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="labelInput">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" rows="8"><%= userDescription%></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
+        " alt="tvastra_logo">
+        </figure>
+        <nav class="sectionNav">
+            <ul>
+                <li><a href="doctor.html">Doctor</a></li>
+                <li><a href="hospital.html">Hospital</a></li>
+                <li><a href="dentistry.html">Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
+        </nav>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- <script src="../assets/scripts/jquery-clockpicker.min.js"></script> -->
+    <script src="../assets/scripts/index.js"></script>
+    <script src="../assets/scripts/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script>
+        var input1 = document.getElementById('hospital');
+        var tagify = new Tagify(input1);
+        var input2 = document.getElementById('achievement');
+        var tagify = new Tagify(input2);
+        var input3 = document.getElementById('qualification');
+        var tagify = new Tagify(input3);
+        var input4 = document.getElementById('award');
+        var tagify = new Tagify(input4);
+        var input5 = document.getElementById('specialization');
+        var tagify = new Tagify(input5);
+        var input6 = document.getElementById('treatments');
+        var tagify = new Tagify(input6);
+    </script>
+
+</body>
+
+</html>

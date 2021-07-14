@@ -19,11 +19,35 @@ section[class=sortBy] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0 1rem;
+  padding: 0 1.5rem 0 1rem;
   margin-top: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+section[class=sortBy] form[class=sortBtnDropdown] {
+  display: none;
+  padding: 0;
+  position: absolute;
+  background-color: var(--black);
+  min-width: 10rem;
+  overflow: auto;
+  right: 1rem;
+  margin-top: 2.8rem;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+section[class=sortBy] form[class=sortBtnDropdown] button {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100%;
+}
+
+section[class=sortBy] form[class=sortBtnDropdown] button:hover {
+  background-color: var(--skyblue);
 }
 
 section[class=sortBy] h4 {
@@ -115,6 +139,61 @@ div[class=doctorInfo] figcaption h3:before {
   top: 0.6rem;
   margin-left: -2.75rem;
   width: 2.5rem;
+}
+
+div[class=bookSlotNow] {
+  display: none;
+}
+
+div[class=bookSlotNow] div {
+  border-bottom: 0.1rem solid var(--black);
+  padding: 1rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 0.5rem;
+}
+
+div[class=bookSlotNow] div i {
+  font-size: 0.7rem;
+}
+
+div[class=bookSlotNow] div p {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+div[class=bookSlotNow] div div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  border: none;
+  margin: auto;
+  padding: 0;
+}
+
+div[class=bookSlotNow] div div p[class=slots] {
+  color: var(--green);
+  border: 0.1rem solid var(--green);
+  padding: 0.2rem 0.3rem;
+}
+
+div[class=bookSlotNow] div button {
+  background-color: var(--deepblue);
+  border-radius: 0.3rem;
+}
+
+div[class=bookSlotNow] h6[class=hospitalName] {
+  margin: 0.3rem;
+  color: var(--green);
 }
 
 section[class=enquiry] {
@@ -329,6 +408,44 @@ section[class=enquiry] button {
   section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] figure {
     height: 18rem;
   }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] form {
+    padding: 0;
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] {
+    display: none;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/ span 2;
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] div[class=MultiCarousel] {
+    padding: 0.5rem;
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] div[class=MultiCarousel] .MultiCarousel-inner {
+    padding: 0 2.5rem;
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] div[class=MultiCarousel] .left {
+    position: absolute;
+    margin: -2.8rem auto auto 0.5rem;
+    border-radius: 50%;
+    padding: 0.3rem 0.5rem;
+    background-color: var(--hardsilver);
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] div[class=MultiCarousel] .left i {
+    margin: 0.1rem 0 0 0;
+    color: var(--deepblue);
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] div[class=MultiCarousel] .right {
+    position: absolute;
+    margin: -2.7rem auto auto auto;
+    right: 6rem;
+    border-radius: 50%;
+    padding: 0.3rem 0.5rem;
+    background-color: var(--hardsilver);
+  }
+  section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] div[class=container] div[class=MultiCarousel] .right i {
+    margin: 0.1rem 0 0 0;
+    color: var(--deepblue);
+  }
   section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] figcaption {
     grid-row-gap: 0rem;
   }
@@ -339,7 +456,8 @@ section[class=enquiry] button {
     top: 0.8rem;
   }
   section[class=allDoctors] div[class=doctorList] div[class=doctorInfo] figcaption button {
-    padding: 1rem 4rem;
+    padding: 0.3rem 3rem;
+    font-family: 'Nexa-bold';
   }
   section[class=enquiry] {
     background-color: var(--lightblue);

@@ -56,41 +56,57 @@ form {
     flex-direction: column;
     border-top: 0.1rem solid var(--silver);
     padding-top: 1rem;
-}
-
-input[type=date]::placeholder {
-    color: var(--silver);
-}
-
-form button[id=signupBtn] {
-    margin: 0.5rem 0;
-    background-image: url(../images/arrow.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    background-position-x: 95%;
-    letter-spacing: 0.3rem;
-}
-
-form select {
-    padding: 1rem 0.3rem;
-    border: 0.1rem solid var(--silver);
-    background: none;
-    margin: 0.5rem 0;
-}
-
-form div {
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0.5rem;
-}
-
-.eyeIcon {
-    margin: auto;
-    margin-right: 1rem;
-    margin-top: -3.1rem;
-    padding-bottom: 2.1rem;
+    .eyeIcon {
+        margin: auto;
+        margin-right: 3%;
+        margin-top: -3.1rem;
+        padding-bottom: 2.1rem;
+    }
+    input[type=date] {
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0.6;
+        }
+        color: var(--smokyblack);
+        background: none;
+    }
+    select {
+        padding: 1rem 0.3rem;
+        border: 0.1rem solid var(--silver);
+        background: none;
+        margin: 0.5rem 0;
+        appearance: none;
+        background-image: url(../images/dropdown.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position-x: 97%;
+        &::after {
+            opacity: 0.5;
+        }
+    }
+    div {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+    }
+    input[type=checkbox] {
+        margin: auto;
+        margin-right: 0;
+    }
+    label {
+        color: var(--deepblue);
+        margin-bottom: 0;
+    }
+    button[id=signupBtn] {
+        margin: 0.5rem 0;
+        background-image: url(../images/arrow.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        background-position-x: 95%;
+        letter-spacing: 0.3rem;
+    }
 }
 
 footer {
@@ -120,6 +136,6 @@ footer {
         width: 50%;
     }
     form select {
-        padding: 1.2rem 0.7rem;
+        padding: 1.2rem 0.5rem;
     }
 }

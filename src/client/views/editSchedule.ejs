@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/dashboard</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/profile.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/editSchedule.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet/css/clocklet.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra_logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="./doctor">Doctors</a></li>
+                <li><a href="./hospital">Hospitals</a></li>
+                <li><a href="./dentistry">Treatment</a></li>
+                <li><a href="#">Other Services</a></li>
+                <li><a href="./aboutus">About</a></li>
+            </ul>
+        </nav>
+        <nav class="userNav">
+            <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
+            <button class="userInfoBtn" onclick="userInfo()"><%= userName%><i class="fa fa-angle-down"></i></button>
+            <form action="/signOut" method="POST" id="signout" style="display: none;">
+                <figure>
+                    <!-- <img src="data:image/jpg;base64,<%= profilePic%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image"> -->
+                    <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
+                    <figcaption>
+                        <h5>
+                            <%= userName%>
+                        </h5>
+                        <p>
+                            <%= userPhoneNo%>
+                        </p>
+                    </figcaption>
+                </figure>
+                <button>My Appointment</button>
+                <button>My Labtests</button>
+                <button>My Medicine Order</button>
+                <button>Payments</button>
+                <button type="submit" id="btn">LogOut</button>
+            </form>
+        </nav>
+        <i class="fa fa-bars"></i>
+    </header>
+    <main>
+        <section class="dashboardNav">
+            <h2>Dashboard</h2>
+            <form method="POST">
+                <button id="navBtn1" type="submit" formaction="/editProfile">
+                  <a href="./editProfile.ejs"></a>
+                  <i class="fas fa-user-edit"></i>
+                  <h5 id="navBtn1h5">Profile</h5>
+                </button>
+                <button id="navBtn2" type="submit" formaction="/dashboard">
+                  <a href="./dashboard.ejs"></a>
+                  <i class="fas fa-th-list"></i>
+                  <h5 id="navBtn2h5">Appointment</h5>
+                </button>
+                <button id="navBtn3" type="submit" formaction="/editSchedule">
+                  <i class="fas fa-scroll"></i>
+                  <h5 id="navBtn3h5">Edit schedule</h5>
+                </button>
+                <button id="navBtn4" type="submit" formaction="/medicalReport">
+                    <a href="./medicalReport.ejs"></a>
+                  <i class="fas fa-notes-medical"></i>
+                  <h5 id="navBtn4h5">Medical Reposts</h5>
+                </button>
+                <button id="navBtn5" type="submit" formaction="/setting">
+                    <a href="./setting"></a>
+                  <i class="fas fa-user-cog"></i>
+                  <h5 id="navBtn5h5">Settings</h5>
+                </button>
+                <input type="hidden" name="userPhoneNo" value="<%= userPhoneNo%>">
+            </form>
+        </section>
+        <section class="schedule" id="schedule">
+            <div class="top">
+                <h2>All Schedule</h2>
+                <button class="scheduleBtn" id="scheduleBtn" onclick="showSetSchedule()">Create new schedule</button>
+            </div>
+            <% for(var i = 0; i < weekDay.length; i++){ %>
+                <li>
+                    <div class="scheduleCard" id="<%= Done[i]%>">
+                        <div class="day">
+                            <h5>
+                                <%= weekDay[i]%>
+                            </h5>
+                        </div>
+                        <div class="hospitalTime">
+                            <h5>
+                                <%= hospitalName[i]%>
+                            </h5>
+                            <h5 class="times">
+                                <%= fromTime[i]%> -
+                                    <%= toTime[i]%>
+                            </h5>
+                        </div>
+                        <div class="btnCheckbox">
+                            <form method="POST">
+                                <input type="hidden" name="scheduleId" id="scheduleId" value="<%= scheduleId[i]%>">
+                                <button type="button" onclick="viewslot(this.value)" value="<%= scheduleId[i]%>">View slots</button>
+                                <button type="submit" formaction="/rmvSlot">Remove slots</button>
+                            </form>
+                            <form action="/scheduleDone" method="POST">
+                                <input type="hidden" name="scheduleId" id="scheduleId" value="<%= scheduleId[i]%>">
+                                <input onclick="checkboxs()" onchange="this.form.submit()" type="checkbox" name="scheduleDone" id="scheduleDone" <%=Done[i]%>>
+                            </form>
+                        </div>
+                        <div class=slots id="<%= scheduleId[i]%>">
+                            <div>
+                                <% for(var j = 0; j < startTime[i].length; j++){ %>
+                                    <form action="/scheduleSlotDone" method="POST" id="<%=slotDone[i][j]%>">
+                                        <input type="hidden" name="scheduleSlotId" id="scheduleSlotId" value="<%= slotId[i][j]%>">
+                                        <%=startTime[i][j]%> -
+                                            <%=endTime[i][j]%> <input type="checkbox" onchange="this.form.submit()" name="scheduleSlotDone" id="scheduleSlotDone" <%=slotDone[i][j]%>>
+                                    </form>
+                                    <%}%>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <%}%>
+                    <div class="setSchedule" id="setSchedule">
+                        <h4>Create Schedule</h4>
+                        <form action="/createSchedule" method="POST">
+                            <div class="labelInput">
+                                <label for="weekday">Select available day</label>
+                                <select name="weekday" id="weekday" required multiple>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuseday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option> 
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                    <option value="sunday">Sunday</option>
+                                 </select>
+                            </div>
+                            <div class="labelInput">
+                                <label for="hospital">Select Hospital</label>
+                                <select class="hospital" name="hospital" id="hospital">
+                                    <option value="apollo" selected disabled>Select a Hospital</option>
+                                    <option value="apollo">Apollo</option>
+                                </select>
+                            </div>
+                            <div class="labelInput">
+                                <label for="fromtime">From Time</label>
+                                <input name="fromtime" placeholder="00:00" data-clocklet="format: h:mm A">
+                            </div>
+                            <div class="labelInput">
+                                <label for="totime">To Time</label>
+                                <input name="totime" placeholder="00:00" data-clocklet="format: h:mm A">
+                            </div>
+                            <div class="labelInput">
+                                <label for="interval">Intervals</label>
+                                <input type="number" name="interval" id="interval" placeholder="Intervals(min 15min)">
+                            </div>
+                            <div class="cdBtn">
+                                <button class="done" id="done" type="submit">Done</button>
+                                <button class="cancel" id="cancel" onclick="hideSetSchedule()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+        </section>
+    </main>
+    <footer>
+        <figure>
+            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png
+        " alt="tvastra_logo">
+        </figure>
+        <nav class="sectionNav">
+            <ul>
+                <li><a href="doctor.html">Doctor</a></li>
+                <li><a href="hospital.html">Hospital</a></li>
+                <li><a href="dentistry.html">Treatment</a></li>
+                <li><a>Other Service</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <nav class=socialMedia>
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-pinterest"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-google-plus"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
+        </nav>
+        <p>All Rights Reserved. &#169 tvastra 2018</p>
+    </footer>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="../assets/scripts/index.js"></script>
+    <script src="../assets/scripts/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clocklet"></script>
+</body>
+
+</html>

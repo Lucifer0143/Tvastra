@@ -1,0 +1,250 @@
+main {
+    background-color: var(--lightsilver);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+section[class=dashboardNav] {
+    padding: 1rem;
+    width: 16rem;
+    form {
+        padding: 0;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        background-color: var(--lightsilver);
+        width: 100%;
+        i {
+            color: var(--deepblue);
+        }
+        h5 {
+            padding-left: 0.5rem;
+            margin-bottom: 0;
+            text-align: left;
+            font-family: 'Nexa-light';
+        }
+        &:hover {
+            background-color: var(--white);
+            border-left: 0.1rem solid var(--deepblue);
+            h5 {
+                color: var(--deepblue);
+                font-family: 'Nexa-bold';
+            }
+        }
+        h5[id=navBtn4h5] {
+            color: var(--deepblue);
+            font-family: 'Nexa-bold';
+        }
+    }
+}
+
+section[class=report] {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+    div[class=reportHead] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid var(--silver);
+        margin-bottom: 1rem;
+        button {
+            background-color: var(--deepblue);
+            border-radius: 0.5rem;
+        }
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 0.5rem;
+    }
+    div[class=reportCard] {
+        background-color: var(--lightsilver);
+        form[class=reportContent] {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 0.5rem;
+            border: 0.05rem solid var(--black);
+            padding-top: 0;
+            padding-bottom: 0;
+            button[class=viewImg] {
+                margin-top: auto;
+                margin-bottom: auto;
+                background-color: var(--white);
+                color: var(--black);
+                border-radius: 0.5rem;
+                h5 {
+                    margin-bottom: 0;
+                }
+            }
+            div {
+                flex-direction: column;
+                h6 {
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+                h6[class=title] {
+                    color: var(--deepblue);
+                }
+            }
+            button[class=delete] {
+                margin: auto;
+                margin-right: 2rem;
+                background-color: var(--deepblue);
+            }
+        }
+    }
+    div[class=addrecordform] {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: var(--white);
+        border: 0.5rem solid var(--shadowblack);
+        div[class=addpic] {
+            background-color: var(--black);
+            width: 6rem;
+            height: 5rem;
+            input[type=file] {
+                opacity: 0;
+                height: 0;
+                width: 0;
+                margin-top: -6rem;
+            }
+            label {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                i,
+                span {
+                    color: var(--white);
+                    margin: auto;
+                    text-align: center;
+                    margin-bottom: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+        div[id=reportImg] {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left: 8rem;
+            top: 1.7rem;
+            img {
+                height: 5rem;
+                width: 5rem;
+                margin: 0 0.5rem;
+            }
+        }
+        div[class=inputfields] {
+            padding: 0;
+        }
+        div[class=type-of-report] {
+            padding: 0;
+            h5 {
+                margin-bottom: 0;
+                color: var(--deepblue);
+                text-align: left;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0;
+                li {
+                    height: 7rem;
+                    width: auto;
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 0;
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        grid-gap: 1rem;
+                        i,
+                        span {
+                            margin: auto;
+                            text-align: center;
+                            margin-bottom: 0;
+                        }
+                    }
+                    &:hover {
+                        background-color: var(--lightblue);
+                    }
+                }
+            }
+        }
+        div[class=buttons] {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1rem;
+            button[id=cancel] {
+                background-color: var(--red);
+            }
+            button[id=done] {
+                background-color: var(--deepblue);
+            }
+        }
+    }
+}
+
+// section[class=showRecord] {
+//     display: none;
+//     background-color: var(--white);
+//     border-radius: 1rem;
+//     padding: 0;
+//     div[class=reportHead] {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         border-bottom: 0.1rem solid var(--silver);
+//         margin-bottom: 1rem;
+//         button {
+//             background-color: var(--deepblue);
+//             border-radius: 0.5rem;
+//         }
+//     }
+//     div[class=addrecordform] {
+//         display: none;
+//         div[class=addpic] {
+//             background-color: var(--black);
+//             width: 6rem;
+//             height: 5rem;
+//             input[type=file] {
+//                 opacity: 0;
+//             }
+//             label {
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: center;
+//                 i,
+//                 span {
+//                     color: var(--white);
+//                     margin: auto;
+//                     text-align: center;
+//                     margin-bottom: 0;
+//                     cursor: pointer;
+//                 }
+//             }
+//         }
+//         div[class=buttons] {
+//             display: flex;
+//             flex-direction: row-reverse;
+//             gap: 1rem;
+//             button[id=cancel] {
+//                 background-color: var(--red);
+//             }
+//             button[id=done] {
+//                 background-color: var(--deepblue);
+//             }
+//         }
+//     }
+// }

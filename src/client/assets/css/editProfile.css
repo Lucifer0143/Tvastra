@@ -1,0 +1,230 @@
+main {
+  background-color: var(--lightsilver);
+  padding: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+span {
+  margin-bottom: 0rem;
+}
+
+section[class=dashboardNav] {
+  padding: 1rem;
+  width: 16rem;
+}
+
+section[class=dashboardNav] form {
+  padding: 0;
+}
+
+section[class=dashboardNav] button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--lightsilver);
+  width: 100%;
+}
+
+section[class=dashboardNav] button i {
+  color: var(--deepblue);
+}
+
+section[class=dashboardNav] button h5 {
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: 'Nexa-light';
+}
+
+section[class=dashboardNav] button:hover {
+  background-color: var(--white);
+  border-left: 0.1rem solid var(--deepblue);
+}
+
+section[class=dashboardNav] button:hover h5 {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardNav] button h5[id=navBtn1h5] {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardDetail] {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section[class=dashboardDetail] form {
+  padding: 0;
+}
+
+section[class=dashboardDetail] div[class=profile] form div[class=top] div[class=labelInput] figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  margin-top: 0.3rem;
+}
+
+section[class=dashboardDetail] div[class=profile] form div[class=top] div[class=labelInput] figure img {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+section[class=dashboardDetail] div[class=profile] form div[class=top] div[class=labelInput] figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  padding-left: 1rem;
+  margin: auto;
+  margin-left: 0;
+}
+
+section[class=dashboardDetail] div[class=profile] form div[class=top] div[class=labelInput] figure figcaption span {
+  margin-bottom: 0;
+  font-family: 'Nexa-light';
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=edit] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0.5rem;
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=edit] div[class=labelInput] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=edit] div[class=labelInput] label {
+  font-family: 'Nexa-bold';
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=edit] div[class=labelInput] textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=edit] div[class=labelInput] input {
+  margin-top: 0;
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=description] div[class=labelInput] textarea {
+  margin-top: 0.3rem;
+}
+
+section[class=dashboardDetail] div[class=profile] div[class=description] div[class=labelInput] label {
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardDetail] div[class=top] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.1rem solid var(--silver);
+}
+
+section[class=dashboardDetail] div[class=top] div[class=labelInput] {
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardDetail] div[class=top] h3 {
+  margin: auto;
+  margin-left: 0;
+}
+
+section[class=dashboardDetail] div[class=top] button {
+  margin: auto;
+  margin-right: 0;
+  background-color: var(--deepblue);
+  border-radius: 0.5rem;
+}
+
+section[class=dashboardDetail] div[class=top] select {
+  border: 0.1rem solid var(--silver);
+}
+
+section[class=dashboardDetail] div[class=description] {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 0;
+}
+
+div[class=edit] {
+  border-bottom: 0.1rem solid var(--silver);
+}
+
+input[type=file] {
+  position: absolute;
+  z-index: -1;
+}
+
+label[class=selectFile] {
+  color: var(--deepblue);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+ul[class=autocomplete] {
+  position: relative;
+  padding: 0;
+}
+
+.autocomplete-items {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+.autocomplete-items ul {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.autocomplete-items ul:hover {
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+/*# sourceMappingURL=editProfile.css.map */

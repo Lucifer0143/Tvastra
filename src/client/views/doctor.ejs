@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="../assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/theme.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/profile.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/doctor.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body>
@@ -21,16 +22,37 @@
         </figure>
         <nav>
             <ul>
-                <li><a href="doctor.html">Doctors</a></li>
-                <li><a href="hospital.html">Hospitals</a></li>
-                <li><a href="dentistry.html">Treatment</a></li>
-                <li><a href="">Other Services</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="./doctor">Doctors</a></li>
+                <li><a href="./hospital">Hospitals</a></li>
+                <li><a href="./dentistry">Treatment</a></li>
+                <li><a href="#">Other Services</a></li>
+                <li><a href="./aboutus">About</a></li>
             </ul>
         </nav>
-        <nav>
-            <button class="loginBtn" onclick="window.location.href='signin.html';">Login / Sign Up</button>
-            <button class="quoteBtn">Get a Quotes</button>
+        <nav class="userNav">
+            <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
+            <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
+            <button class="userInfoBtn" onclick="userInfo()"><%= userName%><i class="fa fa-angle-down"></i></button>
+            <form method="POST" id="signout" style="display: none;">
+                <figure>
+                    <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
+                    <figcaption>
+                        <h5>
+                            <%= userName%>
+                        </h5>
+                        <p>
+                            <%= userPhoneNo%>
+                        </p>
+                    </figcaption>
+                </figure>
+                <button type="submit" formaction="/dashboard">My Appointment</button>
+                <button>My Labtests</button>
+                <button>My Medicine Order</button>
+                <button>Payments</button>
+                <button type="submit" id="btn" formaction="/signOut">LogOut</button>
+                <input type="hidden" name="userName" value="<%= userName%>">
+                <input type="hidden" name="userPhoneNo" value="<%= userPhoneNo%>">
+            </form>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
@@ -45,25 +67,40 @@
         </section>
         <section class="sortBy">
             <h4>Home / Doctors Lists</h4>
-            <button class="sortBtn">Sort by <i class="fa fa-angle-down"></i></button>
+            <button onclick="showSortBtnDropdown()" class="sortBtn">Sort by <i class="fa fa-angle-down"></i></button>
+            <form class="sortBtnDropdown" id="sortBtnDropdown" method="GET">
+                <button formaction="/doctor" name="NameAssc" value="NameAssc">Name(Assc.)</button>
+                <button formaction="/doctor" name="NameDisc" value="NameDisc">Name(Disc.)</button>
+                <button formaction="/doctor" name="AvgFeeAssc" value="AvgFeeAssc">Average Fees(Assc.)</button>
+                <button formaction="/doctor" name="AvgFeeDisc" value="AvgFeeDisc">Average Fees(Disc.)</button>
+                <button formaction="/doctor" name="ExperienceAssc" value="ExperienceAssc">Experience(Assc.)</button>
+                <button formaction="/doctor" name="ExperienceDisc" value="ExperienceDisc">Experience(Disc.)</button>
+            </form>
         </section>
+
+        <!-- <div class="container">
+            <h1>Employee list</h1>
+            <ul id="list">
+
+            </ul>
+        </div> -->
         <section class="allDoctors">
             <div class="doctorFilter">
                 <button class="filterBtn">Filter by</button>
                 <div class="filterItem">
                     <h3>Location</h3>
                     <i class="fa fa-search"></i>
-                    <input type="checkbox" id="DLF">
+                    <input type="checkbox" id="Location1" onclick="filter()">
                     <label for="DLF">DLF Cyber City</label>
-                    <input type="checkbox" id="Dwaraka">
+                    <input type="checkbox" id="Location2">
                     <label for="Dwaraka">Dwaraka</label>
-                    <input type="checkbox" id="Lajpat Nagar">
+                    <input type="checkbox" id="Location3">
                     <label for="Lajpat Nagar">Lajpat Nagar</label>
-                    <input type="checkbox" id="Palam Vihar">
+                    <input type="checkbox" id="Location4">
                     <label for="Palam Vihar">Palam Vihar</label>
-                    <input type="checkbox" id="Punjabi Baag">
+                    <input type="checkbox" id="Location5">
                     <label for="Punjabi Baag">Punjabi Baag</label>
-                    <input type="checkbox" id="Pusa Road">
+                    <input type="checkbox" id="Location6">
                     <label for="Pusa Road">Pusa Road</label>
                     <a class="fa fa-plus"> Show More</a>
                 </div>
@@ -119,152 +156,190 @@
                     <a class="fa fa-plus"> Show More</a>
                 </div>
             </div>
-            <div class="doctorList">
-                <div class="doctorInfo">
-                    <figcaption>
-                        <h3>Duke Sanson</h3>
-                        <div class="details">
-                            <i class="fas fa-certificate"></i>
-                            <p>Duke Sanson</p>
+            <div class="doctorList" id="doctorList">
+                <% for(var i = 0; i < Name.length; i++){ %>
+                    <div class="doctorInfo">
+                        <figcaption>
+                            <h3>
+                                <%= Name[i]%>
+                            </h3>
+                            <div class="details">
+                                <i class="fas fa-certificate"></i>
+                                <p>
+                                    <%= Specialization[i]%>
+                                </p>
+                            </div>
+                            <div class="details">
+                                <i class="fas fa-award"></i>
+                                <p>
+                                    <%= Qualification[i]%>
+                                </p>
+                            </div>
+                            <div class="details">
+                                <i class="fa fa-clock-o"></i>
+                                <p>
+                                    <%= Experience[i]%> Years of Experience
+                                </p>
+                            </div>
+                            <div class="details">
+                                <i class="fa fa-hospital-o"></i>
+                                <p>
+                                    <%= Hospital[i]%>
+                                </p>
+                            </div>
+                            <div class="details">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>
+                                    <%= Country[i]%>
+                                </p>
+                            </div>
+                            <div class="details">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>
+                                    <%= AvgFees[i]%>
+                                </p>
+                            </div>
+                            <button class="bookBtn" id="popBtn" onclick="showCarousel('<%= doctorInfoId[i]%>')">Book an appointment</button>
+                        </figcaption>
+                        <form action="/doctorInfo" method="POST" class="doctorDetails">
+                            <figure>
+                                <img src="data:<%=picTypes[i]%>;base64,<%=profilePics[i].toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
+                            </figure>
+                            <input type="hidden" name="doctorInfoId" value="<%= doctorInfoId[i]%>">
+                            <input type="hidden" name="doctorName" value="<%= Name[i]%>">
+                            <input type="hidden" name="doctorCountry" value="<%= Country[i]%>">
+                        </form>
+
+                        <div class="container" id="<%= doctorInfoId[i]%>">
+                            <div class="row">
+                                <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000" style="display: initial;">
+                                    <div class="MultiCarousel-inner" id="slide<%= doctorInfoId[i]%>">
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>0')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>00">
+                                                <h6>Today</h6>
+                                                <p>
+                                                    <%= Slots[i][0].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>1')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>10">
+                                                <h6>Tomorrow</h6>
+                                                <p>
+                                                    <%= Slots[i][1].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>2')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>20">
+                                                <h6>
+                                                    <%=today2%>
+                                                </h6>
+                                                <p>
+                                                    <%= Slots[i][2].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>3')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>30">
+                                                <h6>
+                                                    <%=today3%>
+                                                </h6>
+                                                <p>
+                                                    <%= Slots[i][3].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>4')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>40">
+                                                <h6>
+                                                    <%=today4%>
+                                                </h6>
+                                                <p>
+                                                    <%= Slots[i][4].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>5')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>50">
+                                                <h6>
+                                                    <%=today5%>
+                                                </h6>
+                                                <p>
+                                                    <%= Slots[i][5].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item" onclick="showSlots('bookSlotNow<%= i%>6')">
+                                            <div class="pad15" id="bookSlotNow<%= i%>60">
+                                                <h6>
+                                                    <%=today6%>
+                                                </h6>
+                                                <p>
+                                                    <%= Slots[i][6].length%> Slots Available
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="left" id="prev<%= doctorInfoId[i]%>"><i class="fas fa-angle-left"></i></button>
+                                    <button class="right" id="next<%= doctorInfoId[i]%>"><i class="fas fa-angle-right"></i></button>
+                                </div>
+                                <% for(var k = 0; k < 7; k++){ %>
+                                    <div class="bookSlotNow" id="bookSlotNow<%= i%><%= k%>">
+                                        <div>
+                                            <i class="fas fa-circle"></i>
+                                            <p>Morning</p>
+                                            <div>
+                                                <% for(var j = 0; j < Slots[i][k].length; j++){ %>
+                                                    <% if(Slots[i][k][j].split(' ')[1] == 'AM'){ %>
+                                                        <p class="slots">
+                                                            <%= Slots[i][k][j]%>
+                                                        </p>
+                                                        <%}%>
+                                                            <%}%>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-circle"></i>
+                                            <p>AfterNoon</p>
+                                            <% if(Slots[i][k].length == 0){ %>
+                                                <button>Go to next Available slots</button>
+                                                <%}%>
+                                                    <div>
+                                                        <% for(var j = 0; j < Slots[i][k].length; j++){ %>
+                                                            <% if(Slots[i][k][j].split(' ')[1] == 'PM'){ %>
+                                                                <% if(Slots[i][k][j].split(' ')[0].split(':')[0] < 4){ %>
+                                                                    <p class="slots">
+                                                                        <%= Slots[i][k][j]%>
+                                                                    </p>
+
+                                                                    <%}%>
+                                                                        <%}%>
+                                                                            <%}%>
+                                                    </div>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-circle"></i>
+                                            <p>Evening</p>
+                                            <div>
+                                                <% for(var j = 0; j < Slots[i][k].length; j++){ %>
+                                                    <% if(Slots[i][k][j].split(' ')[1] == 'PM'){ %>
+                                                        <% if(Slots[i][k][j].split(' ')[0].split(':')[0] > 3){ %>
+                                                            <p class="slots">
+                                                                <%= Slots[i][k][j]%>
+                                                            </p>
+                                                            <%}%>
+                                                                <%}%>
+                                                                    <%}%>
+                                            </div>
+                                        </div>
+                                        <h6 class="hospitalName">none</h6>
+                                    </div>
+                                    <%}%>
+                            </div>
                         </div>
-                        <div class="details">
-                            <i class="fas fa-award"></i>
-                            <p>Neuro Surgeon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-clock-o"></i>
-                            <p>Chain Deparment of Neurological Surgery </p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-hospital-o"></i>
-                            <p>doctor1</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Australia</p>
-                        </div>
-                        <button class="bookBtn">Book an appointment</button>
-                    </figcaption>
-                    <figure>
-                        <img src="../assets/images/doctor1(1).jpg" alt="doctor_image">
-                    </figure>
-                </div>
-                <div class="doctorInfo">
-                    <figcaption>
-                        <h3>Georgea Peter</h3>
-                        <div class="details">
-                            <i class="fas fa-certificate"></i>
-                            <p>Georgea Peter</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-award"></i>
-                            <p>Breast Cancer Surgeon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-clock-o"></i>
-                            <p>Director. UT. Southwest</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-hospital-o"></i>
-                            <p>doctor2</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>London</p>
-                        </div>
-                        <button class="bookBtn">Book an appointment</button>
-                    </figcaption>
-                    <figure>
-                        <img src="../assets/images/doctor2(1).jpg" alt="doctor_image">
-                    </figure>
-                </div>
-                <div class="doctorInfo">
-                    <figcaption>
-                        <h3>Charlie Moon</h3>
-                        <div class="details">
-                            <i class="fas fa-certificate"></i>
-                            <p>Charlie Moon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-award"></i>
-                            <p>Cardiaic surgeon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-clock-o"></i>
-                            <p>MBBS, MD, FRCP, MRCP, Fellowship</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-hospital-o"></i>
-                            <p>doctor3</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>New Delhi, India</p>
-                        </div>
-                        <button class="bookBtn">Book an appointment</button>
-                    </figcaption>
-                    <figure>
-                        <img src="../assets/images/doctor3(1).jpg" alt="doctor_image">
-                    </figure>
-                </div>
-                <div class="doctorInfo">
-                    <figcaption>
-                        <h3>Shubham Shinde</h3>
-                        <div class="details">
-                            <i class="fas fa-certificate"></i>
-                            <p>Shubham Shinde</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-award"></i>
-                            <p>Plastic surgeon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-clock-o"></i>
-                            <p>Deparment of Plastic and Reconstructive Surgery</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-hospital-o"></i>
-                            <p>doctor5</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>New Delhi, India</p>
-                        </div>
-                        <button class="bookBtn">Book an appointment</button>
-                    </figcaption>
-                    <figure>
-                        <img src="../assets/images/doctor5(1).jpg" alt="doctor_image">
-                    </figure>
-                </div>
-                <div class="doctorInfo">
-                    <figcaption>
-                        <h3>Rose Moon</h3>
-                        <div class="details">
-                            <i class="fas fa-certificate"></i>
-                            <p>Rose Moon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-award"></i>
-                            <p>Plastic surgeon</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-clock-o"></i>
-                            <p>Deparment of Plastic and Reconstructive Surgery</p>
-                        </div>
-                        <div class="details">
-                            <i class="fa fa-hospital-o"></i>
-                            <p>doctor4</p>
-                        </div>
-                        <div class="details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Dubai</p>
-                        </div>
-                        <button class="bookBtn">Book an appointment</button>
-                    </figcaption>
-                    <figure>
-                        <img src="../assets/images/doctor4(1).jpg" alt="doctor_image">
-                    </figure>
-                </div>
+                    </div>
+                    <%}%>
             </div>
         </section>
         <section class="enquiry">
@@ -298,6 +373,30 @@
         </nav>
         <p>All Rights Reserved. &#169 tvastra 2018</p>
     </footer>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="../assets/scripts/index.js"></script>
+    <script src="../assets/scripts/doctor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        function showCarousel(id) {
+            var x = document.getElementById(id);
+            if (x.style.display == 'none') {
+                x.style.display = 'inline';
+                $('#slide' + id).slick({
+                    infinite: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    prevArrow: $('#prev' + id),
+                    nextArrow: $('#next' + id)
+                });
+            } else {
+                x.style.display = 'none';
+            }
+        };
+    </script>
 </body>
 
 </html>

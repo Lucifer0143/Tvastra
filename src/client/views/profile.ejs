@@ -34,9 +34,10 @@
             <button class="tvastraPlusBtn" onclick="window.location.href='tvastra_plus.html';">Tvastra Plus</button>
             <button class="quoteBtn" onclick="window.location.href='submit_your_query.html';">Get a Quotes</button>
             <button class="userInfoBtn" onclick="userInfo()"><%= userName%><i class="fa fa-angle-down"></i></button>
-            <form action="/signOut" method="POST" id="signout" style="display: none;">
+            <form method="POST" id="signout" style="display: none;">
                 <figure>
-                    <img src="../assets/images/doctor3(1).jpg" alt="user_image">
+                    <!-- <img src="data:image/jpg;base64,<%= profilePic%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image"> -->
+                    <img src="data:<%=picType%>;base64,<%=profilePic.toString('base64')%>" onerror="this.src='../assets/images/doctor_icon.jpg'" alt="user_image">
                     <figcaption>
                         <h5>
                             <%= userName%>
@@ -46,17 +47,19 @@
                         </p>
                     </figcaption>
                 </figure>
-                <button>My Appointment</button>
+                <button type="submit" formaction="/dashboard">My Appointment</button>
                 <button>My Labtests</button>
                 <button>My Medicine Order</button>
                 <button>Payments</button>
-                <button type="submit" id="btn">LogOut</button>
+                <button type="submit" id="btn" formaction="/signOut">LogOut</button>
+                <input type="hidden" name="userName" value="<%= userName%>">
+                <input type="hidden" name="userPhoneNo" value="<%= userPhoneNo%>">
             </form>
         </nav>
         <i class="fa fa-bars"></i>
     </header>
     <main>
-        <% if(isValid == true){ %>
+        <% if(message == 'msg'){ %>
             <div class="alertMsg" id="alertMsgs">
                 <i class="fas fa-check-circle"></i>
                 <div>
@@ -140,7 +143,8 @@
                 </section>
                 <section class="doctors">
                     <h2>World class expert doctors!</h2>
-                    <p>The university of Texas Southastern has been a long works renowned research hospital. But untill the 80s, you couldn't go there. Now, with the addition of Aston Center and Zale Lipshy Hospital, UT Southastern is also a mecca for patients.</p>
+                    <p>The university of Texas Southastern has been a long works renowned research hospital. But untill the 80s, you couldn't go there. Now, with the addition of Aston Center and Zale Lipshy Hospital, UT Southastern is also a mecca for patients.
+                    </p>
                     <div>
                         <figure class="docCard1" id="docCards1">
                             <img src="../assets/images/doctor1(1).jpg" alt="doctor">

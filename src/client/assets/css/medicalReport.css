@@ -1,0 +1,291 @@
+main {
+  background-color: var(--lightsilver);
+  padding: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+section[class=dashboardNav] {
+  padding: 1rem;
+  width: 16rem;
+}
+
+section[class=dashboardNav] form {
+  padding: 0;
+}
+
+section[class=dashboardNav] button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--lightsilver);
+  width: 100%;
+}
+
+section[class=dashboardNav] button i {
+  color: var(--deepblue);
+}
+
+section[class=dashboardNav] button h5 {
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: 'Nexa-light';
+}
+
+section[class=dashboardNav] button:hover {
+  background-color: var(--white);
+  border-left: 0.1rem solid var(--deepblue);
+}
+
+section[class=dashboardNav] button:hover h5 {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardNav] button h5[id=navBtn4h5] {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=report] {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section[class=report] div[class=reportHead] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.1rem solid var(--silver);
+  margin-bottom: 1rem;
+}
+
+section[class=report] div[class=reportHead] button {
+  background-color: var(--deepblue);
+  border-radius: 0.5rem;
+}
+
+section[class=report] li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+section[class=report] div[class=reportCard] {
+  background-color: var(--lightsilver);
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.5rem;
+  border: 0.05rem solid var(--black);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] button[class=viewImg] {
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 0.5rem;
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] button[class=viewImg] h5 {
+  margin-bottom: 0;
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] div h6 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] div h6[class=title] {
+  color: var(--deepblue);
+}
+
+section[class=report] div[class=reportCard] form[class=reportContent] button[class=delete] {
+  margin: auto;
+  margin-right: 2rem;
+  background-color: var(--deepblue);
+}
+
+section[class=report] div[class=addrecordform] {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: var(--white);
+  border: 0.5rem solid var(--shadowblack);
+}
+
+section[class=report] div[class=addrecordform] div[class=addpic] {
+  background-color: var(--black);
+  width: 6rem;
+  height: 5rem;
+}
+
+section[class=report] div[class=addrecordform] div[class=addpic] input[type=file] {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin-top: -6rem;
+}
+
+section[class=report] div[class=addrecordform] div[class=addpic] label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section[class=report] div[class=addrecordform] div[class=addpic] label i,
+section[class=report] div[class=addrecordform] div[class=addpic] label span {
+  color: var(--white);
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+section[class=report] div[class=addrecordform] div[id=reportImg] {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  left: 8rem;
+  top: 1.7rem;
+}
+
+section[class=report] div[class=addrecordform] div[id=reportImg] img {
+  height: 5rem;
+  width: 5rem;
+  margin: 0 0.5rem;
+}
+
+section[class=report] div[class=addrecordform] div[class=inputfields] {
+  padding: 0;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] {
+  padding: 0;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] h5 {
+  margin-bottom: 0;
+  color: var(--deepblue);
+  text-align: left;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] ul li {
+  height: 7rem;
+  width: auto;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] ul li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 1rem;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] ul li label i,
+section[class=report] div[class=addrecordform] div[class=type-of-report] ul li label span {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+section[class=report] div[class=addrecordform] div[class=type-of-report] ul li:hover {
+  background-color: var(--lightblue);
+}
+
+section[class=report] div[class=addrecordform] div[class=buttons] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+section[class=report] div[class=addrecordform] div[class=buttons] button[id=cancel] {
+  background-color: var(--red);
+}
+
+section[class=report] div[class=addrecordform] div[class=buttons] button[id=done] {
+  background-color: var(--deepblue);
+}
+/*# sourceMappingURL=medicalReport.css.map */

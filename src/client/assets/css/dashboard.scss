@@ -1,0 +1,52 @@
+main {
+    background-color: var(--lightsilver);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+section[class=dashboardNav] {
+    padding: 1rem;
+    width: 16rem;
+    form {
+        padding: 0;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        background-color: var(--lightsilver);
+        width: 100%;
+        i {
+            color: var(--deepblue);
+        }
+        h5 {
+            padding-left: 0.5rem;
+            margin-bottom: 0;
+            text-align: left;
+            font-family: 'Nexa-light';
+        }
+        &:hover {
+            background-color: var(--white);
+            border-left: 0.1rem solid var(--deepblue);
+            h5 {
+                color: var(--deepblue);
+                font-family: 'Nexa-bold';
+            }
+        }
+        h5[id=navBtn2h5] {
+            color: var(--deepblue);
+            font-family: 'Nexa-bold';
+        }
+    }
+}
+
+section[class=appointment] {
+    background-color: var(--white);
+    border-radius: 1rem;
+    h3 {
+        color: var(--silver);
+        text-align: left;
+    }
+}

@@ -1,0 +1,299 @@
+main {
+  background-color: var(--lightsilver);
+  padding: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+div {
+  padding: 0;
+}
+
+section[class=dashboardNav] {
+  padding: 1rem;
+  width: 16rem;
+}
+
+section[class=dashboardNav] form {
+  padding: 0;
+}
+
+section[class=dashboardNav] button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--lightsilver);
+  width: 100%;
+}
+
+section[class=dashboardNav] button i {
+  color: var(--deepblue);
+}
+
+section[class=dashboardNav] button h5 {
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: 'Nexa-light';
+}
+
+section[class=dashboardNav] button:hover {
+  background-color: var(--white);
+  border-left: 0.1rem solid var(--deepblue);
+}
+
+section[class=dashboardNav] button:hover h5 {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardNav] button h5[id=navBtn3h5] {
+  color: var(--deepblue);
+  font-family: 'Nexa-bold';
+}
+
+section[class=dashboardNav] button[class=scheduleBtn] {
+  background-color: var(--deepblue);
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 1rem;
+  width: 6rem;
+}
+
+section[class=schedule] {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+section[class=schedule] div[class=top] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.1rem solid var(--silver);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+section[class=schedule] div[class=top] button {
+  background-color: var(--deepblue);
+  border-radius: 0.5rem;
+}
+
+section[class=schedule] li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+section[class=schedule] li div[class=scheduleCard] {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1.3fr;
+      grid-template-columns: 1fr 2fr 1.3fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 0.1rem solid var(--silver);
+  border-radius: 1rem;
+  padding: 0.7rem;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=day] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=day] h5 {
+  color: var(--deepblue);
+  margin: auto;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=hospitalTime] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=hospitalTime] h5 {
+  margin: auto;
+  text-transform: uppercase;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=hospitalTime] h5[class=times] {
+  font-family: 'Nexa-light';
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=btnCheckbox] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=btnCheckbox] form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=btnCheckbox] button {
+  background-color: var(--deepblue);
+  padding: 0.5rem;
+  margin: auto;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=btnCheckbox] input {
+  margin: auto;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=slots] {
+  display: none;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/ span 3;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=slots] div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=slots] div form {
+  display: inline-block;
+  margin: auto 0;
+  padding: 0;
+  text-align: center;
+  border: 0.1rem solid var(--green);
+  line-height: 0;
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
+section[class=schedule] li div[class=scheduleCard] div[class=slots] div form[id=checked] {
+  color: var(--red);
+  border: 0.1rem solid var(--red);
+}
+
+section[class=schedule] li div[id=checked] {
+  background-color: var(--silver);
+}
+
+section[class=schedule] div[class=setSchedule] {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.5rem solid var(--shadowblack);
+  background-color: var(--white);
+  padding: 0.7rem;
+}
+
+section[class=schedule] div[class=setSchedule] form {
+  background-color: var(--silver);
+}
+
+section[class=schedule] div[class=setSchedule] form div[class=cdBtn] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 0;
+}
+
+section[class=schedule] div[class=setSchedule] form button {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+section[class=schedule] div[class=setSchedule] form button[class=cancel] {
+  background-color: var(--red);
+}
+
+section[class=schedule] div[class=setSchedule] form button[class=done] {
+  background-color: var(--deepblue);
+}
+
+section[class=schedule] div[class=setSchedule] div[class=labelInput] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+section[class=schedule] div[class=setSchedule] div[class=labelInput] select[class=hospital] {
+  height: auto;
+  padding: 0.7rem;
+}
+
+section[class=schedule] div[class=setSchedule] label {
+  font-family: 'Nexa-bold';
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+section[class=schedule] div[class=setSchedule] input {
+  margin: 0;
+  padding: 0.7rem;
+}
+
+section[class=schedule] div[class=setSchedule] select {
+  height: 5rem;
+  padding: 0;
+}
+
+section[class=schedule] div[class=setSchedule] select option {
+  background-color: var(--white);
+  color: var(--textblack);
+}
+
+section[class=schedule] div[class=setSchedule] select option:hover {
+  background-color: var(--silver);
+}
+/*# sourceMappingURL=editSchedule.css.map */

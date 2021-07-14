@@ -29,12 +29,16 @@ main h1 {
   margin: 1rem 0;
 }
 
-input[id=email] {
-  background-image: url(../images/questionmark.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 1.2rem;
-  background-position-x: 95%;
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: 0.1rem solid var(--silver);
+  padding: 1rem;
 }
 
 form button[class=signinBtn] {
@@ -49,16 +53,19 @@ form button[class=signinBtn] {
   letter-spacing: 0.3rem;
 }
 
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-top: 0.1rem solid var(--silver);
-  padding: 1rem;
+form input[id=email] {
+  background-image: url(../images/questionmark.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-position-x: 95%;
+}
+
+form .eyeIcon {
+  position: absolute;
+  right: 7.5%;
+  top: 48.5%;
+  color: var(--deepblue);
 }
 
 form div {
@@ -68,7 +75,7 @@ form div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
+  padding: 0.5rem 0;
 }
 
 form div a {
@@ -199,6 +206,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  z-index: -2;
 }
 
 footer p {
@@ -227,7 +235,10 @@ a[class=loginPass] {
 
 @media only screen and (min-width: 1024px) {
   main {
-    width: 45%;
+    width: 35%;
+  }
+  footer p {
+    margin-bottom: 0.5rem;
   }
 }
 /*# sourceMappingURL=signin.css.map */
